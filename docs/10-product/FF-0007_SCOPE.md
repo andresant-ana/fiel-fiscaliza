@@ -2,8 +2,8 @@
 
 **Nome do documento:** Scope  
 **ID:** FF-0007  
-**Versão:** 0.2  
-**Status:** DRAFT  
+**Versão:** 1.0  
+**Status:** CANONICAL  
 **Última revisão:** 2026-09-04  
 **Responsável:** André  
 **Projeto:** Fiel Fiscaliza  
@@ -687,17 +687,19 @@ A redação foi estreitada para impedir que posições, disputas ou atividades d
 
 ## 24.3 Risco de militância substantiva
 
-A fronteira política agora distingue defesa de princípios procedimentais já canônicos de campanha por candidaturas, modelos institucionais ou resultados políticos específicos.
+A fronteira política distingue defesa de princípios procedimentais já canônicos de campanha por candidaturas, modelos institucionais ou resultados políticos específicos.
 
 ## 24.4 Confusão entre acesso público e adequação para publicação
 
-A v0.2 deixa explícito que conteúdo acessível na internet pode ainda ser inadequado para armazenamento ou republicação integral.
+O documento deixa explícito que conteúdo acessível na internet pode ainda ser inadequado para armazenamento ou republicação integral.
 
 ## 24.5 Scope creep por acumulação
 
 Foi criada regra de controle de expansão para exigir revisão documental quando a natureza permanente do produto mudar.
 
 A revisão não identificou conflito material bloqueante com FF-0001, FF-0002, FF-0005 ou FF-0006.
+
+Após aprovação explícita de André, o conteúdo revisado foi promovido sem alteração material para a versão 1.0 CANONICAL.
 
 ---
 
@@ -720,7 +722,7 @@ Antes de promover o FF-0007 para CANONICAL, deve-se confirmar que:
 - não foram introduzidas decisões técnicas ou de interface prematuras;
 - o documento oferece fronteira suficiente para o FF-0008 escolher um MVP pequeno e sustentável.
 
-A revisão crítica de 2026-09-04 considera esses critérios satisfeitos no conteúdo da v0.2, sujeito à aprovação explícita de André para promoção a CANONICAL.
+A revisão crítica de 2026-09-04 considerou esses critérios satisfeitos, e André aprovou explicitamente a promoção deste documento a CANONICAL.
 
 ---
 
@@ -748,6 +750,6 @@ A revisão crítica de 2026-09-04 considera esses critérios satisfeitos no cont
 
 # 27. Vigência
 
-Esta versão permanece **DRAFT** até aprovação explícita.
+Esta versão possui status **CANONICAL** e entra em vigor em **2026-09-04** por aprovação explícita de André após revisão crítica de escopo.
 
-**FF-0007 — SCOPE v0.2 // DRAFT**
+**FF-0007 — SCOPE v1.0 // CANONICAL**
