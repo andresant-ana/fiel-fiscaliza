@@ -2,8 +2,8 @@
 
 **Nome do documento:** Editorial Policy  
 **ID:** FF-0009  
-**Versão:** 0.2  
-**Status:** DRAFT  
+**Versão:** 1.0  
+**Status:** CANONICAL  
 **Última revisão:** 2026-09-04  
 **Responsável:** André  
 **Projeto:** Fiel Fiscaliza  
@@ -1097,7 +1097,7 @@ Antes de promover o FF-0009 para CANONICAL, deve-se confirmar que:
 - preserva revisão humana onde julgamento editorial é material;
 - não antecipa indevidamente a taxonomia de fontes, o modelo formal de Claims ou o fluxo detalhado de correções.
 
-A revisão crítica de 2026-09-04 considera esses critérios satisfeitos no conteúdo da v0.2, sujeito à aprovação explícita de André para promoção a CANONICAL.
+A revisão crítica de 2026-09-04 considerou esses critérios satisfeitos, e André aprovou explicitamente a promoção desta política a CANONICAL.
 
 ---
 
@@ -1176,6 +1176,6 @@ Após os ajustes, não foi identificado conflito canônico bloqueante com FF-000
 
 # 31. Vigência
 
-Esta versão permanece **DRAFT** até aprovação explícita.
+Esta versão possui status **CANONICAL** e entra em vigor em **2026-09-04** por aprovação explícita de André.
 
-**FF-0009 — EDITORIAL_POLICY v0.2 // DRAFT**
+**FF-0009 — EDITORIAL_POLICY v1.0 // CANONICAL**
