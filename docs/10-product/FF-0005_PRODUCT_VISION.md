@@ -2,7 +2,7 @@
 
 **Nome do documento:** Product Vision  
 **ID:** FF-0005  
-**Versão:** 1.0  
+**Versão:** 1.1  
 **Status:** CANONICAL  
 **Última revisão:** 2026-09-04  
 **Responsável:** André  
@@ -21,7 +21,7 @@ Seu objetivo é responder, em nível de produto e sem antecipar arquitetura ou i
 - qual é sua tese de valor;
 - quais resultados caracterizam sucesso;
 - quais princípios devem orientar futuras escolhas de escopo e experiência;
-- quais hipóteses ainda precisam ser validadas antes da definição do MVP.
+- quais hipóteses ainda precisam ser investigadas e validadas ao longo da evolução do produto.
 
 Este documento não define ainda:
 
@@ -109,7 +109,7 @@ O problema que esta visão pretende atacar é que, em muitos casos, elas chegam 
 
 A hipótese de produto é que, para parte relevante das questões institucionais, acompanhar um acontecimento no momento em que ocorre é menos custoso do que reconstruí-lo com precisão meses ou anos depois.
 
-Essa hipótese deve ser validada na Fase 1 e não deve ser tratada como verdade universal sobre todo tipo de informação do clube.
+Essa hipótese deve receber evidência suficiente para orientar decisões de Fase 1 e permanecer explicitamente revisável enquanto não houver validação comportamental adequada. Ela não deve ser tratada como verdade universal sobre todo tipo de informação do clube.
 
 ---
 
@@ -161,9 +161,9 @@ A confiança pretendida deve ser consequência de rastreabilidade, consistência
 
 A oportunidade que esta visão propõe explorar é a criação de um produto cujo valor principal não seja produzir mais volume de informação, mas **aumentar a capacidade de compreender e reutilizar informação institucional ao longo do tempo**.
 
-Essa oportunidade ainda é uma hipótese de produto. Sua existência e relevância devem ser validadas por pesquisa sobre usuários, práticas atuais e iniciativas já existentes antes do fechamento do Gate F1.
+Essa oportunidade ainda é uma hipótese de produto. Antes do fechamento do Gate F1, sua plausibilidade e relevância devem ter sido investigadas por evidência suficiente e contraprova proporcional ao risco e à reversibilidade das decisões tomadas. Pesquisa comportamental pré-MVP pode ser adiada quando sua ausência não impedir uma decisão responsável, pequena e reversível, desde que a incerteza permaneça documentada.
 
-Se validada, o Fiel Fiscaliza poderá transformar informação pública dispersa em um patrimônio informacional:
+Se sustentada pela evidência disponível, o Fiel Fiscaliza poderá transformar informação pública dispersa em um patrimônio informacional:
 
 - consultável;
 - contextualizado;
@@ -486,9 +486,13 @@ Quais problemas específicos serão escolhidos para o MVP será definido no FF-0
 
 ---
 
-# 15. Hipóteses de produto a validar na Fase 1
+# 15. Hipóteses de produto e dívida de validação
 
-A visão atual contém hipóteses que não devem ser tratadas como fatos até serem validadas.
+A visão atual contém hipóteses que não devem ser tratadas como fatos enquanto não houver evidência apropriada.
+
+Nem toda hipótese precisa ser empiricamente encerrada antes do Gate F1. Para decisões pequenas, reversíveis e de baixo custo, a Fase 1 pode adotar uma direção provisória com base em evidência documental robusta, contraprovas e incerteza explicitamente registrada.
+
+Hipóteses cuja incerteza possa alterar materialmente escopo, custo operacional, risco editorial, segurança, compreensão ou viabilidade devem receber investigação adicional antes de cristalizar decisões difíceis de reverter.
 
 ## 15.1 Hipótese de dor
 
@@ -506,7 +510,7 @@ Existe um grupo de usuários além do próprio mantenedor que obterá utilidade 
 
 As iniciativas já existentes de transparência, imprensa, mobilização ou acompanhamento institucional deixam uma lacuna relevante e contínua no problema de memória institucional estruturada que o Fiel Fiscaliza pretende atacar.
 
-Essa hipótese deve ser validada por mapeamento do ecossistema, não presumida.
+Essa hipótese deve ser investigada por mapeamento do ecossistema, não presumida.
 
 ## 15.5 Hipótese de disponibilidade
 
@@ -524,26 +528,40 @@ Há volume suficiente de informação pública e legitimamente acessível para p
 
 # 16. Pesquisa necessária antes do Gate F1
 
-Para transformar esta visão em especificação de produto, a Fase 1 ainda deve produzir evidência suficiente sobre:
+Para transformar esta visão em especificação de produto, a Fase 1 deve reunir **evidência suficiente para a decisão**, proporcional ao risco, ao custo e à reversibilidade do que está sendo decidido.
+
+A pesquisa deve examinar, conforme materialmente relevante:
 
 - quem são os usuários primários e secundários;
-- quais perguntas institucionais eles tentam responder;
-- quais dessas perguntas são hoje mais caras, demoradas ou frustrantes;
-- como as pessoas resolvem esses problemas atualmente;
+- quais perguntas institucionais aparecem no ecossistema;
+- quais dessas perguntas parecem exigir maior esforço, reconstrução ou verificação;
+- como essas perguntas são resolvidas atualmente;
 - quais iniciativas, sites, veículos ou ferramentas já atendem parte dessas necessidades;
-- quais lacunas reais permanecem;
-- quais casos de uso geram valor recorrente;
+- quais lacunas plausíveis permanecem;
+- quais casos de uso possuem melhores sinais de utilidade recorrente;
 - qual subconjunto de problemas possui melhor relação entre valor e custo de manutenção para um MVP;
-- quais funções seriam interessantes, mas não essenciais;
+- quais funções parecem interessantes, mas não essenciais;
 - quais evidências contradizem ou enfraquecem as hipóteses desta visão.
 
 A pesquisa não deve ser conduzida apenas para confirmar a ideia existente. Contraprovas são parte do processo de produto.
 
-O **FF-0006 — USERS_AND_USE_CASES** deve aprofundar usuários e tarefas.
+Pesquisa comportamental, entrevistas ou testes de tarefa são meios válidos, mas **não constituem requisito universal obrigatório antes do MVP**. Podem ser adiados quando:
+
+- a decisão é pequena e reversível;
+- a desk research e outras evidências já permitem uma escolha responsável;
+- a incerteza é declarada explicitamente;
+- o custo de pesquisa adicional é desproporcional ao risco da decisão;
+- existe mecanismo futuro razoável para reabrir a questão diante de uso real, feedback ou contraprova.
+
+Quando pesquisa comportamental for adiada, o documento responsável deve registrar a **dívida de validação**, o que permanece desconhecido e os gatilhos que exigem reabertura da pesquisa.
+
+Decisões tomadas sob essa regra não devem ser descritas como demanda empiricamente validada.
+
+O **FF-0006 — USERS_AND_USE_CASES** deve aprofundar usuários, tarefas, força de evidência e eventual dívida de validação.
 
 O **FF-0007 — SCOPE** deve transformar a visão em fronteiras claras.
 
-O **FF-0008 — MVP_SPEC** deve escolher a menor combinação de capacidades capaz de provar a tese de produto com utilidade real.
+O **FF-0008 — MVP_SPEC** deve escolher a menor combinação de capacidades capaz de testar a tese de produto com utilidade real e risco controlado.
 
 ## 16.1 Critérios de reavaliação da visão
 
@@ -560,11 +578,24 @@ Nesses casos, o resultado correto pode ser reduzir escopo, reposicionar a tese, 
 
 Preservar uma ideia por apego não é objetivo do Fiel Fiscaliza.
 
+## 16.2 Gatilhos para pesquisa adicional
+
+Pesquisa adicional deve ser realizada ou fortemente considerada quando a incerteza puder alterar materialmente uma decisão, incluindo situações em que:
+
+- duas alternativas de produto relevantes possuam evidência semelhante e a escolha dependa de comportamento de usuário;
+- um recurso de custo operacional elevado dependa de demanda ainda desconhecida;
+- haja sinais de incompreensão recorrente por usuários não especializados;
+- uso real contradiga o usuário primário ou os casos de uso escolhidos;
+- uma solução existente passe a atender melhor o problema;
+- um risco editorial, jurídico, de privacidade ou segurança dependa de pressuposto ainda não testado.
+
+A existência de dívida de validação não deve ser usada para impedir indefinidamente o avanço do projeto, mas também não autoriza converter incerteza em fato.
+
 ---
 
 # 17. Perguntas deliberadamente não respondidas por este documento
 
-Permanecem abertas, entre outras:
+Permanecem abertas neste nível de visão, entre outras:
 
 - quem exatamente será o usuário primário do MVP;
 - qual será a primeira área institucional coberta profundamente;
@@ -581,7 +612,7 @@ Permanecem abertas, entre outras:
 - qual será a stack;
 - onde o produto será hospedado.
 
-Essas perguntas não devem ser respondidas silenciosamente por implementação.
+Essas perguntas podem ser respondidas por documentos posteriores e não devem ser respondidas silenciosamente por implementação.
 
 ---
 
@@ -604,7 +635,7 @@ Este documento condiciona principalmente:
 - futuros documentos de Experiência;
 - critérios de priorização de backlog e roadmap.
 
-Documentos posteriores podem especializar esta visão, mas não devem transformar hipóteses ainda não validadas em decisões sem processo explícito.
+Documentos posteriores podem especializar esta visão e tomar decisões provisórias sob incerteza quando seguirem as regras de proporcionalidade e dívida de validação desta versão.
 
 ---
 
@@ -618,20 +649,23 @@ Antes de promover este documento para CANONICAL, deve-se confirmar que:
 - nenhuma funcionalidade de MVP foi canonizada prematuramente;
 - hipóteses relevantes estão identificadas como hipóteses;
 - a oportunidade proposta não é apresentada como lacuna de mercado já comprovada;
-- o documento não presume usuário que ainda não foi estudado;
+- decisões sobre usuários distinguem evidência disponível de validação comportamental;
 - os critérios de sucesso não dependem apenas de audiência;
 - a visão é compatível com manutenção individual e custo zero;
 - existem critérios explícitos para reavaliar ou pivotar a tese diante de contraprovas;
+- eventual dívida de validação possui incertezas e gatilhos de reabertura explícitos;
 - as questões ainda abertas estão encaminhadas aos documentos adequados.
 
-A revisão crítica de 2026-09-04 confirmou esses critérios sem identificar conflito canônico bloqueante.
+A revisão de 2026-09-04 confirmou esses critérios e aprovou a alteração metodológica estreita que permite evidência proporcional ao risco e à reversibilidade, sem dispensar contraprova nem transformar hipótese em fato.
 
 ---
 
 # 20. Vigência
 
-Esta versão possui status **CANONICAL** e entra em vigor em **2026-09-04** por aprovação explícita de André após revisão crítica de produto.
+Esta versão possui status **CANONICAL** e entra em vigor em **2026-09-04** por aprovação explícita de André.
 
-**FF-0005 — PRODUCT_VISION v1.0 // CANONICAL**
+**FF-0005 — PRODUCT_VISION v1.1 // CANONICAL**
+
+A versão 1.1 preserva integralmente a visão, a tese e os princípios da versão 1.0 e altera apenas a estratégia de validação da Fase 1: pesquisa comportamental pré-MVP deixa de ser requisito universal, desde que decisões sob incerteza sejam proporcionais, reversíveis, explicitamente qualificadas e acompanhadas de dívida de validação quando aplicável.
 
 A canonização deste documento não encerra a Fase 1. O Gate F1 exige também FF-0006, FF-0007 e FF-0008 em estado CANONICAL e consistentes entre si.
