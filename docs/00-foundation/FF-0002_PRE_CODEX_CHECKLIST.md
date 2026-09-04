@@ -2,8 +2,8 @@
 
 **Nome do documento:** Pre-Codex Checklist  
 **ID:** FF-0002  
-**Versão:** 0.1  
-**Status:** DRAFT  
+**Versão:** 1.0  
+**Status:** CANONICAL  
 **Última revisão:** 2026-09-04  
 **Responsável:** André  
 **Projeto:** Fiel Fiscaliza  
@@ -41,6 +41,8 @@ Antes da liberação formal, qualquer exceção para uso do Codex em prova técn
 5. ter a decisão resultante documentada.
 
 A exceção não substitui o cumprimento deste checklist.
+
+Este documento regula o uso do Codex, mas não autoriza que implementação manual ou assistida pelo ChatGPT seja usada para contornar decisões ainda não resolvidas. Código de produção não deve cristalizar silenciosamente requisitos, arquitetura ou regras editoriais que ainda estejam em aberto.
 
 ---
 
@@ -92,6 +94,12 @@ Se uma decisão permanecer conscientemente em aberto, ela deve ser registrada co
 
 Não utilizar uma implementação para decidir silenciosamente uma questão ainda não resolvida.
 
+## 3.6 Documentos canônicos devem ser rastreáveis entre si
+
+Quando uma decisão de um documento puder alterar materialmente outro documento, essa relação deve ser identificável por referência, seção de impacto, índice ou mecanismo equivalente.
+
+Não é obrigatório criar dependências artificiais entre todos os documentos. O objetivo é impedir que uma alteração importante seja feita sem que seus efeitos sobre especificações relacionadas sejam percebidos.
+
 ---
 
 # 4. Convenção de status deste checklist
@@ -119,9 +127,10 @@ Garantir que o projeto possua identidade, autoridade documental, memória de dec
 - [x] Estrutura documental inicial criada no repositório.
 - [x] Instruções permanentes do projeto definidas no ChatGPT.
 - [x] FF-0001 — PROJECT_CONSTITUTION v1.0 // CANONICAL.
-- [ ] FF-0002 — PRE_CODEX_CHECKLIST v1.0 // CANONICAL.
+- [x] FF-0002 — PRE_CODEX_CHECKLIST v1.0 // CANONICAL.
 - [ ] FF-0003 — DECISION_LOG com o conjunto inicial de decisões já tomadas.
 - [ ] FF-0004 — GLOSSARY com o vocabulário inicial oficial.
+- [ ] Definir e aplicar convenção mínima de impacto/dependência entre documentos canônicos quando materialmente relevante.
 - [ ] Confirmar que nenhum documento da Fundação contradiz o FF-0001.
 
 ## Gate F0
@@ -342,6 +351,9 @@ Definir como implementar o MVP respeitando custo operacional obrigatório de R$ 
 - [ ] Definir filas de revisão.
 - [ ] Definir regras para publicação automática versus aprovação humana.
 - [ ] Definir estratégia para documentos e PDFs.
+- [ ] Definir mecanismos de coleta que não dependam de burlar autenticação, controles de acesso ou restrições técnicas.
+- [ ] Definir política de taxa de acesso, retries e comportamento responsável por fonte.
+- [ ] Avaliar termos de uso, regras de acesso e limitações técnicas relevantes quando uma fonte exigir coleta automatizada.
 
 ### Persistência
 
@@ -465,12 +477,16 @@ Definir como o Fiel Fiscaliza evitará regressões, exposição indevida de dado
 - [ ] Definir proteção contra injeção de conteúdo malicioso proveniente de fontes externas quando aplicável.
 - [ ] Definir política para dependências e atualizações de segurança.
 
-### Risco jurídico e reputacional
+### Risco jurídico, propriedade intelectual e reputação
 
 - [ ] Mapear riscos de difamação e falsa atribuição factual.
 - [ ] Mapear risco de descontextualização histórica.
 - [ ] Mapear risco de uso indevido de dados pessoais.
 - [ ] Mapear risco de parecer iniciativa oficial.
+- [ ] Avaliar uso de nomes, marcas, escudos, logos e identidade visual de terceiros.
+- [ ] Distinguir informação publicamente acessível de conteúdo livremente redistribuível.
+- [ ] Definir estratégia de licenciamento para código, documentação e dados estruturados antes do release público do MVP ou da aceitação de contribuições externas, o que ocorrer primeiro.
+- [ ] Definir política de preservação ou referência a documentos de terceiros, priorizando metadados, hashes e links quando a redistribuição integral não for adequada.
 - [ ] Definir mitigação por evidência, linguagem e correção.
 
 ### Registro de riscos
@@ -639,6 +655,7 @@ O Codex está formalmente liberado para implementação regular do MVP somente q
 - [ ] Gate F4 aprovado.
 - [ ] Arquitetura respeita custo obrigatório de R$ 0.
 - [ ] Decisões arquiteturais bloqueantes possuem ADR quando necessário.
+- [ ] Limites, preços e condições dos serviços externos críticos foram revalidados perto da data do CODEX READY.
 
 ## Experiência
 
@@ -654,6 +671,7 @@ O Codex está formalmente liberado para implementação regular do MVP somente q
 
 - [ ] Gate F7 aprovado.
 - [ ] Manutenção por exceção está operacionalmente especificada.
+- [ ] Acesso às fontes críticas do MVP foi revalidado perto da data do CODEX READY.
 
 ## Execução
 
@@ -765,6 +783,24 @@ Podem continuar evoluindo por versionamento normal:
 
 Entretanto, mudanças que conflitem com documentação CANONICAL devem seguir o processo formal definido no FF-0001.
 
+## 17.1 Validade do estado CODEX READY
+
+CODEX READY é uma aprovação baseada em um conjunto específico de documentos, decisões e premissas em determinado momento. Ele não constitui autorização permanente e irrestrita.
+
+Se, após a liberação:
+
+- um documento CANONICAL que afete o MVP sofrer mudança material;
+- uma decisão arquitetural bloqueante for substituída;
+- uma fonte crítica deixar de ser acessível;
+- uma condição de free tier ou custo zero deixar de ser verdadeira;
+- um risco crítico novo invalidar uma premissa anterior;
+
+as partes afetadas do estado CODEX READY devem ser marcadas como **REVIEW REQUIRED** até que uma análise de impacto confirme que a implementação pode continuar.
+
+Não é necessário paralisar tarefas comprovadamente não relacionadas. O bloqueio deve ser proporcional ao impacto da mudança.
+
+A revalidação deve registrar quais gates foram afetados e quais permanecem válidos.
+
 ---
 
 # 18. Anti-patterns
@@ -807,30 +843,35 @@ Escolher serviço gratuito sem considerar limites, lock-in, possibilidade de cob
 
 Permitir que automação transforme alegações sensíveis em fatos públicos sem as salvaguardas editoriais definidas.
 
+## Public-means-republishable
+
+Presumir que uma informação ou documento disponível publicamente pode ser copiado, redistribuído ou republicado integralmente sem análise de direitos, termos ou necessidade.
+
+## Gate bypass
+
+Usar implementação manual, ChatGPT, Codex, scripts ou experimentos como forma de cristalizar silenciosamente uma decisão que ainda deveria passar pelo processo de especificação e aprovação.
+
 ---
 
 # 19. Estado atual
 
-Na publicação desta versão DRAFT:
+Na entrada em vigor desta versão:
 
 - FF-0001 está **CANONICAL v1.0**;
+- FF-0002 está **CANONICAL v1.0**;
 - o repositório GitHub está criado;
 - a estrutura documental está criada;
 - o Fiel Fiscaliza permanece em fase de fundação e especificação;
 - Codex ainda **não está liberado para implementação regular do produto**.
 
-O próximo objetivo após aprovação deste documento é concluir a Fundação por meio do FF-0003 — DECISION_LOG e FF-0004 — GLOSSARY.
+O próximo objetivo é concluir a Fundação por meio do FF-0003 — DECISION_LOG e FF-0004 — GLOSSARY.
 
 ---
 
 # 20. Vigência
 
-Esta versão possui status **DRAFT**.
-
-Ela não se torna normativa até aprovação explícita de André.
-
-Quando aprovada, deverá ser promovida para:
+Esta versão possui status **CANONICAL** e entra em vigor em **2026-09-04** por aprovação explícita de André.
 
 **FF-0002 — PRE_CODEX_CHECKLIST v1.0 // CANONICAL**
 
-A partir dessa promoção, este documento passa a ser o mapa oficial de preparação do Fiel Fiscaliza até o estado CODEX READY.
+A partir desta data, este documento constitui o mapa oficial de preparação do Fiel Fiscaliza até o estado CODEX READY.
