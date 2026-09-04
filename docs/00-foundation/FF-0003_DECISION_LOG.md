@@ -2,8 +2,772 @@
 
 **Nome do documento:** Decision Log  
 **ID:** FF-0003  
-**Versão:** 0.0  
+**Versão:** 0.1  
 **Status:** DRAFT  
 **Última revisão:** 2026-09-04  
+**Responsável:** André  
+**Projeto:** Fiel Fiscaliza  
 
-> Estrutura reservada. Conteúdo ainda não especificado.
+---
+
+# 1. Propósito
+
+Este documento preserva as decisões relevantes tomadas ao longo da vida do Fiel Fiscaliza.
+
+Seu objetivo é impedir que decisões importantes fiquem enterradas apenas em chats, sejam esquecidas com o tempo ou sejam reinterpretadas sem rastreabilidade.
+
+O Decision Log registra principalmente:
+
+- decisões fundacionais;
+- decisões de produto;
+- decisões operacionais;
+- decisões de governança do projeto;
+- decisões que ainda não justificam um ADR próprio;
+- aprovações ou substituições de documentos canônicos;
+- decisões negativas relevantes, isto é, escolhas conscientes de **não** adotar algo naquele momento.
+
+Este documento é subordinado ao **FF-0001 — PROJECT_CONSTITUTION**, aos demais documentos CANONICAL específicos de cada área e aos ADRs aprovados.
+
+Se uma entrada deste log entrar em conflito com uma fonte de autoridade superior, prevalece a fonte superior.
+
+---
+
+# 2. O que este documento não é
+
+O FF-0003 não substitui:
+
+- especificações detalhadas;
+- ADRs;
+- políticas editoriais;
+- modelo de domínio;
+- arquitetura;
+- backlog;
+- documentação de implementação.
+
+Uma entrada deste log deve registrar **o que foi decidido, por quê e onde essa decisão passou a morar**.
+
+Quando uma decisão crescer a ponto de exigir especificação própria, a entrada permanece como registro histórico e passa a referenciar o documento responsável.
+
+---
+
+# 3. Status das decisões
+
+Os status abaixo pertencem às **entradas** do Decision Log e não substituem os estados documentais DRAFT, CANONICAL e DEPRECATED.
+
+### APROVADA
+
+Decisão explicitamente aceita por André e vigente no nível de autoridade indicado.
+
+### SUBSTITUÍDA
+
+Decisão anteriormente aprovada que foi posteriormente substituída por outra.
+
+A entrada original não deve ser removida.
+
+### REVOGADA
+
+Decisão que deixou de vigorar sem substituição direta.
+
+### PENDENTE
+
+Questão registrada, mas ainda não decidida.
+
+Entradas PENDENTES não constituem regra do projeto.
+
+---
+
+# 4. Estrutura das entradas
+
+Cada decisão deve, quando aplicável, registrar:
+
+- **ID**;
+- **data**;
+- **status**;
+- **decisão**;
+- **motivação**;
+- **fonte de autoridade / formalização**;
+- **impacto**;
+- **substitui / é substituída por**;
+- **observações**.
+
+A granularidade deve ser suficiente para reconstruir a evolução do projeto sem transformar o log em duplicação integral dos documentos canônicos.
+
+---
+
+# 5. Decisões fundacionais reconstruídas
+
+As entradas desta seção consolidam decisões tomadas durante a concepção inicial do Fiel Fiscaliza e posteriormente formalizadas, total ou parcialmente, nos documentos canônicos do projeto.
+
+---
+
+## FF-DEC-0001 — Nome oficial do projeto
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+O nome oficial e definitivo do projeto é **Fiel Fiscaliza**.
+
+### Motivação
+
+O nome é curto, intuitivo, diretamente relacionado à torcida do Corinthians e comunica de forma simples a finalidade de fiscalização coletiva do projeto.
+
+### Formalização
+
+- FF-0001 — PROJECT_CONSTITUTION, seção 2.1.
+
+### Impacto
+
+O nome deve ser utilizado consistentemente em documentação, repositório, produto e comunicações do projeto.
+
+---
+
+## FF-DEC-0002 — Natureza independente, comunitária e sem fins lucrativos
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+O Fiel Fiscaliza é um projeto independente, comunitário e sem fins lucrativos.
+
+Ele não existe para gerar retorno financeiro ao mantenedor nem como extensão de grupo político, dirigente, empresa ou instituição.
+
+### Motivação
+
+Preservar independência editorial e alinhar o produto à finalidade de utilidade pública para a comunidade corinthiana.
+
+### Formalização
+
+- FF-0001 — PROJECT_CONSTITUTION, seções 2, 5 e 44.
+
+---
+
+## FF-DEC-0003 — Missão do Fiel Fiscaliza
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+A missão do projeto é ajudar corinthianos a compreender, acompanhar, preservar e fiscalizar a vida institucional do Sport Club Corinthians Paulista por meio de informação pública, organizada, verificável, contextualizada e historicamente preservada.
+
+### Motivação
+
+O problema central identificado não é ausência absoluta de informação, mas dispersão, dificuldade de consulta, perda de contexto, baixa rastreabilidade e ausência de memória institucional acessível.
+
+### Formalização
+
+- FF-0001 — PROJECT_CONSTITUTION, seções 3 e 4.
+
+---
+
+## FF-DEC-0004 — Independência em relação ao SCCP e à Gaviões da Fiel
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+O Fiel Fiscaliza não representa oficialmente:
+
+- o Sport Club Corinthians Paulista;
+- a Gaviões da Fiel;
+- qualquer grupo político do clube.
+
+O fato de André ser associado da Gaviões da Fiel não torna o projeto institucionalmente vinculado à torcida organizada.
+
+### Motivação
+
+Permitir colaboração e proximidade com a comunidade sem criar falsa representação institucional ou comprometer independência editorial.
+
+### Formalização
+
+- FF-0001 — PROJECT_CONSTITUTION, seção 5.
+
+---
+
+## FF-DEC-0005 — Escopo institucional, não jornalismo esportivo geral
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+O Fiel Fiscaliza prioriza governança, política institucional, diretoria, conselhos, eleições, estatuto, finanças, Arena, contratos relevantes, investigações, processos, transparência, documentos, votações e memória política.
+
+O projeto não deve evoluir para portal geral de notícias esportivas.
+
+### Motivação
+
+Evitar perda de foco, sobrecarga operacional e competição desnecessária com veículos cuja função é cobrir futebol cotidiano.
+
+### Formalização
+
+- FF-0001 — PROJECT_CONSTITUTION, seções 14 e 15.
+
+---
+
+## FF-DEC-0006 — Integridade editorial acima de velocidade e engajamento
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+A credibilidade factual do Fiel Fiscaliza tem prioridade sobre velocidade de publicação, alcance, viralização ou alinhamento com percepções populares.
+
+O sistema deve distinguir explicitamente fatos, alegações, denúncias, investigações, processos, decisões, opiniões, rumores e estados de incerteza.
+
+### Motivação
+
+O domínio político, financeiro e jurídico do Corinthians envolve acusações, versões conflitantes e procedimentos ainda não concluídos. Uma ferramenta de fiscalização só possui utilidade duradoura se não transformar alegação em fato.
+
+### Formalização
+
+- FF-0001 — PROJECT_CONSTITUTION, seções 7, 8, 18 e 19.
+
+---
+
+## FF-DEC-0007 — Existência de investigação não comprova a acusação investigada
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+Quando uma investigação, denúncia ou processo estiver documentalmente comprovado, o fato confirmado é a existência daquele procedimento ou alegação.
+
+Isso não comprova automaticamente a veracidade material da acusação.
+
+### Motivação
+
+Evitar que o próprio ato de registrar investigações seja interpretado como atribuição de culpa.
+
+### Formalização
+
+- FF-0001 — PROJECT_CONSTITUTION v1.0, seção 7.
+
+---
+
+## FF-DEC-0008 — Fonte primária não equivale a verdade material absoluta
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+Fontes primárias têm prioridade para comprovar atos, documentos, decisões e declarações emitidas por suas respectivas instituições.
+
+Entretanto, uma fonte primária não torna automaticamente verdadeira toda alegação material que contenha quando houver contestação, apuração pendente ou posição de parte interessada.
+
+### Motivação
+
+Separar corretamente autoridade documental de verdade material sobre fatos controvertidos.
+
+### Formalização
+
+- FF-0001 — PROJECT_CONSTITUTION v1.0, seção 10.
+
+---
+
+## FF-DEC-0009 — Proveniência é parte estrutural do dado
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+Informações factuais relevantes devem carregar proveniência suficiente para reconstruir sua origem, publicação, coleta, documento ou URL e contexto temporal.
+
+### Motivação
+
+Fiscalização sem rastreabilidade se transforma facilmente em reprodução de narrativa. A evidência deve acompanhar o dado desde sua modelagem.
+
+### Formalização
+
+- FF-0001 — PROJECT_CONSTITUTION, seção 9.
+
+---
+
+## FF-DEC-0010 — Histórico não deve ser sobrescrito pelo estado atual
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+O Fiel Fiscaliza deve modelar mudanças ao longo do tempo e preservar estados anteriores.
+
+Mudanças de cargo, valores, decisões, investigações, relações e estrutura institucional devem gerar evolução histórica, não substituição destrutiva do passado.
+
+### Motivação
+
+O Corinthians pode passar por reforma estatutária, intervenção judicial, SAF, mudança de órgãos ou outras reestruturações. O sistema precisa sobreviver conceitualmente a essas mudanças.
+
+### Formalização
+
+- FF-0001 — PROJECT_CONSTITUTION, seções 11, 12 e 13.
+
+---
+
+## FF-DEC-0011 — Custo operacional mensal obrigatório de R$ 0
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+Enquanto o projeto for mantido pessoalmente por André, sua arquitetura deve permitir operação com custo mensal obrigatório de **R$ 0**.
+
+Custos opcionais podem existir apenas por decisão explícita e não devem se tornar silenciosamente indispensáveis.
+
+### Motivação
+
+O Fiel Fiscaliza não possui objetivo de lucro e não deve transformar-se em despesa recorrente pessoal para continuar existindo.
+
+### Formalização
+
+- FF-0001 — PROJECT_CONSTITUTION, seções 22 e 23.
+
+---
+
+## FF-DEC-0012 — Preferência por static-first, portabilidade e complexidade sob demanda
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+A arquitetura deve preferir soluções static-first, portáteis, observáveis, simples de manter e baseadas em padrões abertos.
+
+Infraestrutura dinâmica ou complexa deve ser introduzida somente quando um requisito concreto a justificar.
+
+### Motivação
+
+Reduzir custo, superfície de ataque, manutenção e lock-in, preservando capacidade futura de migração.
+
+### Formalização
+
+- FF-0001 — PROJECT_CONSTITUTION, seções 24, 27 e 28.
+
+---
+
+## FF-DEC-0013 — IA paga fora do caminho crítico público
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+IA pode auxiliar desenvolvimento, pesquisa, classificação, extração e revisão, mas APIs pagas de IA não devem ser requisito para o funcionamento essencial da aplicação pública enquanto vigorar o requisito de custo zero.
+
+### Motivação
+
+Evitar custo variável e dependência comercial no caminho crítico do produto.
+
+### Formalização
+
+- FF-0001 — PROJECT_CONSTITUTION, seções 25 e 26.
+
+---
+
+## FF-DEC-0014 — Manutenção por exceção
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+André não deve precisar alimentar manualmente o Fiel Fiscaliza todos os dias.
+
+A direção operacional desejada é:
+
+**coleta automática → detecção → normalização → fila de revisão → validação humana → publicação.**
+
+### Motivação
+
+O projeto precisa ser sustentável por uma pessoa e aproveitar software para trabalho repetitivo, preservando julgamento humano para significado editorial.
+
+### Formalização
+
+- FF-0001 — PROJECT_CONSTITUTION, seções 20 e 21.
+
+---
+
+# 6. Governança documental e ambiente de trabalho
+
+---
+
+## FF-DEC-0015 — Documentação é memória oficial; chats são espaço de elaboração
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+Chats são utilizados para pesquisar, discutir, propor e revisar.
+
+Documentos formais são utilizados para estabelecer, preservar, comunicar e versionar decisões.
+
+Princípio adotado:
+
+> **Chats servem para pensar. Documentos servem para lembrar.**
+
+### Motivação
+
+Reduzir perda de contexto e evitar que decisões importantes dependam da memória de uma conversa ou de um modelo.
+
+### Formalização
+
+- FF-0001 — PROJECT_CONSTITUTION, seção 35.
+
+---
+
+## FF-DEC-0016 — Estados documentais e hierarquia de autoridade
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+Estados formais de documentos:
+
+- DRAFT;
+- CANONICAL;
+- DEPRECATED.
+
+Hierarquia de autoridade:
+
+1. FF-0001 — PROJECT_CONSTITUTION;
+2. documentos CANONICAL específicos da área;
+3. ADRs aprovados;
+4. FF-0003 — DECISION_LOG;
+5. documentos DRAFT;
+6. chats e discussões ainda não formalizadas.
+
+### Motivação
+
+Impedir contradições silenciosas e tornar explícito qual documento prevalece quando houver divergência.
+
+### Formalização
+
+- FF-0001 — PROJECT_CONSTITUTION, seções 36 a 39.
+
+---
+
+## FF-DEC-0017 — Projeto ChatGPT como workspace intelectual e GitHub como repositório versionado
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+O trabalho do Fiel Fiscaliza será dividido entre:
+
+- **Projeto Fiel Fiscaliza no ChatGPT:** pesquisa, raciocínio, arquitetura, especificação, documentação e revisão;
+- **GitHub:** preservação versionada da documentação e, futuramente, do código e dos dados do projeto;
+- **Codex:** agente de implementação utilizado seletivamente quando sua atuação autônoma sobre o repositório gerar benefício real.
+
+Documentos CANONICAL mantidos no projeto e no repositório devem representar as mesmas decisões vigentes.
+
+### Motivação
+
+Separar elaboração intelectual, memória versionada e execução de código, reduzindo dependência da memória de qualquer ferramenta individual.
+
+### Impacto
+
+Exige disciplina de sincronização das decisões canônicas relevantes entre as fontes utilizadas no Projeto ChatGPT e o repositório.
+
+---
+
+## FF-DEC-0018 — Repositório oficial criado no GitHub
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+O repositório versionado do projeto foi criado como:
+
+`andresant-ana/fiel-fiscaliza`
+
+O repositório está público em sua configuração atual.
+
+### Motivação
+
+Permitir transparência, auditabilidade, histórico de mudanças e futura colaboração.
+
+### Observação
+
+A existência pública do repositório não determina, por si só, a licença futura de código, documentação ou dados.
+
+---
+
+## FF-DEC-0019 — Estrutura documental inicial numerada e modular
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+A documentação formal foi organizada em blocos funcionais e IDs estáveis `FF-XXXX`, incluindo inicialmente:
+
+- `00-foundation`;
+- `10-product`;
+- `20-editorial`;
+- `30-domain`;
+- `40-architecture`;
+- `50-experience`;
+- `60-quality`;
+- `70-operations`;
+- `80-delivery`.
+
+Foi criada uma estrutura inicial até **FF-0039**, com diretório separado para ADRs.
+
+### Motivação
+
+Facilitar navegação, referência cruzada, evolução modular e instrução de agentes.
+
+### Impacto
+
+A estrutura pode evoluir futuramente, mas IDs já utilizados não devem ser reutilizados silenciosamente para significados diferentes.
+
+---
+
+# 7. Uso do Codex e preparação para implementação
+
+---
+
+## FF-DEC-0020 — Cota do Codex é recurso escasso
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+O Fiel Fiscaliza deve utilizar ChatGPT prioritariamente para pesquisa, produto, arquitetura, especificação, documentação, revisão e decomposição de tarefas.
+
+Codex deve ser reservado para situações em que sua capacidade de navegar e modificar o repositório de forma autônoma produza ganho significativo.
+
+### Motivação
+
+A cota disponível no plano de André é limitada e concorre com outros projetos pessoais.
+
+### Formalização
+
+- FF-0001 — PROJECT_CONSTITUTION, seção 34.
+- FF-0002 — PRE_CODEX_CHECKLIST, seções 15 e 16.
+
+---
+
+## FF-DEC-0021 — Implementação regular só após estado CODEX READY
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+O Codex não deve iniciar implementação regular do código de produção do MVP antes do cumprimento dos gates definidos no FF-0002 e da declaração formal **CODEX READY — Fiel Fiscaliza MVP**.
+
+Exceções técnicas prévias devem ser limitadas, explicitamente aprovadas e não podem cristalizar silenciosamente requisitos ainda em aberto.
+
+### Motivação
+
+Evitar coding-first, desperdício de cota e retrabalho arquitetural/editorial.
+
+### Formalização
+
+- FF-0002 — PRE_CODEX_CHECKLIST v1.0 // CANONICAL.
+
+---
+
+## FF-DEC-0022 — Classificação Verde, Amarela e Vermelha para uso do Codex
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+Tarefas serão classificadas antes de consumir Codex:
+
+- **Verde:** evitar Codex;
+- **Amarela:** avaliar caso a caso;
+- **Vermelha:** Codex prioritário.
+
+### Motivação
+
+Usar a cota onde a autonomia sobre múltiplos arquivos, testes e ciclos de correção gera maior retorno.
+
+### Formalização
+
+- FF-0002 — PRE_CODEX_CHECKLIST, seção 15.
+
+---
+
+## FF-DEC-0023 — CODEX READY é revalidável, não permanente
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+Após um estado CODEX READY, mudanças materiais em documentos canônicos, arquitetura, free tiers, fontes críticas ou riscos podem colocar apenas as áreas afetadas em **REVIEW REQUIRED**.
+
+Tarefas comprovadamente não relacionadas não precisam ser bloqueadas.
+
+### Motivação
+
+O Corinthians, as fontes públicas e a infraestrutura gratuita mudam ao longo do tempo. A autorização de implementação precisa refletir as premissas realmente vigentes.
+
+### Formalização
+
+- FF-0002 — PRE_CODEX_CHECKLIST, seção 17.1.
+
+---
+
+# 8. Decisões conscientemente adiadas
+
+---
+
+## FF-DEC-0024 — Stack e provedores de infraestrutura ainda não estão definidos
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+Não há, neste momento, decisão CANONICAL sobre:
+
+- framework de frontend;
+- linguagem principal de implementação;
+- banco de dados;
+- formato definitivo de persistência;
+- provedor de hospedagem;
+- provedor de jobs;
+- Cloudflare;
+- Supabase;
+- GitHub Actions como runtime operacional;
+- JSON como armazenamento principal;
+- necessidade de backend em runtime.
+
+Essas possibilidades foram discutidas apenas como alternativas iniciais e deverão ser decididas na fase de arquitetura com base no MVP e nos requisitos canônicos.
+
+### Motivação
+
+Evitar transformar explorações prematuras em compromisso técnico antes de produto, editorial e domínio estarem definidos.
+
+### Formalização
+
+- FF-0002 — PRE_CODEX_CHECKLIST, Fase 4.
+
+---
+
+## FF-DEC-0025 — Licenciamento ainda não definido
+
+**Data:** 2026-09-04  
+**Status:** PENDENTE  
+
+### Questão
+
+Ainda não foi escolhida licença para:
+
+- código;
+- documentação;
+- dados estruturados.
+
+### Restrição já aprovada
+
+A estratégia deve ser definida antes do release público do MVP ou da aceitação de contribuições externas, o que ocorrer primeiro.
+
+A disponibilidade pública do repositório não deve ser interpretada como autorização irrestrita de reutilização.
+
+### Formalização da pendência
+
+- FF-0002 — PRE_CODEX_CHECKLIST, Fase 6.
+
+---
+
+# 9. Aprovação dos primeiros documentos canônicos
+
+---
+
+## FF-DEC-0026 — FF-0001 promovido a CANONICAL v1.0
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+O **FF-0001 — PROJECT_CONSTITUTION v1.0** foi explicitamente aprovado por André e tornou-se a autoridade normativa máxima do Fiel Fiscaliza.
+
+### Commit de formalização
+
+`eb70be12ac286a3f755d60db40d446b065f159c5`
+
+### Impacto
+
+Toda decisão posterior deve respeitar ou formalmente alterar o FF-0001 quando houver conflito.
+
+---
+
+## FF-DEC-0027 — FF-0002 promovido a CANONICAL v1.0
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+O **FF-0002 — PRE_CODEX_CHECKLIST v1.0** foi explicitamente aprovado por André e tornou-se o mapa oficial de preparação do projeto até o estado CODEX READY.
+
+### Commit de formalização
+
+`060d2730a450969a10d26e8be60c7c3f6b889246`
+
+### Impacto
+
+O projeto permanece em fase pré-Codex e deve concluir os gates pertinentes antes da implementação regular do MVP.
+
+---
+
+# 10. Pendências abertas na data desta versão
+
+As entradas abaixo não constituem decisões aprovadas; apenas consolidam questões já reconhecidas como pendentes.
+
+- concluir e canonizar FF-0003;
+- produzir e canonizar FF-0004 — GLOSSARY;
+- definir convenção mínima de impacto/dependência entre documentos canônicos;
+- concluir Gate F0;
+- definir produto e MVP nas fases posteriores;
+- definir arquitetura somente após requisitos, política editorial e domínio;
+- definir estratégia de licenciamento antes do marco estabelecido em FF-0002;
+- manter Codex fora da implementação regular até CODEX READY.
+
+---
+
+# 11. Regra para novas entradas
+
+Uma nova decisão relevante tomada em chat deve provocar a pergunta:
+
+> **Onde esta decisão deve morar?**
+
+Se houver documento canônico específico, ele deve ser atualizado pelo processo aplicável e o Decision Log pode registrar a alteração de forma resumida.
+
+Se não houver documento específico e a decisão for relevante o suficiente para sobreviver ao chat, ela deve receber uma entrada neste log.
+
+Decisões arquiteturais relevantes que exigirem análise de contexto, alternativas e consequências devem preferencialmente utilizar ADR.
+
+---
+
+# 12. Vigência
+
+Esta versão possui status **DRAFT**.
+
+Ela reconstrói as principais decisões já tomadas até 2026-09-04, mas ainda depende de revisão e aprovação explícita de André.
+
+Quando aprovada, deverá ser promovida para:
+
+**FF-0003 — DECISION_LOG v1.0 // CANONICAL**
+
+A partir dessa promoção, novas decisões relevantes deverão ser adicionadas de forma incremental, preservando as entradas históricas anteriores.
