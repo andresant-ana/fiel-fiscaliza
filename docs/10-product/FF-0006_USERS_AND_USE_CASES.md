@@ -2,7 +2,7 @@
 
 **Nome do documento:** Users and Use Cases  
 **ID:** FF-0006  
-**Versão:** 0.2  
+**Versão:** 0.3  
 **Status:** DRAFT  
 **Última revisão:** 2026-09-04  
 **Responsável:** André  
@@ -12,21 +12,18 @@
 
 # 1. Propósito
 
-Este documento identifica os grupos de usuários candidatos do Fiel Fiscaliza, descreve as tarefas institucionais que o produto pretende ajudar a realizar e registra a evidência disponível para decidir quais usuários e casos de uso poderão orientar o MVP.
+Este documento identifica os usuários que podem obter maior valor do Fiel Fiscaliza, descreve os principais Jobs to Be Done (JTBD) e registra a evidência utilizada para orientar FF-0007 — SCOPE e FF-0008 — MVP_SPEC.
 
-Seu objetivo não é inventar personas detalhadas nem transformar interesse aparente em demanda comprovada.
+Seu objetivo não é provar demanda de mercado nem produzir personas artificiais.
 
-O documento deve responder progressivamente:
+O documento deve permitir responder:
 
-- quem pode obter valor real do Fiel Fiscaliza;
-- quais problemas essas pessoas tentam resolver;
-- em quais situações esses problemas aparecem;
-- como essas tarefas são realizadas atualmente;
-- onde existe atrito, perda de contexto ou custo de verificação;
-- quais alternativas já resolvem parte do problema;
-- quais casos de uso possuem melhor combinação entre utilidade, frequência, relevância institucional e sustentabilidade operacional;
-- quais grupos não devem orientar o produto mesmo que consigam utilizá-lo;
-- quais hipóteses já possuem evidência documental e quais ainda dependem de evidência comportamental.
+- para quem o produto será inicialmente desenhado;
+- quais tarefas institucionais pretende tornar menos custosas;
+- quais usuários são primários e secundários;
+- quais casos de uso possuem prioridade de produto;
+- quais incertezas permanecem abertas;
+- quais usos não devem orientar o produto.
 
 O FF-0006 é subordinado ao:
 
@@ -35,15 +32,67 @@ O FF-0006 é subordinado ao:
 - FF-0004 — GLOSSARY;
 - FF-0005 — PRODUCT_VISION.
 
-A Product Vision estabelece que a unidade básica de valor do Fiel Fiscaliza é uma questão institucional que se torna mais fácil de compreender, verificar e reconstruir, e não uma notícia publicada.
+A Product Vision estabelece que a unidade básica de valor do Fiel Fiscaliza é **uma questão institucional que se torna mais fácil de compreender, verificar e reconstruir**, e não uma notícia publicada.
 
 ---
 
-# 2. Estado da pesquisa nesta versão
+# 2. Mudança metodológica da versão 0.3
 
-A versão 0.2 incorpora uma pesquisa documental pública realizada em **2026-09-04** sobre o ecossistema de informação, transparência, governança, fiscalização e memória institucional relacionado ao Corinthians.
+A versão 0.2 previa entrevistas semiestruturadas e testes de tarefa como condição para promover segmentos e casos de uso a `VALIDADO PARA F1`.
 
-A pesquisa incluiu, entre outros:
+Essa exigência foi reavaliada em 2026-09-04.
+
+Para evitar que discovery síncrono se transforme em gargalo desproporcional para um projeto individual, a pesquisa comportamental pré-MVP deixa de ser requisito obrigatório para o Gate F1.
+
+A decisão **não** significa que entrevistas ou testes de usuários sejam inúteis.
+
+Significa que, neste estágio, o projeto aceita avançar com:
+
+1. pesquisa documental pública já realizada;
+2. análise explícita de alternativas e contraprovas;
+3. decisões de produto com nível de confiança declarado;
+4. MVP deliberadamente pequeno e reversível;
+5. validação posterior por uso real, feedback público ou pesquisa direcionada quando uma incerteza material justificar o custo.
+
+A consequência é uma **dívida de validação de produto conscientemente aceita**, registrada neste documento.
+
+---
+
+# 3. Regra epistemológica
+
+As seguintes classificações são utilizadas no FF-0006.
+
+## HIPÓTESE
+
+Proposição plausível ainda sem evidência significativa suficiente.
+
+## EVIDÊNCIA DOCUMENTAL
+
+Proposição observada de modo consistente em fontes públicas, documentos, cobertura jornalística, discussões ou iniciativas do ecossistema.
+
+Demonstra que a tarefa ou necessidade existe publicamente, mas não prova frequência individual, intensidade da dor ou recorrência de uso de um produto dedicado.
+
+## DECIDIDO PARA F1
+
+Decisão de produto adotada com base na melhor evidência disponível para permitir avanço de escopo e MVP.
+
+`DECIDIDO PARA F1` **não significa validação empírica de demanda**.
+
+A decisão pode ser revista se uso real, feedback ou nova pesquisa produzir contraprova relevante.
+
+## REFUTADO / DEPRIORIZADO
+
+Hipótese ou caso de uso conscientemente afastado por baixo valor, boa solução alternativa, baixa viabilidade, risco incompatível, escopo excessivo ou conflito com documentos CANONICAL.
+
+O projeto não deve utilizar a palavra “validado” para descrever demanda ou comportamento de usuários sem evidência comportamental apropriada.
+
+---
+
+# 4. Base de evidência disponível
+
+A versão 0.3 utiliza como principal evidência de discovery uma pesquisa documental pública aprofundada realizada em 2026-09-04 sobre o ecossistema de informação, transparência, governança, fiscalização e memória institucional do Corinthians.
+
+A pesquisa examinou, entre outros:
 
 - portal oficial de Transparência do SCCP;
 - demonstrações financeiras, eleições, conselhos, atas e regimentos publicados pelo clube;
@@ -57,54 +106,68 @@ A pesquisa incluiu, entre outros:
 - Coletivo Voz Corinthiana;
 - Projeto Time do Povo;
 - Reddit r/Corinthians;
-- pesquisa acadêmica;
+- produção acadêmica;
 - MPSP;
 - TJSP;
 - CVM / Fundos.NET;
-- Receita Federal e dados de CNPJ;
+- Receita Federal e dados públicos de CNPJ;
 - Diários Oficiais e outras bases públicas auxiliares.
 
-A pesquisa documental encontrou evidência forte de que determinadas tarefas existem publicamente e se repetem no ecossistema, mas **não é suficiente para declarar qual segmento deve ser o usuário primário do MVP, qual é a frequência real dessas tarefas por pessoa ou quão forte é a disposição de usar uma ferramenta dedicada para resolvê-las**.
-
-Portanto, esta versão permanece **DRAFT**.
+A pesquisa procurou evidências favoráveis e contraprovas para a tese do FF-0005.
 
 ---
 
-# 3. Regra epistemológica
+# 5. Síntese do problema observado
 
-A partir desta versão, hipóteses de usuário e de caso de uso devem utilizar os seguintes estados.
+A pesquisa não encontrou ausência absoluta de informação institucional sobre o Corinthians.
 
-## HIPÓTESE
+Existe um ecossistema relevante de documentos oficiais, imprensa, comunidades, torcidas, movimentos, registros judiciais, bases governamentais e pesquisas independentes.
 
-Proposição plausível ainda sem evidência significativa suficiente.
+A fricção observada está principalmente em:
 
-## EVIDÊNCIA DOCUMENTAL
+- fragmentação entre fontes;
+- informação consumida como fluxo e difícil de reencontrar;
+- contexto temporal disperso;
+- documentos e notícias que precisam ser correlacionados manualmente;
+- números financeiros com datas-base ou conceitos diferentes;
+- dificuldade de distinguir estágio atual de investigações e processos;
+- decisões coletivas sem voto individual público;
+- versões conflitantes e alegações que exigem rastreamento até a origem;
+- conhecimento necessário para interpretar documentos jurídicos, financeiros e estatutários.
 
-Proposição observada de modo consistente em fontes públicas, documentos, cobertura jornalística, discussões ou iniciativas do ecossistema.
-
-Esse estado demonstra que a tarefa ou necessidade existe publicamente, mas não demonstra por si só frequência individual, intensidade da dor ou prioridade de produto.
-
-## EVIDÊNCIA COMPORTAMENTAL
-
-Proposição sustentada por episódios reais relatados por participantes ou pela observação direta de uma pessoa executando a tarefa.
-
-## VALIDADO PARA F1
-
-Proposição com evidência documental e comportamental suficiente, dentro das limitações desta fase, para orientar FF-0007 e FF-0008.
-
-## REFUTADO / DEPRIORIZADO
-
-Hipótese que a pesquisa mostrou possuir baixa frequência, baixo valor, boa solução alternativa, baixa viabilidade, risco incompatível com o projeto ou conflito com os documentos CANONICAL.
-
-Nenhum segmento ou caso de uso deve ser promovido a prioridade de MVP apenas porque parece intuitivo ao mantenedor.
-
-A experiência pessoal de André é evidência válida de uma necessidade individual, mas não prova, sozinha, que a mesma necessidade possua relevância suficiente para um público externo.
+A oportunidade de produto permanece **plausível, não comprovada como demanda de mercado**.
 
 ---
 
-# 4. Usuário, stakeholder e objeto de fiscalização
+# 6. Contraprovas e alternativas atuais
 
-Esses conceitos não devem ser confundidos.
+O Fiel Fiscaliza não parte da premissa de que usuários estejam sem solução.
+
+Hoje muitas perguntas podem ser respondidas utilizando uma combinação de:
+
+- Google e outros mecanismos de busca;
+- portal oficial do SCCP;
+- veículos de imprensa;
+- portais especializados;
+- fóruns e redes sociais;
+- registros do Judiciário e Ministério Público;
+- CVM e outras bases públicas;
+- arquivos pessoais, contatos e conhecimento prévio de usuários especializados.
+
+Portanto, o produto só se justifica se reduzir materialmente algum dos seguintes custos:
+
+- tempo de reconstrução;
+- quantidade de fontes que precisam ser correlacionadas;
+- risco de usar informação desatualizada;
+- dificuldade de chegar à fonte original;
+- dificuldade de compreender status, vigência ou incerteza;
+- perda de memória histórica.
+
+A existência dessas alternativas é contraprova permanente contra qualquer tentativa de construir apenas “mais um lugar com as mesmas notícias”.
+
+---
+
+# 7. Usuário, stakeholder e objeto de fiscalização
 
 ## Usuário
 
@@ -114,544 +177,223 @@ Pessoa que utiliza o Fiel Fiscaliza para compreender, verificar, pesquisar, reco
 
 Pessoa ou organização afetada pelo projeto, interessada em seus resultados ou capaz de fornecer contexto, crítica, dados públicos ou colaboração.
 
-Um stakeholder pode nunca utilizar a aplicação pública.
-
 ## Objeto de fiscalização
 
 Pessoa, órgão, organização, decisão, documento, contrato, processo, votação ou outro elemento institucional documentado pelo Fiel Fiscaliza.
 
 Ser objeto de fiscalização não torna alguém usuário do produto.
 
-Essa distinção impede que a experiência seja desenhada principalmente para as pessoas fiscalizadas em vez de para quem precisa compreender a instituição.
+O produto deve ser desenhado prioritariamente para quem precisa compreender a instituição, não para agradar as pessoas fiscalizadas.
 
 ---
 
-# 5. Síntese da pesquisa documental
+# 8. Usuário primário do MVP
 
-## 5.1 Evidência observada
+## 8.1 Torcedor institucionalmente engajado
 
-A pesquisa não encontrou falta absoluta de informação institucional sobre o Corinthians.
+**Status:** DECIDIDO PARA F1  
+**Nível de confiança:** moderado  
+**Papel:** usuário primário do MVP
 
-Ao contrário, existe um ecossistema significativo de:
+É o corinthiano que acompanha com alguma recorrência temas como:
 
-- documentos oficiais;
-- cobertura jornalística;
-- fóruns e comunidades;
-- torcidas organizadas;
-- coletivos de governança;
-- propostas de reforma institucional;
-- registros judiciais e administrativos;
-- bases públicas governamentais.
+- governança;
+- finanças;
+- eleições;
+- conselhos;
+- estatuto;
+- Arena;
+- investigações;
+- processos;
+- decisões institucionais.
 
-A fricção observada está principalmente em **fragmentação, heterogeneidade, perda de contexto temporal, dificuldade de reencontrar fontes, divergência de conceitos e custo de reconstrução**.
+Pode ou não participar de organizada, associação, movimento, fórum ou grupo político.
 
-O portal oficial do SCCP publica materiais relevantes, mas sua organização é predominantemente documental. Notícias oferecem contexto e atualização, mas são consumidas como fluxo. Fóruns e redes ajudam a revelar perguntas e controvérsias, mas misturam opinião, rumor e informação não confirmada. Bases públicas podem oferecer evidência primária, porém exigem conhecimento para consulta e interpretação.
+A escolha não presume qualquer alinhamento partidário interno.
 
-## 5.2 Interpretação de produto
+### Por que foi escolhido
 
-A pesquisa torna mais plausível a tese de que existe espaço para uma camada independente orientada a reconstrução de questões institucionais.
+A pesquisa documental encontrou os sinais mais consistentes de necessidade recorrente nesse grupo:
 
-Essa é uma **interpretação da pesquisa**, não uma prova de que o Fiel Fiscaliza possui demanda suficiente ou de que nenhuma solução equivalente existe.
+- debates públicos frequentes;
+- mobilização de torcidas e coletivos;
+- necessidade de reconstruir fatos e documentos;
+- interesse em votações, finanças, estatuto e responsabilização;
+- uso repetido de fontes distintas para sustentar discussões.
 
-A diferenciação candidata mais defensável não é competir com imprensa por velocidade nem reproduzir o portal oficial, mas reduzir o esforço necessário para conectar:
+### Necessidades principais
 
-**fonte → afirmação/fato → evento → entidade → estado temporal → histórico.**
+- verificar afirmações;
+- reencontrar documentos e fontes;
+- reconstruir cronologias;
+- saber o estado atual de questões antigas;
+- contextualizar números;
+- compreender decisões sem inferir informação ausente;
+- usar histórico em vez de memória informal.
 
-Essa formulação permanece uma hipótese de produto a ser testada com usuários.
+### Limitação da decisão
 
----
+Não foi demonstrado por entrevista ou analytics que esse usuário utilizará o produto com determinada frequência.
 
-# 6. Inventário resumido do ecossistema atual
-
-## 6.1 SCCP — Transparência
-
-**Tipo:** fonte oficial / primária para atos e publicações do clube.  
-**Referências públicas:**
-
-- https://www.corinthians.com.br/clube/transparencia
-- https://www.corinthians.com.br/clube/transparencia/demonstracoes-financeiras-e-balancetes-patrimoniais
-- https://www.corinthians.com.br/clube/transparencia/eleicoes
-- https://www.corinthians.com.br/clube/transparencia/atas-do-conselho
-- https://www.corinthians.com.br/clube/transparencia/conselho-deliberativo
-- https://www.corinthians.com.br/clube/transparencia/presidencia-e-diretoria
-- https://www.corinthians.com.br/clube/transparencia/regimentos
-
-**Valor observado:** documentos oficiais relevantes para governança, eleições, demonstrações financeiras, conselhos, atas e regras institucionais.
-
-**Fricção observada:** o acervo responde bem à pergunta “o que o clube publicou?”, mas não necessariamente à pergunta “como esta questão evoluiu?” ou “quais documentos de períodos diferentes preciso correlacionar para entender isto?”.
-
-**Observação técnica:** durante a pesquisa, algumas páginas indexadas retornaram bloqueios a acesso automatizado. Isso é sinal de risco operacional para futura coleta, não prova de proibição de automação.
+A decisão é suficiente para orientar um MVP pequeno, mas deverá ser reavaliada após evidência de uso real.
 
 ---
 
-## 6.2 Imprensa e portais especializados
+# 9. Usuários secundários
 
-### Meu Timão
+## 9.1 Torcedor com dúvida institucional pontual
 
-Referências:
+**Status:** DECIDIDO PARA F1  
+**Nível de confiança:** moderado  
+**Papel:** usuário secundário relevante
 
-- https://www.meutimao.com.br/
-- https://www.meutimao.com.br/forum-do-corinthians/
+Não acompanha política diariamente, mas procura contexto quando uma crise, eleição, investigação, dívida ou decisão ganha relevância.
 
-Valor observado:
+Este usuário exige baixa barreira cognitiva e ajuda a impedir que o produto seja compreensível apenas por especialistas.
 
-- cobertura histórica extensa;
-- páginas e notícias sobre política, diretoria, Arena, estatuto e finanças;
-- fórum público muito ativo;
-- corpus útil para descobrir perguntas espontâneas da torcida.
+## 9.2 Jornalista, comunicador ou criador de conteúdo
 
-Limite:
+**Status:** DECIDIDO PARA F1  
+**Nível de confiança:** moderado  
+**Papel:** usuário secundário / power user
 
-- notícia e fórum não constituem base canônica de fatos;
-- conteúdo comunitário mistura opinião, hipótese, rumor e informação verificável.
+Pode obter valor ao localizar fonte original, datas, cronologias e registros públicos.
 
-### ge
+O produto não deve se tornar serviço de pauta, clipping ou substituto de apuração jornalística.
 
-Referência:
+## 9.3 Pesquisador histórico, acadêmico ou analista externo
 
-- https://ge.globo.com/futebol/times/corinthians/
+**Status:** DECIDIDO PARA F1  
+**Nível de confiança:** moderado/baixo para o MVP; alto para visão de longo prazo  
+**Papel:** usuário secundário
 
-Valor observado:
+Pode obter alto valor do patrimônio acumulado, mas não deve comandar o escopo inicial.
 
-- cobertura profissional de finanças, política, processos e investigações;
-- útil para descoberta, contexto e triangulação.
-
-### UOL Esporte
-
-Referência:
-
-- https://www.uol.com.br/esporte/
-
-Valor observado:
-
-- cobertura frequente de política, Arena, investigação e Judiciário;
-- útil para identificar divergências entre versões, documentos e cálculos.
-
-### Central do Timão e Alambrado Alvinegro
-
-Referências:
-
-- https://centraldotimao.com.br/
-- https://alambradoalvinegro.com.br/
-
-Valor observado:
-
-- ampliam diversidade de cobertura especializada e de atores institucionais ou comunitários.
-
----
-
-## 6.3 Torcidas, movimentos e advocacy
-
-### Gaviões da Fiel
-
-Referência:
-
-- https://gavioes.com.br/
-
-A entidade declara publicamente entre seus objetivos acompanhar e fiscalizar o Corinthians e publica posicionamentos sobre temas institucionais.
-
-É fonte primária para **suas próprias posições e atos**, mas não deve ser tratada como árbitro neutro sobre fatos controvertidos envolvendo terceiros.
-
-### SAFiel
-
-Referência:
-
-- https://safiel.com.br/
-
-É uma proposta de transformação societária e de governança. Sua existência demonstra demanda por discussões profundas sobre estrutura institucional, mas seu conteúdo possui natureza propositiva e interessada.
-
-### Coletivo Voz Corinthiana
-
-Referências documentais localizadas:
-
-- https://www.meutimao.com.br/noticias-do-corinthians/509649/democratizar-para-profissionalizar-coletivo-convoca-torcida-para-reformar-estatuto-do-corinthians
-- https://www.meutimao.com.br/noticias-do-corinthians/513979/coletivo-conclui-documento-sugestivo-a-reforma-do-estatuto-do-corinthians-confira-os-detalhes
-- https://www.meutimao.com.br/noticias-do-corinthians/528526/coletivo-protocola-pedido-exigindo-votacao-aberta-e-nominal-na-reforma-do-estatuto-do-corinthians
-- https://www.meutimao.com.br/noticias-do-corinthians/535465/coletivo-voz-corinthiana-anuncia-suspensao-das-atividades-no-dia-a-dia-do-corinthians
-
-A pesquisa encontrou evidência de mobilização em torno de reforma estatutária, governança e voto nominal. Também encontrou relato de suspensão de atividades regulares em 2026 associado a desgaste, polarização, ataques e ameaças.
-
-Esse caso reforça simultaneamente duas hipóteses:
-
-1. existe interesse intenso por governança em parte da torcida;
-2. produto de fiscalização deve evitar mecanismos que personalizem, gamifiquem ou facilitem perseguição de pessoas.
-
-### Projeto Time do Povo
-
-Referência:
-
-- https://x.com/proj_timedopovo
-
-Foi localizado como iniciativa pública ligada a debate e pressão institucional. Alcance, cadência e cobertura atual não foram medidos de forma suficiente para caracterização mais forte nesta versão.
-
----
-
-## 6.4 Comunidades públicas
-
-### Fórum Meu Timão
-
-O fórum possui grande volume de discussões e recorrência de temas políticos, financeiros e de governança.
-
-Isso demonstra atividade pública relevante, mas não permite inferir a proporção de toda a torcida que possui essas necessidades.
-
-### Reddit r/Corinthians
-
-Referência:
-
-- https://www.reddit.com/r/Corinthians/
-
-Foram encontrados debates sobre reforma estatutária, impeachment, SAF, finanças, conselhos e votações.
-
-É um bom campo de discovery qualitativo e recrutamento de usuários digitais, mas não é amostra representativa da torcida.
-
----
-
-## 6.5 Fontes primárias externas ao clube
-
-Fontes potencialmente críticas para casos específicos:
-
-- MPSP — https://www.mpsp.mp.br/
-- TJSP — https://www.tjsp.jus.br/Processos
-- CVM / Fundos.NET — https://cvmweb.cvm.gov.br/
-- Dados Abertos CVM — https://dados.cvm.gov.br/
-- Receita Federal / Dados Abertos — https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/dados-abertos/cadastros
-- JUCESP — https://vre.jucesp.sp.gov.br/
-- Diário Oficial do Estado de São Paulo — https://www.doe.sp.gov.br/
-- Diário Oficial da Cidade de São Paulo — https://diariooficial.prefeitura.sp.gov.br/
-- Diário Oficial da União — https://www.gov.br/pt-br/servicos/acessar-o-diario-oficial-da-uniao
-- Portal da Transparência — https://portaldatransparencia.gov.br/
-
-A existência dessas fontes fortalece a hipótese de disponibilidade pública para alguns domínios, mas não garante que todo contrato, processo, voto ou documento institucional esteja acessível.
-
----
-
-# 7. Limitações e contraprovas da pesquisa documental
-
-A pesquisa encontrou evidências favoráveis à tese do Fiel Fiscaliza, mas também limites importantes.
-
-## 7.1 Alternativas atuais já resolvem parte relevante do problema
-
-Google, imprensa, portal oficial, fóruns, redes sociais e bases públicas permitem responder muitas perguntas sem uma ferramenta nova.
-
-O Fiel Fiscaliza somente se justifica se reduzir materialmente o esforço ou aumentar qualidade, contexto, auditabilidade ou recuperação histórica em tarefas relevantes.
-
-## 7.2 O público observado é enviesado para usuários mais engajados
-
-Fóruns, Reddit, organizadas e coletivos super-representam quem já discute política e governança.
-
-A pesquisa documental não mostra se um torcedor menos especializado terá valor recorrente suficiente.
-
-## 7.3 Informação pública é incompleta
-
-Votos podem não ser nominais. Contratos podem ser privados. Processos podem ter restrições. Documentos podem não estar publicados. Algumas decisões podem ser conhecidas apenas por cobertura jornalística.
-
-O produto precisa aceitar **desconhecido / não disponível publicamente** como resposta legítima.
-
-## 7.4 Acesso público não equivale a reutilização irrestrita
-
-A disponibilidade de uma página ou documento não significa licença para republicação integral.
-
-Direitos autorais, regras de acesso, LGPD, dados pessoais e direitos de personalidade deverão ser aprofundados em documentos posteriores.
-
-## 7.5 Automação perfeita não está demonstrada
-
-As fontes possuem formatos e barreiras técnicas diferentes. A pesquisa encontrou páginas oficiais que não responderam de forma uniforme a acesso automatizado.
-
-Isso enfraquece qualquer hipótese de que o MVP possa depender de coleta integral totalmente automática desde o primeiro dia.
-
-## 7.6 Iniciativas específicas ainda precisam de caracterização primária
-
-Discussões anteriores do projeto mencionaram iniciativas como **Expulsão Já** e **Painel dos Conselheiros**. A pesquisa documental desta rodada não obteve material primário suficiente para caracterizá-las com o mesmo rigor das iniciativas acima.
-
-Elas não devem ser tratadas como inexistentes nem ter escopo atribuído por memória. Se forem relevantes ao fechamento do FF-0006/FF-0007, devem receber verificação específica adicional.
-
----
-
-# 8. Segmentos candidatos após desk research
-
-Nenhum segmento é declarado usuário primário nesta versão.
-
-## 8.1 Torcedor interessado em compreender uma questão institucional
-
-**Status:** EVIDÊNCIA DOCUMENTAL  
-**Candidato a:** usuário primário
-
-A pesquisa observou grande circulação de dúvidas e debates sobre dívida, Arena, estatuto, processos, eleições, conselhos e decisões.
-
-O que ainda falta saber:
-
-- com que frequência esse torcedor realiza pesquisa ativa;
-- se aceita depender de imprensa como solução suficiente;
-- qual profundidade tolera;
-- se valoriza fonte/proveniência ou apenas uma explicação resumida;
-- se retornaria a uma ferramenta dedicada.
-
----
-
-## 8.2 Torcedor institucionalmente engajado
-
-**Status:** EVIDÊNCIA DOCUMENTAL FORTE  
-**Candidato a:** usuário primário
-
-Organizadas, coletivos, fóruns e debates públicos demonstram existência clara de usuários que acompanham governança e precisam verificar ou reconstruir informação com maior frequência.
-
-O que ainda falta saber:
-
-- se as soluções atuais já são suficientes para power users;
-- quais tarefas são repetitivas e dolorosas em vez de apenas intelectualmente interessantes;
-- se desejam memória estruturada ou preferem pesquisa livre em notícias/documentos.
-
----
-
-## 8.3 Pesquisador eventual de uma questão histórica
-
-**Status:** EVIDÊNCIA DOCUMENTAL  
-**Candidato a:** usuário primário ou secundário
-
-A própria dispersão temporal de notícias, documentos e séries financeiras torna a tarefa plausível e recorrente no ecossistema.
-
-Ainda falta evidência comportamental sobre frequência e intensidade.
-
----
-
-## 8.4 Jornalista, comunicador ou criador de conteúdo
-
-**Status:** EVIDÊNCIA DOCUMENTAL  
-**Candidato a:** usuário secundário / power user
-
-A cobertura observada demonstra trabalho frequente de reconstrução documental, financeira, processual e histórica.
-
-Ainda precisa ser validado se uma ferramenta externa realmente reduziria o processo de apuração ou se jornalistas preferem seus próprios arquivos, contatos e rotinas.
-
----
-
-## 8.5 Associado do SCCP, conselheiro ou participante institucional
+## 9.4 Associado, conselheiro ou participante institucional
 
 **Status:** HIPÓTESE COM EVIDÊNCIA DOCUMENTAL PARCIAL  
-**Candidato a:** usuário secundário
+**Papel:** usuário secundário possível
 
-A pesquisa mostra intensa atividade institucional, audiências, assembleias e discussões de estatuto, mas não demonstra como esses participantes atualmente pesquisam informação nem se usariam uma ferramenta pública externa.
-
-O produto não poderá depender de acesso interno ou privilegiado.
+Pode se beneficiar de memória pública, mas o produto não dependerá de acesso interno, credenciais privilegiadas, documentos confidenciais ou relacionamento político.
 
 ---
 
-## 8.6 Pesquisador acadêmico, historiador ou analista externo
+# 10. Jobs to Be Done prioritários
 
-**Status:** EVIDÊNCIA DOCUMENTAL  
-**Candidato a:** usuário secundário de longo prazo
+## P0 — orientar escopo e MVP
 
-A existência de estudos acadêmicos sobre governança corinthiana mostra uso real do clube como objeto de pesquisa.
+### JTBD-01 — Verificar uma afirmação e chegar à fonte
 
-Este segmento pode obter valor alto do acervo histórico acumulado, mas ainda não há justificativa para fazê-lo comandar o MVP.
+**Quando** encontro uma afirmação institucional relevante,  
+**quero** identificar quem afirmou, a origem, o status e a evidência disponível,  
+**para** distinguir o documentado do alegado, inferido, contestado ou desconhecido.
 
----
+**Status:** DECIDIDO PARA F1
 
-# 9. Perguntas institucionais observadas
-
-A pesquisa encontrou recorrência qualitativa das seguintes perguntas:
-
-- Quanto o Corinthians deve e de onde saiu esse número?
-- Qual é o estado real desta investigação ou processo?
-- Essa decisão já vale ou ainda pode mudar?
-- Como funciona a estrutura política do clube?
-- Quem ou qual órgão tomou esta decisão?
-- Existe registro de votação? O voto foi nominal?
-- Qual documento original confirma esta notícia?
-- Quem ocupava determinado cargo em uma data específica?
-- Como um valor financeiro mudou ao longo do tempo?
-- O que era conhecido quando uma decisão foi tomada?
-- Quais fatos estão confirmados e quais continuam alegados ou contestados?
-- O que não está disponível publicamente?
-
-Essas perguntas constituem evidência de tarefas existentes, não prova de prioridade de MVP.
+Este JTBD incorpora a necessidade de chegar ao documento, decisão, declaração ou registro de origem quando disponível.
 
 ---
 
-# 10. Jobs to Be Done após desk research
-
-## JTBD-01 — Entender uma questão institucional que apareceu agora
-
-**Quando** encontro uma notícia, debate ou crise sobre o Corinthians,  
-**quero** compreender rapidamente o que aconteceu, qual é o contexto e quais informações são confirmadas,  
-**para** formar uma visão informada sem depender apenas da narrativa de quem publicou primeiro.
-
-**Status:** EVIDÊNCIA DOCUMENTAL  
-**Prioridade candidata:** P0/P1
-
----
-
-## JTBD-02 — Reconstruir a história e o estado atual de uma questão
+### JTBD-02 — Reconstruir a história e o estado atual de uma questão
 
 **Quando** um assunto se desenvolve durante meses ou anos,  
-**quero** consultar sua evolução temporal e seu estado atual,  
-**para** saber o que mudou sem reler todo o fluxo de notícias.
+**quero** reconstruir sua evolução e identificar seu estado conhecido atual,  
+**para** entender o que mudou sem depender da última notícia que lembro ter visto.
 
-**Status:** EVIDÊNCIA DOCUMENTAL FORTE  
-**Prioridade candidata:** P0
-
-Casos públicos que sustentam a hipótese incluem Arena, reforma estatutária, investigações e processos.
+**Status:** DECIDIDO PARA F1
 
 ---
 
-## JTBD-03 — Verificar uma afirmação
-
-**Quando** vejo uma afirmação sobre dirigente, conselheiro, votação, dívida, documento, investigação ou decisão,  
-**quero** identificar sua origem, status e evidência disponível,  
-**para** distinguir o documentado do alegado, inferido ou desconhecido.
-
-**Status:** EVIDÊNCIA DOCUMENTAL FORTE  
-**Prioridade candidata:** P0
-
----
-
-## JTBD-04 — Encontrar a fonte original
-
-**Quando** encontro uma informação reproduzida em notícia, rede social ou debate,  
-**quero** chegar ao documento, decisão, declaração ou registro de origem quando disponível,  
-**para** verificar o conteúdo com menos intermediação.
-
-**Status:** EVIDÊNCIA DOCUMENTAL FORTE  
-**Prioridade candidata:** P0
-
----
-
-## JTBD-05 — Entender um número financeiro no tempo
+### JTBD-03 — Entender um número financeiro no tempo
 
 **Quando** encontro um valor sobre dívida, Arena, receita, despesa ou outro indicador financeiro,  
 **quero** saber valor, data-base, conceito, método e fonte,  
-**para** não comparar números diferentes como se representassem a mesma coisa.
+**para** evitar comparar números diferentes como se fossem equivalentes.
 
-**Status:** EVIDÊNCIA DOCUMENTAL FORTE  
-**Prioridade candidata:** P0
-
-A divergência pública entre cálculos relacionados à Arena em 2026 é um caso-teste especialmente forte para esta tarefa.
+**Status:** DECIDIDO PARA F1
 
 ---
 
-## JTBD-06 — Saber o estágio real de uma investigação ou processo
-
-**Quando** existe uma investigação, processo ou decisão judicial relevante,  
-**quero** saber qual é o estágio atual, o que já foi decidido e o que ainda pode mudar,  
-**para** não confundir existência do procedimento com culpa nem decisão não definitiva com resultado encerrado.
-
-**Status:** EVIDÊNCIA DOCUMENTAL FORTE  
-**Prioridade candidata:** P0/P1  
-**Risco editorial:** alto
-
----
-
-## JTBD-07 — Reconstruir uma decisão institucional pública
+### JTBD-04 — Reconstruir uma decisão institucional pública
 
 **Quando** um órgão do clube toma uma decisão,  
-**quero** saber qual órgão decidiu, quando, qual era a pauta, qual foi o resultado e, se publicamente nominal, como cada pessoa votou,  
-**para** compreender a governança sem inferir informação que não foi publicada.
+**quero** saber qual órgão decidiu, quando, qual era a pauta, qual foi o resultado e quais informações individuais estão publicamente disponíveis,  
+**para** compreender a decisão sem inferir votos, alianças ou posições não documentadas.
 
-**Status:** EVIDÊNCIA DOCUMENTAL FORTE  
-**Prioridade candidata:** P0/P1
+**Status:** DECIDIDO PARA F1
 
-### Restrição
-
-Voto individual desconhecido deve permanecer desconhecido.
+Voto individual não publicado deve permanecer **desconhecido / não disponível publicamente**.
 
 ---
 
-## JTBD-08 — Comparar versões ou claims conflitantes
+# 11. Jobs to Be Done secundários
 
-**Quando** duas partes apresentam versões incompatíveis,  
-**quero** identificar quem afirmou cada coisa, qual evidência acompanha cada versão e o que permanece contestado,  
-**para** compreender a divergência sem exigir falsa equivalência nem falsa certeza.
+## P1
 
-**Status:** EVIDÊNCIA DOCUMENTAL  
-**Prioridade candidata:** P1
+### JTBD-05 — Entender o estágio real de investigação ou processo
 
----
+Identificar o que está em investigação, o que foi decidido, o que ainda pode mudar e qual é o estado processual conhecido.
 
-## JTBD-09 — Recuperar atuação institucional publicamente documentada
+**Status:** DECIDIDO PARA F1  
+**Risco editorial:** alto
 
-**Quando** preciso compreender a trajetória institucional de uma pessoa ou órgão,  
-**quero** encontrar cargos, mandatos, decisões, posições ou votações publicamente verificáveis relacionadas,  
-**para** avaliar atuação institucional com memória documental em vez de impressão pessoal.
+A presença no conjunto de casos de uso não significa cobertura ampla obrigatória no MVP.
 
-**Status:** EVIDÊNCIA DOCUMENTAL  
-**Prioridade candidata:** P1
+### JTBD-06 — Comparar versões ou claims conflitantes
 
-### Restrição
+Identificar quem afirmou cada versão, quais evidências estão associadas e o que permanece contestado.
 
-Esse Job não autoriza inferir voto secreto, aliança política, intenção, culpa ou posição não documentada.
+**Status:** DECIDIDO PARA F1  
+**Risco editorial:** alto
 
----
+### JTBD-07 — Recuperar atuação institucional publicamente documentada
 
-## JTBD-10 — Descobrir o que era conhecido em determinada data
+Encontrar cargos, mandatos, decisões, posições e votações publicamente verificáveis relacionados a pessoa ou órgão.
 
-**Quando** preciso avaliar uma decisão ou declaração passada,  
-**quero** saber quais informações e estados estavam publicamente documentados naquele momento,  
-**para** evitar anacronismo e reconstrução histórica incorreta.
+**Status:** DECIDIDO PARA F1
 
-**Status:** EVIDÊNCIA DOCUMENTAL  
-**Prioridade candidata:** P1/P2
+Não autoriza inferir voto secreto, aliança, intenção ou culpa.
 
----
+### JTBD-08 — Descobrir o que era conhecido em determinada data
 
-## JTBD-11 — Perceber que uma questão mudou
+Reconstruir o estado documental disponível em um momento passado para reduzir anacronismo.
 
-**Quando** uma questão institucional que acompanho sofre mudança relevante,  
-**quero** perceber a mudança e chegar à nova evidência,  
-**para** não precisar monitorar manualmente dezenas de fontes.
-
-**Status:** HIPÓTESE COM EVIDÊNCIA DOCUMENTAL PARCIAL  
-**Prioridade candidata:** P2
-
-A dispersão de fontes sustenta a plausibilidade, mas a necessidade real de alertas ou monitoramento pessoal ainda não foi demonstrada.
+**Status:** DECIDIDO PARA F1
 
 ---
 
-## JTBD-12 — Explicar uma questão para outra pessoa sem perder a fonte
+## P2 / ADIADO
 
-**Quando** preciso compartilhar ou discutir um tema institucional,  
-**quero** apontar para uma representação clara e rastreável da questão,  
-**para** que outra pessoa consiga verificar a base factual sem depender apenas da minha interpretação.
+### JTBD-09 — Alertas de mudança
 
-**Status:** HIPÓTESE COM EVIDÊNCIA DOCUMENTAL PARCIAL  
-**Prioridade candidata:** P1/P2
+**Status:** DEPRIORIZADO PARA O MVP
 
----
+A dispersão de fontes torna a ideia plausível, mas não existe evidência suficiente de que alertas devam orientar a primeira versão.
 
-# 11. Matriz provisória de casos de uso
+### JTBD-10 — Pesquisa acadêmica avançada / exportações especializadas
 
-As prioridades abaixo são **candidatas** e não constituem decisão de MVP.
+**Status:** DEPRIORIZADO PARA O MVP
 
-| Caso de uso | Evidência documental | Impacto institucional | Viabilidade aparente | Risco | Próximo passo |
-|---|---|---|---|---|---|
-| Encontrar fonte original | forte | muito alto | alta | baixo/médio | teste comportamental |
-| Reconstruir cronologia + estado atual | forte | muito alto | média/alta | médio | teste comportamental |
-| Contextualizar números financeiros | forte | muito alto | média/alta | médio/alto | teste comportamental |
-| Reconstruir decisão/votação pública | forte | muito alto | média | alto | teste comportamental |
-| Acompanhar processo/investigação | forte | muito alto | média | alto | teste comportamental |
-| Comparar claims conflitantes | forte | alto | média/alta | alto | entrevistas + Fase 2 editorial |
-| Histórico de cargos/mandatos | média | alto | alta | médio | entrevistas |
-| Contratos relevantes | média | alto | baixa/média | alto | de-priorizar até validar disponibilidade |
-| Alertas de mudança | parcial | médio/alto | média | médio | validar frequência real |
-| Pesquisa acadêmica avançada | média | médio | média | baixo | não orientar MVP inicialmente |
+Compatível com visão de longo prazo, mas não necessário para provar utilidade inicial.
 
 ---
 
-# 12. Implicações candidatas para o futuro MVP
+# 12. Matriz de prioridade
 
-A pesquisa sugere que o MVP pode obter melhor relação valor/custo se começar por **capacidades transversais**, e não por tentar construir vários grandes módulos independentes.
+| Caso de uso | Prioridade F1 | Evidência | Risco | Observação |
+|---|---|---|---|---|
+| Verificar afirmação + fonte original | P0 | documental forte | médio | capacidade transversal central |
+| Cronologia + estado atual | P0 | documental forte | médio | núcleo da memória institucional |
+| Contextualizar números financeiros | P0 | documental forte | médio/alto | exige precisão conceitual |
+| Reconstruir decisão institucional pública | P0 | documental forte | alto | nunca inferir voto ausente |
+| Processo/investigação | P1 | documental forte | alto | depende de política editorial robusta |
+| Claims conflitantes | P1 | documental | alto | depende de FF-0011 |
+| Histórico de cargos/mandatos | P1 | documental | médio | forte valor acumulativo |
+| Estado conhecido em data passada | P1 | documental | médio | valor histórico alto |
+| Alertas | P2 | parcial | médio | adiado |
+| Pesquisa acadêmica avançada | P2 | documental | baixo | não orienta MVP |
 
-Capacidades candidatas:
-
-1. chegar à fonte original e à proveniência;
-2. reconstruir cronologia e estado atual;
-3. contextualizar valores financeiros no tempo;
-4. reconstruir decisões institucionais públicas.
-
-Esta seção registra **sugestões derivadas da pesquisa**, não requisitos aprovados.
-
-A escolha formal do MVP pertence ao **FF-0008 — MVP_SPEC** após conclusão da pesquisa comportamental, definição de usuários prioritários e FF-0007.
-
-Contratos completos, inferência de alianças políticas, rankings de atores e cobertura indiscriminada de todos os processos não possuem justificativa suficiente para o MVP nesta versão.
+As prioridades P0/P1/P2 orientam FF-0007 e FF-0008, mas o FF-0008 continua responsável por decidir quais capacidades efetivamente entram no MVP.
 
 ---
 
@@ -659,400 +401,123 @@ Contratos completos, inferência de alianças políticas, rankings de atores e c
 
 O Fiel Fiscaliza não deve otimizar sua experiência para:
 
-- usuários que buscam escalações, transferências ou cobertura esportiva cotidiana sem consequência institucional;
-- grupos que desejem apenas material para campanha eleitoral interna;
-- pessoas buscando listas para assédio, intimidação ou perseguição;
-- usuários interessados em dados pessoais privados;
-- pessoas que esperem conclusões de culpa sem evidência suficiente;
-- usuários que desejem rumores rápidos em vez de informação verificável;
-- grupos que exijam manipulação editorial favorável a situação ou oposição;
-- pessoas cuja principal necessidade seja entretenimento esportivo;
-- usuários que desejem ranking simplista de “bons” ou “maus” dirigentes/conselheiros.
+- cobertura esportiva cotidiana sem consequência institucional;
+- campanha eleitoral interna;
+- listas para assédio, intimidação ou perseguição;
+- pesquisa de dados pessoais privados;
+- conclusões de culpa sem evidência;
+- rumor rápido;
+- manipulação editorial pró-situação ou pró-oposição;
+- ranking simplista de “bons” e “maus” dirigentes ou conselheiros;
+- gamificação de pessoas fiscalizadas.
 
-A pesquisa sobre o ambiente político online reforçou que histórico de pessoas, votos e posições pode possuir valor de fiscalização, mas também aumentar risco de personalização e assédio se mal projetado.
-
-O produto deve fiscalizar **atos públicos e institucionais**, não gamificar indivíduos.
+O projeto fiscaliza atos, decisões, recursos e relações institucionais publicamente documentadas.
 
 ---
 
-# 14. O que a pesquisa documental já permite afirmar
+# 14. O que a pesquisa já permite decidir
 
-Com o grau de segurança adequado a esta fase:
+Com confiança suficiente para avançar na Fase 1:
 
-- existem fontes públicas relevantes suficientes para justificar exploração de produto em vários domínios;
-- informação institucional sobre o SCCP está distribuída entre fontes oficiais, imprensa, registros públicos e comunidades;
-- tarefas de verificação de fonte, reconstrução temporal, compreensão financeira e acompanhamento de decisões/processos aparecem de forma recorrente no ecossistema público;
-- há grupos de torcedores com interesse intenso em governança e transparência;
-- soluções atuais resolvem partes importantes dessas tarefas, portanto o Fiel Fiscaliza precisa demonstrar ganho real e não apenas duplicar conteúdo;
-- fontes críticas possuem limitações técnicas e documentais que impedem presumir automação total ou cobertura completa;
-- votos, contratos, documentos ou estados podem legitimamente permanecer desconhecidos ou indisponíveis publicamente;
-- nenhum segmento está validado ainda como usuário primário do MVP.
-
----
-
-# 15. O que ainda NÃO pode ser afirmado
-
-A pesquisa documental não permite afirmar que:
-
-- a maioria dos corinthianos possui interesse recorrente por governança;
-- o torcedor comum sente a mesma dor que jornalistas, pesquisadores ou usuários engajados;
-- qualquer segmento utilizaria o produto repetidamente;
-- os JTBD P0 propostos são necessariamente os mais importantes para o MVP;
-- usuários preferem cronologia, tabela, perfil, busca ou qualquer interface específica;
-- alertas são necessários;
-- perfis de pessoas devem estar no MVP;
-- existe demanda suficiente para cobertura ampla de contratos;
-- todas as fontes críticas podem ser coletadas automaticamente;
-- a lacuna de mercado está comprovada;
-- as iniciativas atuais são insuficientes para todos os usuários.
-
-Esses pontos permanecem perguntas de pesquisa.
+- o MVP deve ser desenhado prioritariamente para o torcedor institucionalmente engajado;
+- precisa continuar compreensível para o torcedor que chega com uma dúvida pontual;
+- jornalistas/comunicadores e pesquisadores são usuários secundários relevantes;
+- fonte original/proveniência, temporalidade, contexto financeiro e decisões institucionais são casos de uso fortes;
+- o produto não deve competir por velocidade de notícia;
+- informação ausente deve poder permanecer desconhecida;
+- soluções atuais já resolvem partes do problema e devem ser tratadas como concorrência funcional;
+- um MVP pequeno pode ser utilizado como instrumento adicional de validação da própria tese de produto.
 
 ---
 
-# 16. Matriz das hipóteses do FF-0005
+# 15. O que continua desconhecido
 
-| Hipótese do FF-0005 | Estado após desk research | Leitura atual |
-|---|---|---|
-| Dor | fortalecida, não validada | há fricção observável de reconstrução/verificação, mas intensidade individual precisa de entrevistas |
-| Valor de temporalidade e proveniência | fortalecida | múltiplos casos mostram perda de contexto, versões e números dependentes de data/fonte |
-| Existência de usuários externos | fortalecida | há grupos públicos engajados e produção recorrente de pesquisa/conteúdo; recorrência de uso do produto ainda desconhecida |
-| Lacuna frente a soluções atuais | plausível, não comprovada | nenhuma solução encontrada reuniu claramente todas as capacidades propostas, mas alternativas atuais resolvem partes importantes |
-| Disponibilidade pública | parcialmente fortalecida | há muitas fontes úteis, porém lacunas, restrições e formatos heterogêneos são relevantes |
-| Manutenção individual | desconhecida/parcial | ingestão híbrida parece possível; custo humano real só poderá ser estimado após recorte de MVP e protótipo operacional |
-| Compreensão por não especialistas | desconhecida | pesquisa documental não substitui teste de compreensão com usuários |
+A decisão de avançar sem entrevistas preserva explicitamente as seguintes incertezas:
 
----
+- frequência real de uso por pessoa;
+- intensidade subjetiva da dor;
+- taxa de retorno a uma ferramenta dedicada;
+- preferência de interface;
+- quantidade de contexto que usuários não especializados toleram;
+- quanto tempo o Fiel Fiscaliza efetivamente economiza;
+- quais segmentos gerarão maior uso real;
+- se determinados recursos aparentemente valiosos serão pouco utilizados.
 
-# 17. Pesquisa comportamental necessária
-
-Antes de promover segmentos ou JTBD para `VALIDADO PARA F1`, devem ser realizadas entrevistas semiestruturadas acompanhadas de pequenos testes de tarefa.
-
-Objetivos:
-
-- identificar episódios reais de busca institucional;
-- medir esforço percebido e passos executados;
-- descobrir fontes e atalhos atuais;
-- identificar casos em que a solução atual já é boa o suficiente;
-- compreender tolerância a incerteza e profundidade;
-- descobrir diferenças entre usuário casual e power user;
-- testar se proveniência e temporalidade realmente reduzem esforço;
-- levantar contraprovas para as prioridades candidatas.
-
-Não deve ser perguntado apenas se a pessoa “usaria um site de transparência”.
-
-O foco deve ser comportamento passado e tarefa demonstrada.
+Nenhuma dessas incertezas deve ser convertida em alegação de demanda comprovada.
 
 ---
 
-# 18. Pacote de campo — critérios de recrutamento
+# 16. Dívida de validação aceita
 
-## 18.1 Princípio
+A ausência de entrevistas pré-MVP gera uma dívida consciente de validação.
 
-A amostra não pretende representar estatisticamente toda a torcida.
+Ela deve ser paga de forma proporcional, sem se transformar em novo gate automático.
 
-O objetivo é maximizar **diversidade de comportamento e contexto de uso**.
+Formas aceitáveis incluem:
 
-## 18.2 Tamanho recomendado
+- feedback espontâneo após protótipo ou MVP;
+- formulário curto no produto;
+- issues/discussões públicas;
+- análise agregada de uso quando compatível com privacidade;
+- conversas assíncronas com usuários;
+- entrevistas direcionadas somente quando uma decisão material continuar incerta;
+- testes de tarefa quando uma interface concreta existir e houver algo real a observar.
 
-**5 a 8 participantes** para a primeira rodada.
-
-## 18.3 Composição desejada para 8 participantes
-
-- 2 torcedores comuns ou moderadamente engajados, incluindo ao menos 1 que não acompanhe política diariamente;
-- 1 torcedor institucionalmente muito engajado;
-- 1 associado do SCCP ou participante de espaços institucionais;
-- 1 integrante de torcida organizada com interesse/atuação em fiscalização;
-- 1 jornalista ou setorista;
-- 1 comunicador/criador que trate de política, finanças ou governança;
-- 1 pesquisador, advogado, contador, analista ou ator institucional com experiência real em documentação do SCCP.
-
-A composição pode ser adaptada conforme disponibilidade, mas não deve ficar restrita a pessoas já politicamente hiperengajadas.
-
-## 18.4 Critérios de inclusão
-
-O participante deve conseguir relatar pelo menos um episódio real, recente ou histórico, em que tentou compreender ou verificar uma questão institucional relacionada ao Corinthians.
-
-## 18.5 Critérios de diversidade
-
-Buscar variedade em:
-
-- intensidade de acompanhamento político;
-- familiaridade com documentos oficiais;
-- relação ou não com clube social/organizada;
-- dependência de redes sociais versus pesquisa ativa;
-- capacidade técnica de interpretar temas jurídicos/financeiros.
-
-## 18.6 Critérios de exclusão metodológica
-
-Evitar:
-
-- amostra composta apenas por amigos próximos que já conhecem a proposta;
-- participantes recrutados somente de uma corrente política;
-- entrevistas exclusivamente com especialistas;
-- selecionar pessoas porque já disseram gostar da ideia.
+Pesquisa adicional deve ser realizada **quando puder alterar uma decisão**, não apenas para cumprir ritual de discovery.
 
 ---
 
-# 19. Pacote de campo — roteiro de entrevista
+# 17. Gatilhos para reabrir pesquisa de usuários
 
-O roteiro é semiestruturado. A ordem pode variar, mas não se deve conduzir a pessoa para confirmar a tese do Fiel Fiscaliza.
+Nova pesquisa passa a ser recomendada quando ocorrer pelo menos uma das condições:
 
-## Bloco A — episódio real
+1. dois caminhos de produto relevantes possuírem evidência documental semelhante e a escolha depender de comportamento de usuário;
+2. o MVP não demonstrar uso suficiente para seus casos de uso centrais;
+3. usuários apresentarem dificuldade recorrente de compreensão;
+4. um recurso de alto custo operacional depender de demanda ainda desconhecida;
+5. surgir contraprova relevante de que solução existente atende melhor o problema;
+6. o produto começar a atrair principalmente um segmento diferente do usuário primário definido neste documento.
 
-1. Me conte a última vez em que você quis entender algo sobre política, administração, finanças, Justiça ou governança envolvendo o Corinthians.
-2. O que fez você começar a procurar?
-3. Qual era exatamente a pergunta que queria responder?
-4. Como você saberia que a resposta estava boa o suficiente?
-
-## Bloco B — caminho atual
-
-5. Onde você começou a procurar?
-6. Qual foi o segundo lugar?
-7. Você usou Google, notícia, rede social, fórum, documento oficial ou perguntou para alguém?
-8. Quais fontes costuma confiar mais? Quais costuma confirmar em outro lugar?
-9. Você chegou à fonte/documento original?
-
-## Bloco C — fricção
-
-10. O que demorou mais?
-11. Teve algo que você não conseguiu descobrir?
-12. Precisou juntar informação de várias páginas?
-13. Já desistiu de pesquisar alguma questão do Corinthians? Qual?
-14. Alguma vez encontrou números ou versões incompatíveis e não soube qual estava correta?
-
-## Bloco D — temporalidade
-
-15. Foi fácil saber se a informação ainda estava atual?
-16. Já descobriu depois que um status, valor ou decisão que usou estava desatualizado?
-17. Quando um caso se prolonga por meses, como você descobre o que aconteceu desde a última vez que acompanhou?
-
-## Bloco E — incerteza e confiança
-
-18. Como prefere que uma ferramenta mostre que algo ainda é alegação, contestado, desconhecido ou está em investigação?
-19. É melhor mostrar resposta incompleta explicitamente ou não mostrar nada?
-20. O que faria você confiar em uma síntese feita por uma ferramenta independente?
-
-## Bloco F — governança e pessoas
-
-21. Você já tentou saber quem decidiu ou votou alguma coisa?
-22. O que fez quando o voto individual não estava disponível?
-23. Já pesquisou histórico institucional de um dirigente, conselheiro ou órgão?
-24. Que informação seria útil e que informação seria invasiva ou desnecessária?
-
-## Bloco G — formato, somente após reconstruir comportamento
-
-25. Na situação que você contou, o que teria ajudado mais: cronologia, tabela, resumo, documento, busca, perfil, comparação ou outro formato?
-26. O que uma ferramenta teria de fazer para realmente substituir parte do seu processo atual?
+Esses gatilhos permitem pesquisa sob demanda em vez de pesquisa como etapa burocrática obrigatória.
 
 ---
 
-# 20. Pacote de campo — três testes de tarefa
+# 18. Relação com o FF-0005
 
-Os testes devem observar **como a pessoa pesquisa hoje**, antes de apresentar qualquer solução futura do Fiel Fiscaliza.
+O FF-0005 exige que hipóteses de produto sejam testadas e que contraprovas sejam procuradas antes do Gate F1.
 
-Registrar tempo aproximado, número de fontes, erros, abandono, nível de confiança e resultado.
+A pesquisa documental realizada em 2026-09-04 cumpriu parte material dessa obrigação e produziu evidências favoráveis e contrárias.
 
-## TESTE T1 — Financeiro / Arena
+O FF-0005 **não exige entrevistas como método específico**.
 
-### Pergunta
+Portanto, adiar pesquisa comportamental não cria conflito com a Product Vision, desde que:
 
-> “Há valores diferentes circulando sobre a dívida relacionada à Arena. Descubra por que esses valores podem ser diferentes e em qual fonte você confiaria para explicar isso para outra pessoa.”
-
-### O que observar
-
-- onde começa a pesquisa;
-- se procura data-base e conceito;
-- se identifica fontes oficiais ou apenas manchetes;
-- se percebe que valores diferentes podem medir coisas diferentes;
-- se chega a documentos do SCCP/CVM ou triangula imprensa;
-- quanto tempo leva até considerar a resposta suficiente.
-
-### Hipóteses testadas
-
-- JTBD-03;
-- JTBD-04;
-- JTBD-05;
-- valor de proveniência;
-- valor de contextualização temporal.
+- a incerteza permaneça explícita;
+- decisões não sejam apresentadas como demanda empiricamente validada;
+- o MVP permaneça pequeno e reversível;
+- nova evidência possa provocar revisão posterior.
 
 ---
 
-## TESTE T2 — Processo / decisão não definitiva
-
-### Pergunta
-
-> “Você encontra uma notícia dizendo que uma decisão judicial mudou uma estrutura institucional do Corinthians. Descubra se essa mudança já está definitivamente valendo ou se ainda pode mudar.”
-
-### O que observar
-
-- se diferencia decisão de trânsito em julgado/definitividade;
-- se busca tribunal ou apenas notícia;
-- se identifica possibilidade de recurso quando documentada;
-- se transforma manchete em certeza maior do que a fonte permite;
-- dificuldade de entender linguagem processual.
-
-### Hipóteses testadas
-
-- JTBD-02;
-- JTBD-03;
-- JTBD-06;
-- hipótese de compreensão por não especialistas.
-
----
-
-## TESTE T3 — Governança / votação
-
-### Pergunta
-
-> “Escolha uma decisão relevante do Conselho ou de uma assembleia do Corinthians. Descubra qual órgão decidiu, qual foi o resultado e se existe registro público de como cada pessoa votou.”
-
-### O que observar
-
-- se encontra o órgão correto;
-- se localiza ata, eleição, comunicado ou cobertura;
-- se diferencia resultado coletivo de voto individual;
-- se aceita ‘voto individual não disponível publicamente’ como resposta;
-- se tenta inferir alinhamento ou voto sem evidência.
-
-### Hipóteses testadas
-
-- JTBD-04;
-- JTBD-07;
-- JTBD-09;
-- valor de representar lacunas explicitamente.
-
----
-
-# 21. Pacote de campo — template de Evidence Log
-
-Uma linha por evidência documental ou comportamental relevante.
-
-```text
-evidence_id:
-tipo: documental | entrevista | teste_tarefa
-data_coleta:
-fonte_ou_participante:
-url_se_publica:
-tema:
-pergunta_observada:
-jtbd_relacionado:
-segmento_candidato:
-
-evidencia_resumida:
-evidencia_literal_se_necessaria:
-forca_do_sinal: fraca | media | forte
-
-contraevidencia:
-solucao_atual_utilizada:
-risco_de_vies:
-implicacao_provisoria:
-observacoes:
-```
-
-O campo `contraevidencia` é obrigatório sempre que houver evidência material contrária ou alternativa já suficiente.
-
----
-
-# 22. Pacote de campo — template por participante
-
-```text
-participant_id: P01
-perfil_hipotetico:
-data:
-canal:
-consentimento: sim | nao
-gravacao_autorizada: sim | nao | nao_gravado
-
-episodio_real_descrito:
-gatilho:
-pergunta_original:
-passos_executados:
-fontes_utilizadas:
-tempo_aproximado:
-frustracoes:
-resultado:
-nivel_de_confianca:
-incertezas_percebidas:
-solucao_atual_foi_suficiente: sim | parcial | nao
-
-teste_tarefa:
-resultado:
-tempo:
-fontes_visitadas:
-erros:
-pontos_de_atrito:
-resultado_corretamente_qualificado: sim | parcial | nao
-
-jtbd_correlacionados:
-evidencia_a_favor:
-evidencia_contra:
-novas_hipoteses:
-observacoes:
-```
-
----
-
-# 23. Consentimento, privacidade e retenção da pesquisa
-
-Formulação mínima sugerida antes da entrevista:
-
-> “Estou pesquisando como pessoas buscam e verificam informações institucionais sobre o Corinthians para o projeto independente Fiel Fiscaliza. A participação é voluntária. Vou usar suas respostas para síntese de pesquisa; nenhuma fala será atribuída publicamente a você sem autorização específica. Você pode pular qualquer pergunta ou encerrar a conversa.”
-
-Gravação deve possuir consentimento separado e explícito.
-
-Participantes devem ser identificados na análise como `P01`, `P02` etc.
-
-Dados de contato devem ficar separados das notas de análise quando possível.
-
-Não publicar frases facilmente pesquisáveis que possam reidentificar participante sem autorização.
-
-Áudio bruto, se existir, deve ter retenção limitada ao período necessário para conferência/transcrição e não deve ser preservado indefinidamente sem justificativa.
-
----
-
-# 24. Critérios para concluir a pesquisa de FF-0006
-
-A primeira rodada de pesquisa comportamental pode ser considerada suficiente para revisão de canonização quando:
-
-- houver entrevistas com diversidade mínima de comportamento;
-- existirem episódios reais, não apenas opiniões sobre a ideia;
-- os principais JTBD candidatos tiverem evidência a favor e tentativa explícita de encontrar contraprova;
-- alternativas atuais estiverem registradas;
-- pelo menos os três testes de tarefa tiverem sido aplicados ou houver justificativa documentada para não aplicá-los;
-- usuários primários e secundários puderem ser escolhidos com base em evidência;
-- casos de uso prioritários puderem ser definidos sem depender de solução técnica específica;
-- casos refutados ou depriorizados estiverem preservados;
-- a pesquisa não exigir acesso privado ou privilegiado ao SCCP/Gaviões;
-- os resultados forem compatíveis com manutenção individual e princípios do FF-0001.
-
-Não existe obrigação de validar todas as hipóteses.
-
-Um resultado válido da pesquisa pode ser reduzir significativamente o escopo inicialmente imaginado.
-
----
-
-# 25. Critérios para promoção a CANONICAL
+# 19. Critérios para promoção a CANONICAL
 
 Antes de promover FF-0006 para CANONICAL, deve-se confirmar que:
 
-- o usuário primário do MVP foi identificado com evidência suficiente para F1;
-- usuários secundários relevantes foram distinguidos do usuário primário;
-- necessidades são baseadas em tarefas e episódios observados, não em personas inventadas;
-- casos de uso prioritários possuem evidência documental e comportamental adequada;
-- soluções alternativas existentes foram consideradas;
-- pelo menos algumas hipóteses foram ativamente desafiadas;
-- não foram convertidas preferências de interface em necessidades sem validação;
-- anti-use-cases e riscos de assédio/politização estão explícitos;
-- nenhum caso de uso presume voto, culpa, aliança ou informação privada;
-- a versão é compatível com FF-0001 e FF-0005;
-- as decisões resultantes podem orientar FF-0007 e FF-0008.
+- o usuário primário está explicitamente definido;
+- usuários secundários estão diferenciados;
+- os JTBD P0/P1 são compatíveis com FF-0001 e FF-0005;
+- a escolha é apresentada como decisão de produto, não como prova científica de comportamento;
+- alternativas existentes e contraprovas foram consideradas;
+- anti-use-cases permanecem explícitos;
+- nenhuma necessidade presume acesso privilegiado, voto secreto, aliança, culpa ou dado privado;
+- a dívida de validação e seus gatilhos estão registrados;
+- as decisões são suficientes para orientar FF-0007 e FF-0008 sem escolher tecnologia ou interface prematuramente.
 
-A pesquisa documental de 2026-09-04 **não satisfaz sozinha esses critérios**.
+Entrevistas ou testes de tarefa **não são requisito obrigatório de canonização desta versão**.
 
 ---
 
-# 26. Impacto e dependências documentais
+# 20. Impacto e dependências documentais
 
 ## É impactado por
 
@@ -1065,17 +530,17 @@ A pesquisa documental de 2026-09-04 **não satisfaz sozinha esses critérios**.
 
 - FF-0007 — SCOPE;
 - FF-0008 — MVP_SPEC;
-- futuros FF-0022/FF-0023 relacionados a arquitetura de informação e fluxos;
+- futuros documentos de Experiência;
 - priorização posterior de backlog e roadmap.
 
-As sugestões de MVP desta versão não devem ser tratadas como requisitos canônicos antes do FF-0008.
+As prioridades deste documento não selecionam automaticamente funcionalidades do MVP.
 
 ---
 
-# 27. Vigência
+# 21. Vigência
 
-Esta versão permanece **DRAFT**.
+Esta versão permanece **DRAFT** até revisão crítica e aprovação explícita.
 
-**FF-0006 — USERS_AND_USE_CASES v0.2 // DRAFT**
+**FF-0006 — USERS_AND_USE_CASES v0.3 // DRAFT**
 
-A pesquisa documental foi incorporada, mas a etapa de evidência comportamental permanece pendente antes de qualquer proposta de canonização.
+A versão 0.3 registra a decisão de **adiar pesquisa comportamental obrigatória pré-MVP**, define usuários e JTBD com base na melhor evidência documental disponível e preserva explicitamente a dívida de validação para revisão posterior orientada por necessidade.
