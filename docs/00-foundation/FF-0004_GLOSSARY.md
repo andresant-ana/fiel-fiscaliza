@@ -2,8 +2,8 @@
 
 **Nome do documento:** Glossary  
 **ID:** FF-0004  
-**Versão:** 0.1  
-**Status:** DRAFT  
+**Versão:** 1.0  
+**Status:** CANONICAL  
 **Última revisão:** 2026-09-04  
 **Responsável:** André  
 **Projeto:** Fiel Fiscaliza  
@@ -63,6 +63,12 @@ A existência de uma definição preliminar neste glossário não deve ser inter
 
 Quando não houver termo suficientemente preciso para representar uma situação, o projeto deve preferir linguagem descritiva a utilizar uma classificação inadequada.
 
+## 2.5 Especialização não autoriza conflito silencioso
+
+Um documento especializado pode tornar uma definição mais precisa dentro de seu escopo.
+
+Se essa especialização alterar materialmente o significado compartilhado de um termo deste glossário, o FF-0004 deve ser reavaliado e, quando necessário, versionado. Uma definição especializada não pode ser utilizada para contradizer silenciosamente o FF-0001 ou tornar incompatíveis documentos canônicos relacionados.
+
 ---
 
 # 3. Projeto e identidade
@@ -107,7 +113,7 @@ O Fiel Fiscaliza é um projeto não oficial em relação ao SCCP e à Gaviões d
 
 ## Documento formal
 
-Documento identificado, versionado e mantido dentro da estrutura documental oficial do Fiel Fiscaliza.
+Documento identificado, versionado e reconhecido dentro da estrutura documental oficial do Fiel Fiscaliza.
 
 Todo documento formal deve possuir, no mínimo:
 
@@ -116,6 +122,8 @@ Todo documento formal deve possuir, no mínimo:
 - versão;
 - status;
 - data da última revisão.
+
+O local físico em que uma cópia esteja armazenada não determina sozinho sua autoridade.
 
 ## DRAFT
 
@@ -292,6 +300,18 @@ Dependência de uma API ou serviço comercial de inteligência artificial cuja d
 
 Enquanto vigorar o requisito de custo zero, esse padrão não é permitido.
 
+## Free tier
+
+Faixa gratuita de um serviço externo, sujeita a limites, condições, políticas e alterações definidas pelo respectivo fornecedor.
+
+A existência de um free tier não garante permanência, ausência de cobrança automática, portabilidade ou adequação ao Fiel Fiscaliza. Serviços críticos baseados em free tier devem ser avaliados e revalidados conforme o FF-0002.
+
+## Fonte crítica
+
+Fonte cuja indisponibilidade, perda de acesso ou mudança material comprometa requisito relevante do MVP, um coletor indispensável ou uma premissa operacional aprovada.
+
+A classificação de uma fonte como crítica será definida nas fases de arquitetura e operação e pode mudar ao longo do tempo.
+
 ## Portabilidade
 
 Capacidade de mover dados, lógica e operação do projeto entre ferramentas ou provedores sem reconstrução desproporcional e sem perda do patrimônio informacional.
@@ -326,6 +346,12 @@ Afirmação sobre algo que pode, em princípio, ser sustentado ou contestado por
 
 Informação factual não deve ser confundida com opinião ou interpretação.
 
+## Informação publicamente acessível
+
+Informação que pode ser acessada legitimamente por integrantes do público a partir de fonte disponível sem obtenção ilícita ou burla de controle de acesso.
+
+Ser publicamente acessível não significa, por si só, que o conteúdo deva ser armazenado, republicado integralmente ou exposto pelo Fiel Fiscaliza. Privacidade, relevância institucional, propriedade intelectual, termos aplicáveis e riscos de exposição continuam devendo ser avaliados quando pertinentes.
+
 ## Fato confirmado
 
 Informação factual sustentada por evidência suficiente para o nível de certeza afirmado pelo Fiel Fiscaliza.
@@ -346,11 +372,15 @@ Comunicação ou imputação de possível irregularidade feita por pessoa, insti
 
 O termo deve ser qualificado quando necessário para evitar ambiguidade entre uma denúncia em sentido genérico e uma peça ou ato formal com significado jurídico específico.
 
+Quando o tipo jurídico do ato for conhecido e materialmente relevante — por exemplo, denúncia criminal, representação, notícia de fato ou outra categoria formal — o projeto deve preferir a denominação precisa em vez de reduzir todos esses atos ao termo genérico “denúncia”.
+
 A existência de uma denúncia não confirma sua procedência.
 
 ## Investigação
 
 Procedimento ou atividade destinada a apurar fatos, responsabilidades ou possíveis irregularidades.
+
+Quando se tratar de procedimento formal, o projeto deve identificar, quando relevante, o órgão responsável e a natureza do procedimento. Apuração jornalística ou pesquisa própria não deve ser apresentada como investigação oficial.
 
 A existência de investigação comprova que algo está sendo apurado, não que a hipótese investigada é verdadeira.
 
@@ -358,7 +388,7 @@ A existência de investigação comprova que algo está sendo apurado, não que 
 
 Procedimento formal ainda não concluído de maneira definitiva dentro do âmbito relevante.
 
-O projeto deve registrar seu estado e evolução sem antecipar resultado.
+O projeto deve registrar seu estado e evolução sem antecipar resultado e, quando necessário, qualificar sua natureza — judicial, administrativa, disciplinar ou outra.
 
 ## Decisão administrativa
 
@@ -374,9 +404,11 @@ Não deve ser apresentada como desfecho judicial definitivo.
 
 ## Decisão definitiva
 
-Decisão cujo estado, no contexto relevante, permite tratá-la como encerramento definitivo da questão analisada.
+Decisão cujo estado, dentro do procedimento e do alcance especificamente considerados, permite tratá-la como encerramento definitivo da questão analisada.
 
-O uso desse termo exige cuidado e deve respeitar a natureza do procedimento. Quando houver dúvida sobre definitividade jurídica, o projeto deve utilizar descrição mais precisa em vez de presumir encerramento.
+O termo não deve ser usado de forma genérica quando houver condição processual mais precisa disponível. Em contexto judicial, quando a definitividade depender de trânsito em julgado ou de outra condição processual específica, essa condição deve ser verificada e descrita adequadamente antes de o projeto afirmar que a questão está definitivamente encerrada.
+
+Quando houver dúvida, o projeto deve preferir a descrição objetiva do estado processual conhecido.
 
 ## Declaração pública
 
@@ -426,6 +458,8 @@ O modelo formal de Claim será definido no FF-0011 — CLAIMS_AND_EVIDENCE e pod
 
 Material verificável utilizado para sustentar, limitar, contestar ou contextualizar uma afirmação.
 
+Evidência não é sinônimo automático de prova conclusiva. Sua força depende da afirmação, da fonte, do contexto e das demais evidências disponíveis.
+
 Exemplos podem incluir documentos, registros oficiais, declarações verificáveis ou outras fontes adequadas conforme a política editorial futura.
 
 ## Fonte
@@ -436,7 +470,9 @@ Uma fonte pode possuir diferentes níveis de autoridade e adequação dependendo
 
 ## Fonte primária
 
-Fonte diretamente ligada ao ato, documento, decisão ou declaração que está sendo registrada.
+Fonte diretamente ligada ao ato, documento, decisão, declaração ou evidência específica que está sendo registrada.
+
+A classificação como primária é relativa à afirmação que a fonte pretende sustentar. Uma mesma publicação pode ser fonte primária para provar que determinada declaração foi feita e não ser fonte suficiente para comprovar materialmente todos os fatos alegados nessa declaração.
 
 Exemplos possíveis incluem documentos oficiais, decisões, atas, estatutos e comunicados emitidos pela instituição responsável.
 
@@ -446,7 +482,21 @@ Fonte primária não significa verdade material absoluta de todas as alegações
 
 Fonte que relata, contextualiza, analisa ou reproduz informação originada em outro lugar.
 
-Veículos jornalísticos e publicações especializadas frequentemente atuam como fontes secundárias, embora possam ser fonte primária para suas próprias entrevistas, apurações ou declarações originais.
+A classificação também depende da afirmação considerada. Veículos jornalísticos e publicações especializadas frequentemente atuam como fontes secundárias, embora possam ser fonte primária para suas próprias entrevistas, documentos obtidos, apurações originais ou declarações publicadas diretamente por eles.
+
+## Fonte oficial
+
+Fonte publicada ou emitida por uma instituição, órgão, autoridade ou representante autorizado em nome da entidade correspondente.
+
+“Oficial” descreve a autoria ou chancela institucional da fonte; não significa neutralidade, independência editorial nem verdade material automática sobre fatos controvertidos.
+
+Uma fonte oficial pode ser fonte primária para determinado ato ou declaração e não ser suficiente, isoladamente, para comprovar outra afirmação material.
+
+## Documento oficial
+
+Documento emitido, aprovado, assinado ou publicado por instituição ou autoridade competente dentro do contexto correspondente.
+
+Seu caráter oficial comprova sua origem institucional quando autenticidade e contexto forem adequadamente estabelecidos; não torna automaticamente verdadeiras todas as alegações ou interpretações nele contidas.
 
 ## Proveniência
 
@@ -468,7 +518,7 @@ A proveniência faz parte estrutural do dado.
 
 Representação de versões, contestações ou respostas materialmente relevantes a uma afirmação ou acontecimento.
 
-Não significa equivalência automática entre todas as versões, mas exige que divergências relevantes sejam tratadas de forma verificável e contextualizada.
+Não significa equivalência automática entre todas as versões, nem constitui por si só um conceito de contraditório processual jurídico. Seu objetivo editorial é preservar de forma verificável respostas e divergências relevantes sem fabricar simetria artificial entre evidências de força diferente.
 
 ## Correção
 
@@ -641,12 +691,19 @@ Será formalizado no FF-0031 — SOURCE_REGISTRY.
 Para reduzir ambiguidade, as seguintes distinções devem ser preservadas:
 
 - **investigação** não é **culpa comprovada**;
+- **investigação oficial** não é **apuração jornalística ou pesquisa própria**;
 - **denúncia** não é **fato confirmado**;
 - **alegação** não é **fato confirmado**;
+- **evidência** não é automaticamente **prova conclusiva**;
 - **fonte primária** não é **verdade absoluta**;
+- **fonte oficial** não é **fonte neutra nem verdade material automática**;
+- **fonte oficial** não é necessariamente **fonte primária para toda afirmação**;
 - **declaração pública** não é **comprovação material de tudo que foi declarado**;
+- **decisão judicial** não é automaticamente **decisão judicial definitiva**;
+- **decisão judicial definitiva** não deve ser presumida sem verificar o estado processual aplicável;
 - **estado atual** não substitui **histórico**;
 - **coleta** não é **publicação**;
+- **informação publicamente acessível** não é necessariamente **conteúdo apropriado para republicação ou armazenamento integral**;
 - **documento público** não é necessariamente **conteúdo livremente redistribuível**;
 - **repositório público** não é automaticamente **projeto com licença aberta**;
 - **associado da Gaviões da Fiel** não significa **representante oficial da Gaviões da Fiel**;
@@ -654,6 +711,7 @@ Para reduzir ambiguidade, as seguintes distinções devem ser preservadas:
 - **Decision Log** não é **ADR**;
 - **CODEX READY** não significa **autorização permanente para qualquer implementação**;
 - **static-first** não significa **proibição de backend**;
+- **free tier** não significa **serviço gratuito garantido para sempre**;
 - **sem fins lucrativos** não significa necessariamente **proibição de qualquer apoio financeiro futuro**.
 
 ---
@@ -727,12 +785,8 @@ Alterações que mudem materialmente o significado de um termo CANONICAL devem:
 
 # 15. Vigência
 
-Esta versão possui status **DRAFT**.
-
-Ela consolida o vocabulário fundacional identificado até 2026-09-04 e ainda depende de revisão e aprovação explícita de André.
-
-Quando aprovada, deverá ser promovida para:
+Esta versão possui status **CANONICAL** e entra em vigor em **2026-09-04** por aprovação explícita de André.
 
 **FF-0004 — GLOSSARY v1.0 // CANONICAL**
 
-A partir dessa promoção, o FF-0004 passa a constituir a referência terminológica oficial do Fiel Fiscaliza, subordinada ao FF-0001 e às definições especializadas de documentos CANONICAL dentro de seus respectivos escopos.
+A partir desta promoção, o FF-0004 constitui a referência terminológica oficial do Fiel Fiscaliza, subordinada ao FF-0001 e às definições especializadas de documentos CANONICAL dentro de seus respectivos escopos.
