@@ -2,7 +2,7 @@
 
 **Nome do documento:** Decision Log  
 **ID:** FF-0003  
-**Versão:** 1.4  
+**Versão:** 1.5  
 **Status:** CANONICAL  
 **Última revisão:** 2026-09-04  
 **Responsável:** André  
@@ -1004,13 +1004,117 @@ Transformar o escopo constitucional amplo em fronteiras operacionais claras sem 
 
 ---
 
+## FF-DEC-0036 — FF-0008 promovido a CANONICAL v1.0
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+O **FF-0008 — MVP_SPEC v1.0** foi aprovado após revisão crítica e tornou-se a especificação canônica de Produto do MVP do Fiel Fiscaliza.
+
+O MVP passa a ser definido por um corpus pequeno de **Questões Institucionais**, entendido como unidade de experiência e não como entidade técnica obrigatória.
+
+Entre as decisões centrais:
+
+- corpus inicial de pelo menos 3 Questões Institucionais completas;
+- todas as questões devem possuir proveniência adequada e contexto temporal suficiente;
+- o conjunto deve demonstrar contextualização financeira e reconstrução de decisão institucional pública;
+- o estado apresentado é o **estado conhecido na última verificação**, sem promessa de tempo real;
+- a manutenção não pode depender de publicação diária, moderação contínua, resposta em tempo real, tarefa manual diária inevitável ou serviço pago indispensável;
+- busca global, alertas, contas, API, cobertura ampla e outras capacidades compatíveis permanecem adiadas;
+- elementos incompatíveis com o escopo canônico atual não são tratados como simples backlog;
+- “MVP publicável em sentido de Produto” não equivale a autorização de release público.
+
+### Salvaguardas
+
+A decisão não define:
+
+- stack, banco de dados, hospedagem ou provedor;
+- schema físico ou modelo formal de domínio;
+- layout, rotas ou arquitetura de informação;
+- taxonomia editorial formal;
+- casos históricos exatos das três primeiras questões;
+- autorização para implementação regular ou publicação pública.
+
+### Formalização
+
+- FF-0008 — MVP_SPEC v1.0 // CANONICAL.
+- Commit de formalização: `18fbd5da82a1a3fbf45f9a22631deaee34828049`.
+
+### Impacto
+
+FF-0009 em diante devem especializar política editorial, domínio, arquitetura, experiência, qualidade, operações e entrega sem alterar silenciosamente a especificação canônica do MVP.
+
+---
+
+## FF-DEC-0037 — Gate F1 — Produto aprovado
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+O **Gate F1 — Produto** foi aprovado após auditoria de consistência dos documentos FF-0005, FF-0006, FF-0007 e FF-0008 em suas versões canônicas vigentes.
+
+A auditoria confirmou que o MVP pode ser descrito em nível de Produto sem depender de decisões técnicas ainda não tomadas.
+
+### Escopo da auditoria
+
+Foram verificados, entre outros pontos:
+
+- problema, tese de valor e resultados desejados;
+- evidências, contraprovas e dívida de validação;
+- usuário primário e usuários secundários;
+- JTBD prioritários;
+- escopo institucional e limites com esporte, militância e exposição pessoal;
+- critérios de pertinência e proporcionalidade;
+- proposta de valor mínima;
+- capacidades obrigatórias e adiadas;
+- jornada principal;
+- corpus mínimo de lançamento;
+- critérios objetivos de aceite;
+- distinção entre “MVP publicável em sentido de Produto” e readiness real de release;
+- sustentabilidade para manutenção individual;
+- custo operacional mensal obrigatório possível de R$ 0;
+- independência de acesso institucional privilegiado;
+- ausência de decisão técnica prematura.
+
+### Resultado da auditoria
+
+Não foi identificado conflito CANONICAL bloqueante entre:
+
+- FF-0001 — PROJECT_CONSTITUTION v1.0;
+- FF-0005 — PRODUCT_VISION v1.1;
+- FF-0006 — USERS_AND_USE_CASES v1.0;
+- FF-0007 — SCOPE v1.0;
+- FF-0008 — MVP_SPEC v1.0.
+
+A falta de validação comportamental pré-MVP permanece dívida explicitamente documentada e revisável; ela não foi convertida em alegação de demanda comprovada.
+
+### Formalização
+
+- FF-0002 — PRE_CODEX_CHECKLIST v1.2 // CANONICAL.
+- Commit de fechamento do Gate F1: `e4b76512fea07fe13777421f7f3107eedc166cc0`.
+
+### Impacto
+
+- a **FASE 1 — Produto está concluída**;
+- o projeto avança formalmente para a **FASE 2 — Política editorial e evidências**;
+- o Codex continua **não liberado para implementação regular**, pois Gates F2 a F8 e o Gate final CODEX READY permanecem pendentes.
+
+---
+
 # 10. Pendências abertas na data desta versão
 
 As entradas abaixo não constituem decisões aprovadas; apenas consolidam questões já reconhecidas como pendentes.
 
-- produzir, revisar e canonizar FF-0008 — MVP_SPEC;
+- produzir, revisar e canonizar FF-0009 — EDITORIAL_POLICY;
+- produzir, revisar e canonizar FF-0010 — SOURCE_POLICY;
+- produzir, revisar e canonizar FF-0011 — CLAIMS_AND_EVIDENCE;
+- produzir, revisar e canonizar FF-0012 — CORRECTIONS_POLICY;
 - continuar avaliando as hipóteses do FF-0005 de forma proporcional ao risco e preservar a dívida de validação do FF-0006;
-- concluir Gate F1 — Produto;
+- concluir Gate F2 — Política editorial e evidências;
 - definir arquitetura somente após requisitos, política editorial e domínio;
 - definir estratégia de licenciamento antes do marco estabelecido em FF-0002;
 - manter Codex fora da implementação regular até CODEX READY.
@@ -1042,6 +1146,6 @@ Ao adicionar uma nova entrada, deve-se verificar se ela:
 
 Esta versão possui status **CANONICAL** e entra em vigor em **2026-09-04** por aprovação explícita de André.
 
-**FF-0003 — DECISION_LOG v1.4 // CANONICAL**
+**FF-0003 — DECISION_LOG v1.5 // CANONICAL**
 
-Esta revisão registra a canonização do FF-0007 e mantém como principal pendência de Produto a definição e canonização do FF-0008 — MVP_SPEC antes do Gate F1.
+Esta revisão registra a canonização do FF-0008, a aprovação do Gate F1 e o avanço formal do Fiel Fiscaliza para a Fase 2 — Política editorial e evidências.
