@@ -2,7 +2,7 @@
 
 **Nome do documento:** Decision Log  
 **ID:** FF-0003  
-**Versão:** 1.5  
+**Versão:** 1.6  
 **Status:** CANONICAL  
 **Última revisão:** 2026-09-04  
 **Responsável:** André  
@@ -1105,11 +1105,58 @@ A falta de validação comportamental pré-MVP permanece dívida explicitamente 
 
 ---
 
+## FF-DEC-0038 — FF-0009 promovido a CANONICAL v1.0
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+O **FF-0009 — EDITORIAL_POLICY v1.0** foi aprovado após revisão crítica e tornou-se a política editorial geral canônica do Fiel Fiscaliza.
+
+Entre as regras centrais formalizadas:
+
+- a linguagem publicada não pode expressar certeza, abrangência, causalidade ou efeito jurídico maiores que a evidência disponível;
+- alegações, denúncias, investigações, processos, decisões e desfechos jurídicos devem ser descritos em seu estado específico, sem ampliação indevida;
+- ausência de evidência não equivale automaticamente a evidência de ausência;
+- versões conflitantes devem ser tratadas sem preferência política e sem falsa equivalência;
+- voto, intenção, culpa, responsabilidade, aliança, favorecimento, conflito de interesse e causalidade não podem ser inferidos sem base pública suficiente;
+- afirmações de maior gravidade exigem diligência editorial proporcional;
+- títulos e resumos estão sujeitos ao mesmo rigor factual do corpo do conteúdo;
+- conhecimento posterior não pode ser retroativamente apresentado como se fosse conhecido no momento histórico reconstruído;
+- julgamento editorial substantivo e conteúdo sensível exigem validação humana, preservando manutenção por exceção para mudanças estritamente mecânicas quando futuramente autorizadas;
+- conhecimento pessoal ou não público do mantenedor pode gerar hipótese de pesquisa, mas não substitui evidência pública auditável no núcleo factual do produto.
+
+### Salvaguardas
+
+A canonização do FF-0009 não define ainda:
+
+- taxonomia e prioridade formal de fontes;
+- quantidade ou combinação de fontes necessárias para confirmação;
+- modelo formal de Claim e estados de verificação;
+- regras estruturadas de contestação e relação Claim-evidência;
+- fluxo detalhado de correções, retratações e changelog público.
+
+Essas decisões permanecem reservadas respectivamente a FF-0010, FF-0011 e FF-0012.
+
+### Formalização
+
+- FF-0009 — EDITORIAL_POLICY v1.0 // CANONICAL.
+- Commit de formalização: `ec1ebcfd952e6ce6d852579cde6d07bf065d661f`.
+
+### Impacto
+
+- FF-0010 — SOURCE_POLICY deve definir fontes sem enfraquecer o padrão editorial agora canônico;
+- FF-0011 — CLAIMS_AND_EVIDENCE deve formalizar estados e evidências compatíveis com as distinções editoriais do FF-0009;
+- FF-0012 — CORRECTIONS_POLICY deve operacionalizar o princípio de corrigir o presente sem falsificar o passado;
+- Gate F2 permanece aberto até FF-0009 a FF-0012 estarem CANONICAL e a avaliação de publicabilidade ser reproduzível.
+
+---
+
 # 10. Pendências abertas na data desta versão
 
 As entradas abaixo não constituem decisões aprovadas; apenas consolidam questões já reconhecidas como pendentes.
 
-- produzir, revisar e canonizar FF-0009 — EDITORIAL_POLICY;
 - produzir, revisar e canonizar FF-0010 — SOURCE_POLICY;
 - produzir, revisar e canonizar FF-0011 — CLAIMS_AND_EVIDENCE;
 - produzir, revisar e canonizar FF-0012 — CORRECTIONS_POLICY;
@@ -1146,6 +1193,6 @@ Ao adicionar uma nova entrada, deve-se verificar se ela:
 
 Esta versão possui status **CANONICAL** e entra em vigor em **2026-09-04** por aprovação explícita de André.
 
-**FF-0003 — DECISION_LOG v1.5 // CANONICAL**
+**FF-0003 — DECISION_LOG v1.6 // CANONICAL**
 
-Esta revisão registra a canonização do FF-0008, a aprovação do Gate F1 e o avanço formal do Fiel Fiscaliza para a Fase 2 — Política editorial e evidências.
+Esta revisão registra a canonização do FF-0009 e mantém o projeto na Fase 2 — Política editorial e evidências, com FF-0010, FF-0011 e FF-0012 ainda pendentes antes do Gate F2.
