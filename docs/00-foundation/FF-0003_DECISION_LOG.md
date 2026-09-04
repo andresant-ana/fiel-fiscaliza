@@ -2,7 +2,7 @@
 
 **Nome do documento:** Decision Log  
 **ID:** FF-0003  
-**Versão:** 1.2  
+**Versão:** 1.3  
 **Status:** CANONICAL  
 **Última revisão:** 2026-09-04  
 **Responsável:** André  
@@ -875,7 +875,7 @@ A canonização da visão não confirma empiricamente que:
 - as iniciativas atuais são insuficientes;
 - determinado conjunto de funcionalidades deve compor o MVP.
 
-Esses pontos permanecem hipóteses explícitas a serem testadas antes do Gate F1.
+Esses pontos permanecem hipóteses explícitas a serem testadas antes do Gate F1 conforme a redação então vigente.
 
 ### Formalização
 
@@ -888,14 +888,92 @@ FF-0006, FF-0007 e FF-0008 devem derivar da visão sem transformar hipóteses ai
 
 ---
 
+## FF-DEC-0033 — Estratégia de validação da Fase 1 ajustada no FF-0005 v1.1
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+A estratégia de validação da Fase 1 foi ajustada para impedir que pesquisa comportamental pré-MVP se torne um gate universal desproporcional para um projeto individual.
+
+Para decisões pequenas, reversíveis e de baixo risco, a Fase 1 pode avançar com:
+
+- desk research robusta;
+- busca explícita de contraprovas;
+- nível de incerteza declarado;
+- dívida de validação documentada;
+- gatilhos definidos para reabrir pesquisa quando a incerteza puder alterar materialmente uma decisão.
+
+Entrevistas e testes comportamentais continuam sendo métodos válidos e podem se tornar necessários quando risco, custo, compreensão, segurança, editorial ou irreversibilidade justificarem evidência adicional.
+
+Decisões tomadas sob essa regra não podem ser apresentadas como demanda empiricamente validada.
+
+### Motivação
+
+A revisão crítica do FF-0006 identificou que a redação do FF-0005 v1.0 poderia transformar discovery síncrono em gargalo antes do MVP, apesar de a incerteza poder ser absorvida por um produto inicial pequeno e reversível.
+
+A mudança preserva rigor epistemológico e contraprova, mas torna o nível de pesquisa proporcional à decisão.
+
+### Formalização
+
+- FF-0005 — PRODUCT_VISION v1.1 // CANONICAL.
+- Commit de formalização: `bbc34f2f80b62bac507245e9e40e08cfeb459d83`.
+
+### Impacto
+
+- resolve a tensão documental identificada pelo FF-0006 v0.4;
+- permite canonizar usuários e casos de uso com dívida de validação explícita;
+- não altera missão, visão, tese central, princípios editoriais ou requisito de custo zero;
+- pesquisa comportamental pode ser reaberta posteriormente pelos gatilhos definidos nos documentos de produto.
+
+---
+
+## FF-DEC-0034 — FF-0006 promovido a CANONICAL v1.0
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+O **FF-0006 — USERS_AND_USE_CASES v1.0** foi aprovado após desk research, revisão crítica e resolução da tensão metodológica com o FF-0005.
+
+Para a Fase 1:
+
+- o **torcedor institucionalmente engajado** é o usuário primário do MVP;
+- torcedor com dúvida institucional pontual, jornalista/comunicador/criador de conteúdo e pesquisador histórico/acadêmico/analista externo são usuários secundários relevantes;
+- associado, conselheiro ou participante institucional permanece usuário secundário hipotético;
+- os JTBD P0 são verificar afirmação e fonte, reconstruir cronologia e estado atual, contextualizar números financeiros e reconstruir decisão institucional pública;
+- demanda, frequência de uso, intensidade da dor e preferências de interface continuam sem validação comportamental e permanecem como dívida explícita.
+
+### Salvaguardas
+
+A decisão não afirma que:
+
+- existe demanda de mercado comprovada;
+- usuários retornarão com frequência determinada;
+- todos os JTBD P0 precisam entrar no MVP;
+- determinada interface, página, módulo ou tecnologia foi escolhida;
+- usuários institucionais possuem prioridade sobre quem fiscaliza a instituição.
+
+### Formalização
+
+- FF-0006 — USERS_AND_USE_CASES v1.0 // CANONICAL.
+- Commit de formalização: `dec0c5fdab9d1c3c250b2955c788f5eb8e2489a9`.
+
+### Impacto
+
+FF-0007 — SCOPE e FF-0008 — MVP_SPEC passam a poder utilizar usuários e casos de uso definidos pelo FF-0006 como base canônica, respeitando a dívida de validação e sem converter prioridades em funcionalidades automáticas.
+
+---
+
 # 10. Pendências abertas na data desta versão
 
 As entradas abaixo não constituem decisões aprovadas; apenas consolidam questões já reconhecidas como pendentes.
 
-- produzir, revisar e canonizar FF-0006 — USERS_AND_USE_CASES;
 - produzir, revisar e canonizar FF-0007 — SCOPE;
 - produzir, revisar e canonizar FF-0008 — MVP_SPEC;
-- validar as hipóteses centrais do FF-0005 durante a Fase 1;
+- continuar avaliando as hipóteses do FF-0005 de forma proporcional ao risco e preservar a dívida de validação do FF-0006;
 - concluir Gate F1 — Produto;
 - definir arquitetura somente após requisitos, política editorial e domínio;
 - definir estratégia de licenciamento antes do marco estabelecido em FF-0002;
@@ -928,6 +1006,6 @@ Ao adicionar uma nova entrada, deve-se verificar se ela:
 
 Esta versão possui status **CANONICAL** e entra em vigor em **2026-09-04** por aprovação explícita de André.
 
-**FF-0003 — DECISION_LOG v1.2 // CANONICAL**
+**FF-0003 — DECISION_LOG v1.3 // CANONICAL**
 
-Esta revisão registra a canonização do FF-0005, preservando as decisões históricas anteriores e mantendo explícitas as hipóteses de produto que ainda precisam ser validadas antes do Gate F1.
+Esta revisão registra o ajuste metodológico do FF-0005 para validação proporcional e a canonização do FF-0006, preservando explicitamente a dívida de validação comportamental para revisão posterior quando materialmente necessária.
