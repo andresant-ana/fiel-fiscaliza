@@ -2,8 +2,8 @@
 
 **Nome do documento:** Project Constitution  
 **ID:** FF-0001  
-**Versão:** 0.1  
-**Status:** DRAFT  
+**Versão:** 1.0  
+**Status:** CANONICAL  
 **Última revisão:** 2026-09-04  
 **Responsável:** André  
 **Projeto:** Fiel Fiscaliza  
@@ -239,6 +239,10 @@ Quando o estado de uma informação não puder ser determinado com segurança, o
 
 **“Desconhecido” é preferível a uma conclusão inventada.**
 
+Quando a existência de uma investigação, denúncia ou processo estiver documentalmente comprovada, o fato confirmado é a existência daquele procedimento ou alegação — não a veracidade automática das acusações nele contidas.
+
+O sistema deve preservar explicitamente essa distinção.
+
 ---
 
 # 8. Presunção contra inferências políticas
@@ -290,7 +294,7 @@ A fonte não deve ser tratada apenas como referência visual exibida no final de
 
 ---
 
-# 10. Hierarquia de fontes
+# 10. Prioridade e interpretação das fontes
 
 O projeto deve priorizar fontes primárias sempre que elas estiverem disponíveis e forem adequadas.
 
@@ -317,6 +321,10 @@ Fontes jornalísticas podem:
 - registrar declarações.
 
 Quando uma fonte primária adequada existir, ela deve ter preferência para sustentar afirmações objetivas sobre o conteúdo daquele documento ou ato.
+
+Uma fonte primária é autoridade sobre o ato, documento ou declaração que emitiu. Isso não significa que toda afirmação material contida nela seja automaticamente verdadeira quando estiver contestada, depender de apuração ou expressar a posição de uma das partes.
+
+O Fiel Fiscaliza deve distinguir o fato de uma pessoa ou instituição ter declarado, decidido ou publicado algo da veracidade material de alegações eventualmente contidas nessa manifestação.
 
 A política detalhada de fontes será definida em documento específico.
 
@@ -1148,12 +1156,8 @@ Nenhuma alteração desta Constituição pode ocorrer silenciosamente.
 
 # 49. Vigência
 
-Esta versão ainda possui status **DRAFT**.
-
-Ela não se tornará CANONICAL até receber aprovação explícita de André.
-
-Quando aprovada:
+Esta versão possui status **CANONICAL** e entra em vigor em **2026-09-04** por aprovação explícita de André.
 
 **FF-0001 — PROJECT_CONSTITUTION v1.0 // CANONICAL**
 
-passará a constituir a autoridade máxima do Fiel Fiscaliza.
+constitui, a partir desta data, a autoridade máxima do Fiel Fiscaliza.
