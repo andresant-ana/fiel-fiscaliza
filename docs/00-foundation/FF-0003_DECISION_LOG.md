@@ -2,7 +2,7 @@
 
 **Nome do documento:** Decision Log  
 **ID:** FF-0003  
-**Versão:** 1.0  
+**Versão:** 1.1  
 **Status:** CANONICAL  
 **Última revisão:** 2026-09-04  
 **Responsável:** André  
@@ -727,7 +727,7 @@ A disponibilidade pública do repositório não deve ser interpretada como autor
 
 ---
 
-# 9. Aprovação dos primeiros documentos canônicos
+# 9. Aprovação dos primeiros documentos canônicos e gates
 
 ---
 
@@ -784,13 +784,86 @@ A partir desta versão, novas decisões relevantes devem ser registradas increme
 
 ---
 
+## FF-DEC-0030 — FF-0004 promovido a CANONICAL v1.0
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+O **FF-0004 — GLOSSARY v1.0** foi explicitamente aprovado por André após revisão crítica e tornou-se a referência terminológica oficial do Fiel Fiscaliza, subordinada ao FF-0001 e às definições especializadas de documentos CANONICAL dentro de seus respectivos escopos.
+
+### Commit de formalização
+
+`b3b8fb0f7877e6fe401323414b4d742574a9b3ff`
+
+### Impacto
+
+Documentos posteriores devem utilizar o vocabulário comum do FF-0004 ou registrar explicitamente especializações relevantes sem criar conflito canônico silencioso.
+
+---
+
+## FF-DEC-0031 — Gate F0 — Fundação aprovado
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+O **Gate F0 — Fundação e governança documental** foi aprovado após auditoria de consistência dos documentos FF-0001, FF-0002, FF-0003 e FF-0004.
+
+A auditoria não identificou conflito canônico bloqueante entre os quatro documentos.
+
+### Escopo da auditoria
+
+Foram verificados, entre outros pontos:
+
+- autoridade e hierarquia documental;
+- estados DRAFT, CANONICAL e DEPRECATED;
+- regras de conflito e versionamento;
+- papel do Decision Log e dos futuros ADRs;
+- independência institucional e editorial;
+- distinção entre fato, alegação, investigação, fonte e evidência;
+- proveniência e preservação temporal;
+- custo operacional zero, static-first e manutenção por exceção;
+- política de uso do Codex e estado CODEX READY;
+- consistência terminológica e não antecipação indevida de decisões de produto, domínio ou arquitetura;
+- rastreabilidade de impacto entre documentos canônicos.
+
+### Pendências não bloqueantes reconhecidas
+
+Permanecem deliberadamente para fases posteriores:
+
+- licenciamento de código, documentação e dados;
+- definição detalhada de produto e MVP;
+- política editorial especializada;
+- modelo de domínio e temporalidade técnica;
+- stack, persistência e provedores de infraestrutura.
+
+Essas pendências não contradizem o FF-0001 e já possuem fase de resolução prevista no FF-0002.
+
+### Formalização
+
+- FF-0002 — PRE_CODEX_CHECKLIST v1.1 // CANONICAL.
+- Commit de fechamento do Gate F0: `1901bd1a6c3739f6b13232e965f56b9cb7deea3c`.
+
+### Impacto
+
+A **FASE 0 — Fundação** está concluída.
+
+O Fiel Fiscaliza entra formalmente na **FASE 1 — Produto**, permanecendo pré-Codex e sem autorização para implementação regular do MVP.
+
+---
+
 # 10. Pendências abertas na data desta versão
 
 As entradas abaixo não constituem decisões aprovadas; apenas consolidam questões já reconhecidas como pendentes.
 
-- produzir e canonizar FF-0004 — GLOSSARY;
-- concluir Gate F0 após validação de consistência da Fundação;
-- definir produto e MVP nas fases posteriores;
+- produzir, revisar e canonizar FF-0005 — PRODUCT_VISION;
+- produzir, revisar e canonizar FF-0006 — USERS_AND_USE_CASES;
+- produzir, revisar e canonizar FF-0007 — SCOPE;
+- produzir, revisar e canonizar FF-0008 — MVP_SPEC;
+- concluir Gate F1 — Produto;
 - definir arquitetura somente após requisitos, política editorial e domínio;
 - definir estratégia de licenciamento antes do marco estabelecido em FF-0002;
 - manter Codex fora da implementação regular até CODEX READY.
@@ -822,6 +895,6 @@ Ao adicionar uma nova entrada, deve-se verificar se ela:
 
 Esta versão possui status **CANONICAL** e entra em vigor em **2026-09-04** por aprovação explícita de André.
 
-**FF-0003 — DECISION_LOG v1.0 // CANONICAL**
+**FF-0003 — DECISION_LOG v1.1 // CANONICAL**
 
-A partir desta promoção, novas decisões relevantes devem ser adicionadas de forma incremental, preservando as entradas históricas anteriores e respeitando a hierarquia estabelecida no FF-0001.
+Esta revisão registra a canonização do FF-0004 e a aprovação do **Gate F0 — Fundação**, preservando as decisões históricas anteriores e respeitando a hierarquia estabelecida no FF-0001.
