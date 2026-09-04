@@ -2,8 +2,8 @@
 
 **Nome do documento:** Product Vision  
 **ID:** FF-0005  
-**Versão:** 0.1  
-**Status:** DRAFT  
+**Versão:** 1.0  
+**Status:** CANONICAL  
 **Última revisão:** 2026-09-04  
 **Responsável:** André  
 **Projeto:** Fiel Fiscaliza  
@@ -95,7 +95,7 @@ A vida institucional do Corinthians produz continuamente informação relevante 
 
 O problema não é simplesmente que essas informações não existam.
 
-O problema é que, com frequência, elas chegam ao torcedor de forma:
+O problema que esta visão pretende atacar é que, em muitos casos, elas chegam ao torcedor de forma:
 
 - fragmentada;
 - efêmera;
@@ -107,19 +107,21 @@ O problema é que, com frequência, elas chegam ao torcedor de forma:
 - distribuída entre documentos extensos, notícias, comunicados, redes sociais e registros públicos;
 - pouco conectada ao histórico que permite compreender sua importância.
 
-Como consequência, acompanhar um fato no momento em que acontece pode ser relativamente fácil, enquanto reconstruir a mesma questão meses ou anos depois pode exigir uma nova investigação quase do zero.
+A hipótese de produto é que, para parte relevante das questões institucionais, acompanhar um acontecimento no momento em que ocorre é menos custoso do que reconstruí-lo com precisão meses ou anos depois.
+
+Essa hipótese deve ser validada na Fase 1 e não deve ser tratada como verdade universal sobre todo tipo de informação do clube.
 
 ---
 
 ## 3.2 Problema de continuidade
 
-Informação institucional costuma ser consumida como notícia do dia.
+Informação institucional costuma ser consumida como fluxo do presente.
 
-Entretanto, fiscalização exige continuidade.
+Entretanto, fiscalização institucional frequentemente exige continuidade.
 
-Para avaliar uma gestão, uma decisão, uma promessa, uma votação, uma dívida, uma investigação ou uma mudança estatutária, não basta saber o último acontecimento isolado.
+Para avaliar uma gestão, uma decisão, uma promessa, uma votação, uma dívida, uma investigação ou uma mudança estatutária, não basta necessariamente conhecer apenas o último acontecimento isolado.
 
-É necessário conseguir reconstruir:
+Pode ser necessário reconstruir:
 
 - o que existia antes;
 - o que mudou;
@@ -130,15 +132,15 @@ Para avaliar uma gestão, uma decisão, uma promessa, uma votação, uma dívida
 - qual era o estado conhecido em determinado momento;
 - qual é o estado conhecido agora.
 
-A ausência dessa continuidade enfraquece a memória coletiva e aumenta o custo de fiscalização para cada torcedor interessado.
+A visão parte da hipótese de que a ausência dessa continuidade aumenta o custo de fiscalização para torcedores interessados e favorece perda de memória institucional.
 
 ---
 
-## 3.3 Problema de confiança
+## 3.3 Problema de confiança e verificabilidade
 
 Em ambiente político e institucional, a mesma questão pode ser apresentada de formas incompatíveis por diferentes grupos.
 
-O torcedor frequentemente precisa responder sozinho:
+O torcedor pode precisar responder perguntas como:
 
 - isso aconteceu ou alguém apenas afirmou que aconteceu?
 - existe documento?
@@ -149,15 +151,19 @@ O torcedor frequentemente precisa responder sozinho:
 - esta informação foi posteriormente corrigida?
 - essa pessoa realmente votou assim ou isso está sendo inferido?
 
-O Fiel Fiscaliza pretende reduzir esse custo de verificação sem substituir incerteza por falsa certeza.
+O Fiel Fiscaliza pretende reduzir o custo de verificação dessas perguntas sem substituir incerteza por falsa certeza e sem exigir que o usuário confie no projeto apenas por autoridade declarada.
+
+A confiança pretendida deve ser consequência de rastreabilidade, consistência editorial, correções e acesso às evidências — não de autoproclamação.
 
 ---
 
 # 4. Oportunidade de produto
 
-Existe espaço para um produto cujo valor principal não seja produzir mais volume de informação, mas **aumentar a capacidade de compreender e reutilizar informação institucional ao longo do tempo**.
+A oportunidade que esta visão propõe explorar é a criação de um produto cujo valor principal não seja produzir mais volume de informação, mas **aumentar a capacidade de compreender e reutilizar informação institucional ao longo do tempo**.
 
-A oportunidade consiste em transformar informação pública dispersa em um patrimônio informacional:
+Essa oportunidade ainda é uma hipótese de produto. Sua existência e relevância devem ser validadas por pesquisa sobre usuários, práticas atuais e iniciativas já existentes antes do fechamento do Gate F1.
+
+Se validada, o Fiel Fiscaliza poderá transformar informação pública dispersa em um patrimônio informacional:
 
 - consultável;
 - contextualizado;
@@ -169,9 +175,11 @@ A oportunidade consiste em transformar informação pública dispersa em um patr
 
 O Fiel Fiscaliza não precisa substituir imprensa, portais, instituições ou movimentos de fiscalização existentes.
 
-Seu valor pode estar justamente em ocupar uma função diferente:
+Seu valor proposto está em ocupar uma função diferente:
 
-> **preservar e organizar aquilo que normalmente desaparece no fluxo cotidiano de notícias, documentos, declarações e disputas institucionais.**
+> **preservar e organizar aquilo que normalmente pode se perder no fluxo cotidiano de notícias, documentos, declarações e disputas institucionais.**
+
+A pesquisa da Fase 1 deve procurar tanto evidências favoráveis quanto contraprovas para essa hipótese.
 
 ---
 
@@ -179,11 +187,13 @@ Seu valor pode estar justamente em ocupar uma função diferente:
 
 ## 5.1 Declaração de visão
 
-> **O Fiel Fiscaliza deve se tornar uma referência pública, independente e historicamente confiável para compreender a vida institucional do Corinthians — um lugar em que atos, decisões, documentos, posições e mudanças possam ser reconstruídos no tempo com contexto e fonte verificável.**
+> **O Fiel Fiscaliza deve se tornar uma referência pública e independente para compreender a vida institucional do Corinthians — um lugar em que atos, decisões, documentos, posições e mudanças possam ser reconstruídos no tempo com contexto, proveniência e evidência verificável.**
+
+A confiabilidade do produto deve ser demonstrável por sua rastreabilidade e comportamento editorial, não presumida pelo próprio projeto.
 
 A visão não depende de o usuário acompanhar política do clube diariamente.
 
-O produto deve permitir que alguém chegue depois de um acontecimento e ainda consiga entender a história.
+O produto deve permitir que alguém chegue depois de um acontecimento e ainda consiga reconstruir sua história com o nível de certeza que as evidências realmente permitem.
 
 ---
 
@@ -191,7 +201,7 @@ O produto deve permitir que alguém chegue depois de um acontecimento e ainda co
 
 ### Antes
 
-Para compreender uma questão institucional, o torcedor precisa:
+Para compreender determinadas questões institucionais, o torcedor pode precisar:
 
 - lembrar onde viu determinada informação;
 - procurar notícias antigas;
@@ -215,7 +225,7 @@ O Fiel Fiscaliza deve reduzir esse trabalho, permitindo que o usuário encontre 
 
 O produto não elimina a necessidade de análise crítica.
 
-Ele diminui o custo de obtê-la.
+Ele pretende diminuir o custo de reunir a base factual e documental necessária para exercê-la.
 
 ---
 
@@ -223,29 +233,33 @@ Ele diminui o custo de obtê-la.
 
 A tese central do Fiel Fiscaliza é:
 
-> **A fiscalização institucional melhora quando informação pública deixa de ser consumida apenas como fluxo e passa a existir como memória estruturada, temporal e verificável.**
+> **A fiscalização institucional pode se tornar mais efetiva quando informação pública deixa de ser consumida apenas como fluxo e passa a existir como memória estruturada, temporal e verificável.**
 
-Essa tese possui cinco partes.
+Esta é uma **tese de produto a ser testada**, não uma conclusão empírica já demonstrada.
+
+A tese possui cinco partes.
 
 ## 6.1 Estrutura reduz dispersão
 
 Informações relacionadas devem poder ser encontradas e compreendidas como partes de uma mesma história institucional, e não apenas como páginas isoladas publicadas em lugares diferentes.
 
-## 6.2 Temporalidade reduz distorção histórica
+## 6.2 Temporalidade reduz risco de distorção histórica
 
 A plataforma deve preservar o que era conhecido em cada momento e permitir acompanhar evolução sem reescrever o passado a partir do estado atual.
 
-## 6.3 Proveniência aumenta verificabilidade
+## 6.3 Proveniência aumenta auditabilidade
 
 O usuário deve poder chegar à origem da informação e compreender quem publicou, quando publicou e qual evidência sustenta determinada afirmação.
 
-## 6.4 Linguagem de incerteza aumenta confiança
+## 6.4 Linguagem de incerteza protege a integridade da consulta
 
 Dizer “desconhecido”, “não confirmado”, “alegado” ou “em investigação” quando apropriado é parte da utilidade do produto, não uma fraqueza.
 
-## 6.5 Memória aumenta responsabilização
+## 6.5 Memória sustenta fiscalização retrospectiva
 
-Atos institucionais tornam-se mais fáceis de fiscalizar quando podem ser recuperados posteriormente e comparados com decisões, posições e estados anteriores de forma documentalmente sustentada.
+Atos institucionais se tornam mais recuperáveis e comparáveis quando permanecem associados a documentos, contexto, posições e estados anteriores de forma documentalmente sustentada.
+
+Isso pode ampliar a capacidade de fiscalização posterior sem implicar que memória, por si só, produza responsabilização institucional.
 
 ---
 
@@ -282,7 +296,7 @@ Reduzir a quantidade de contexto prévio necessária para que um corinthiano con
 
 ## 8.2 Verificabilidade
 
-Tornar simples identificar a origem e a qualidade da evidência que sustenta uma informação.
+Tornar simples identificar a origem e a adequação da evidência que sustenta uma informação.
 
 ## 8.3 Memória
 
@@ -294,7 +308,7 @@ Mostrar evolução e vigência em vez de apresentar apenas o último estado conh
 
 ## 8.5 Independência
 
-Não exigir alinhamento com situação, oposição, torcida organizada, dirigente ou grupo político para utilizar ou confiar na estrutura factual do produto.
+Permitir uso e avaliação da estrutura factual do produto sem exigir alinhamento com situação, oposição, torcida organizada, dirigente ou grupo político.
 
 ## 8.6 Acessibilidade informacional
 
@@ -338,7 +352,7 @@ Informações contestadas, incompletas ou não confirmadas devem permanecer reco
 
 O produto deve possuir valor mesmo que não tenha grande número de acessos.
 
-Uma consulta histórica precisa, uma fonte reencontrada ou uma decisão reconstruída corretamente já constituem valor real.
+Uma consulta histórica precisa, uma fonte reencontrada ou uma decisão reconstruída corretamente já podem constituir valor real.
 
 ## 9.7 Baixo custo cognitivo
 
@@ -349,6 +363,12 @@ O usuário não deve precisar compreender a arquitetura interna, o modelo de dad
 Independência editorial não exige tratar evidências desiguais como equivalentes.
 
 O produto deve representar fatos, contestações e incertezas de forma proporcional ao suporte disponível, sem propaganda e sem fabricar falsa simetria.
+
+## 9.9 Confiabilidade deve ser auditável
+
+O produto não deve pedir confiança cega do usuário.
+
+Sempre que materialmente possível, afirmações relevantes devem permitir inspeção de origem, contexto, status e histórico suficiente para que o usuário avalie a base da informação apresentada.
 
 ---
 
@@ -406,6 +426,14 @@ Um produto bem-sucedido deve demonstrar, ao longo do tempo, capacidade de:
 - continuar operacionalmente sustentável;
 - permanecer útil mesmo quando a conjuntura política do clube mudar.
 
+Não constitui sucesso, por si só:
+
+- obter tráfego elevado com baixa rastreabilidade;
+- publicar grande volume com baixa utilidade;
+- cobrir muitas áreas superficialmente;
+- depender de esforço manual incompatível com manutenção individual;
+- gerar percepção de autoridade sem permitir auditoria das evidências.
+
 Métricas quantitativas específicas serão definidas somente quando houver MVP e comportamento observável suficientes para justificar metas concretas.
 
 Não devem ser inventadas metas numéricas nesta fase apenas para dar aparência de precisão.
@@ -416,7 +444,7 @@ Não devem ser inventadas metas numéricas nesta fase apenas para dar aparência
 
 No longo prazo, o Fiel Fiscaliza deve funcionar como um patrimônio informacional público sobre a vida institucional do Corinthians.
 
-Seu valor acumulado deve crescer com o tempo porque cada novo registro passa a possuir contexto histórico anterior.
+Seu valor acumulado deve crescer com o tempo porque cada novo registro poderá se beneficiar do contexto histórico anterior.
 
 A plataforma deve permanecer conceitualmente útil através de:
 
@@ -464,11 +492,11 @@ A visão atual contém hipóteses que não devem ser tratadas como fatos até se
 
 ## 15.1 Hipótese de dor
 
-Torcedores interessados em vida institucional enfrentam esforço excessivo para reencontrar, verificar e contextualizar informação histórica.
+Torcedores interessados em vida institucional enfrentam esforço materialmente relevante para reencontrar, verificar e contextualizar determinadas informações históricas.
 
 ## 15.2 Hipótese de valor
 
-Organização temporal e proveniência explícita reduzem materialmente esse esforço e aumentam confiança na consulta.
+Organização temporal e proveniência explícita reduzem materialmente esse esforço e tornam a base da consulta mais auditável.
 
 ## 15.3 Hipótese de usuário
 
@@ -476,7 +504,7 @@ Existe um grupo de usuários além do próprio mantenedor que obterá utilidade 
 
 ## 15.4 Hipótese de lacuna
 
-As iniciativas já existentes de transparência, imprensa, mobilização ou acompanhamento institucional não resolvem de forma suficiente e contínua o problema de memória institucional estruturada que o Fiel Fiscaliza pretende atacar.
+As iniciativas já existentes de transparência, imprensa, mobilização ou acompanhamento institucional deixam uma lacuna relevante e contínua no problema de memória institucional estruturada que o Fiel Fiscaliza pretende atacar.
 
 Essa hipótese deve ser validada por mapeamento do ecossistema, não presumida.
 
@@ -487,6 +515,10 @@ Há volume suficiente de informação pública e legitimamente acessível para p
 ## 15.6 Hipótese de manutenção
 
 É possível entregar utilidade relevante sem criar uma operação editorial diária incompatível com manutenção individual.
+
+## 15.7 Hipótese de compreensão
+
+É possível apresentar contexto, proveniência, temporalidade e incerteza com rigor sem tornar a experiência excessivamente complexa para usuários não especializados.
 
 ---
 
@@ -502,13 +534,31 @@ Para transformar esta visão em especificação de produto, a Fase 1 ainda deve 
 - quais lacunas reais permanecem;
 - quais casos de uso geram valor recorrente;
 - qual subconjunto de problemas possui melhor relação entre valor e custo de manutenção para um MVP;
-- quais funções seriam interessantes, mas não essenciais.
+- quais funções seriam interessantes, mas não essenciais;
+- quais evidências contradizem ou enfraquecem as hipóteses desta visão.
+
+A pesquisa não deve ser conduzida apenas para confirmar a ideia existente. Contraprovas são parte do processo de produto.
 
 O **FF-0006 — USERS_AND_USE_CASES** deve aprofundar usuários e tarefas.
 
 O **FF-0007 — SCOPE** deve transformar a visão em fronteiras claras.
 
 O **FF-0008 — MVP_SPEC** deve escolher a menor combinação de capacidades capaz de provar a tese de produto com utilidade real.
+
+## 16.1 Critérios de reavaliação da visão
+
+A Product Vision deve ser reavaliada antes do Gate F1 se a pesquisa indicar materialmente que:
+
+- o problema percebido não gera esforço relevante para usuários além do mantenedor;
+- soluções já existentes resolvem de maneira suficiente os casos de uso prioritários;
+- a informação pública disponível é insuficiente para entregar valor consistente;
+- a estrutura necessária para produzir valor exige manutenção incompatível com o FF-0001;
+- o rigor editorial necessário torna a experiência inviável para os usuários-alvo;
+- o melhor problema a resolver está fora da tese central de memória institucional estruturada.
+
+Nesses casos, o resultado correto pode ser reduzir escopo, reposicionar a tese, substituir parte da visão ou até concluir que determinada proposta de produto não se justifica.
+
+Preservar uma ideia por apego não é objetivo do Fiel Fiscaliza.
 
 ---
 
@@ -567,20 +617,20 @@ Antes de promover este documento para CANONICAL, deve-se confirmar que:
 - a visão diferencia claramente valor institucional de cobertura jornalística;
 - nenhuma funcionalidade de MVP foi canonizada prematuramente;
 - hipóteses relevantes estão identificadas como hipóteses;
+- a oportunidade proposta não é apresentada como lacuna de mercado já comprovada;
 - o documento não presume usuário que ainda não foi estudado;
 - os critérios de sucesso não dependem apenas de audiência;
 - a visão é compatível com manutenção individual e custo zero;
+- existem critérios explícitos para reavaliar ou pivotar a tese diante de contraprovas;
 - as questões ainda abertas estão encaminhadas aos documentos adequados.
+
+A revisão crítica de 2026-09-04 confirmou esses critérios sem identificar conflito canônico bloqueante.
 
 ---
 
 # 20. Vigência
 
-Esta versão possui status **DRAFT**.
-
-Ela propõe a visão inicial de produto da Fase 1 e depende de revisão e aprovação explícita de André.
-
-Quando aprovada, deverá ser promovida para:
+Esta versão possui status **CANONICAL** e entra em vigor em **2026-09-04** por aprovação explícita de André após revisão crítica de produto.
 
 **FF-0005 — PRODUCT_VISION v1.0 // CANONICAL**
 
