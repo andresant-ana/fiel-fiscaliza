@@ -2,7 +2,7 @@
 
 **Nome do documento:** Editorial Policy  
 **ID:** FF-0009  
-**Versão:** 0.1  
+**Versão:** 0.2  
 **Status:** DRAFT  
 **Última revisão:** 2026-09-04  
 **Responsável:** André  
@@ -23,12 +23,13 @@ A política deve permitir que o projeto responda de maneira reproduzível a perg
 - como representar denúncias, investigações, processos e decisões sem presumir culpa ou definitividade?;
 - como tratar versões conflitantes?;
 - quando devemos escrever “desconhecido”, “não confirmado” ou formulação equivalente?;
-- como evitar inferências de voto, intenção, culpa, aliança ou responsabilidade?;
+- como evitar inferências de voto, intenção, culpa, aliança, causalidade ou responsabilidade?;
 - como escrever sobre disputas políticas sem transformar fiscalização em propaganda?;
 - como criticar um ato institucional sem produzir ataque pessoal?;
 - quando a ausência de informação deve ser explicitada em vez de preenchida por hipótese?;
 - quais conteúdos exigem revisão humana antes de publicação?;
-- como impedir que títulos, resumos ou simplificações afirmem mais do que a evidência sustenta?
+- como impedir que títulos, resumos ou simplificações afirmem mais do que a evidência sustenta?;
+- como evitar que conhecimento posterior reescreva aquilo que era conhecido em momento anterior?
 
 O FF-0009 estabelece **regras editoriais gerais**.
 
@@ -60,11 +61,13 @@ Em particular, esta política deve respeitar que:
 - fonte primária prova o ato, documento ou declaração que emitiu, não necessariamente a verdade material de alegações controvertidas;
 - “desconhecido” é preferível a uma conclusão inventada;
 - proveniência faz parte estrutural do dado;
-- o estado conhecido atual não deve apagar o histórico;
+- o estado conhecido mais recente não deve apagar o histórico;
 - voto, intenção, culpa, responsabilidade, aliança, favorecimento e pertencimento político não podem ser inferidos sem evidência pública suficiente;
 - o projeto não representa oficialmente SCCP, Gaviões da Fiel ou qualquer grupo político;
 - o produto não deve se transformar em portal esportivo geral, campanha política ou dossiê pessoal;
 - o MVP trabalha com o **estado conhecido na última verificação**, sem promessa de tempo real.
+
+A revisão crítica desta versão não identificou conflito canônico bloqueante com esses documentos.
 
 ---
 
@@ -72,7 +75,7 @@ Em particular, esta política deve respeitar que:
 
 A regra editorial central do Fiel Fiscaliza é:
 
-> **A linguagem publicada nunca deve expressar um grau de certeza maior do que aquele sustentado pela evidência disponível.**
+> **A linguagem publicada nunca deve expressar um grau de certeza, abrangência, causalidade ou efeito jurídico maior do que aquele sustentado pela evidência disponível.**
 
 Isso se aplica a:
 
@@ -94,7 +97,7 @@ Quando houver dúvida entre uma formulação mais forte e uma mais restrita, dev
 
 Prudência editorial não significa esconder informação relevante.
 
-Significa **descrever precisamente aquilo que é conhecido, por que é conhecido e o que ainda não pode ser afirmado**.
+Significa **descrever precisamente aquilo que é conhecido, por que é conhecido, em que momento isso era conhecido e o que ainda não pode ser afirmado**.
 
 ---
 
@@ -157,6 +160,28 @@ O projeto deve representar divergência de forma proporcional à qualidade e per
 
 Uma alegação isolada não deve receber peso artificialmente equivalente a documentação robusta apenas para produzir aparência de equilíbrio.
 
+## 4.7 Gravidade da afirmação aumenta a exigência editorial
+
+O padrão de publicação deve ser proporcional ao potencial de dano e à dificuldade de reversão do efeito causado por uma afirmação.
+
+Quanto mais grave for uma afirmação — por exemplo, envolvendo crime, fraude, corrupção, desvio, favorecimento ilícito, conflito de interesse, culpa pessoal ou dano reputacional relevante — maior deve ser a exigência de:
+
+- precisão de linguagem;
+- atribuição;
+- qualidade e pertinência da evidência;
+- contexto;
+- tratamento de contestação relevante;
+- revisão humana substantiva;
+- prudência na decisão entre publicar, restringir a formulação ou não publicar.
+
+Esta regra não define quantidade fixa de fontes. Os critérios formais de evidência serão especializados em FF-0010 e FF-0011.
+
+## 4.8 Descrever procedimento não equivale a decidir a verdade material
+
+Estados jurídicos e administrativos são fatos institucionais próprios e devem ser descritos corretamente.
+
+A existência de investigação, denúncia, processo, condenação, absolvição, arquivamento, prescrição, improcedência ou outra decisão não autoriza o projeto a ampliar automaticamente o significado jurídico específico daquele ato para uma conclusão factual mais abrangente do que a decisão efetivamente sustenta.
+
 ---
 
 # 5. Padrão mínimo para publicação factual
@@ -171,7 +196,9 @@ Uma afirmação factual materialmente relevante só deve ser publicada quando o 
 6. **Existe contestação material conhecida que altere a compreensão?**
 7. **Há informação ausente que não pode ser preenchida por inferência?**
 8. **A formulação poderia induzir o usuário a concluir algo mais forte do que aquilo que está documentado?**
-9. **A publicação é proporcional à relevância institucional e aos riscos envolvidos?**
+9. **Existe inferência causal, política ou subjetiva embutida na frase? Se existir, ela está realmente sustentada?**
+10. **A gravidade da afirmação exige padrão editorial reforçado?**
+11. **A publicação é proporcional à relevância institucional e aos riscos envolvidos?**
 
 Se uma dessas perguntas materialmente relevantes não puder ser respondida, o conteúdo deve ser:
 
@@ -262,6 +289,8 @@ O projeto só deve utilizar formulações como “decisão definitiva”, “tr�
 
 Quando a definitividade não puder ser estabelecida com segurança, ela deve permanecer não determinada.
 
+Por padrão, o projeto deve preferir o **estado processual ou administrativo exato** a uma palavra genérica como “definitivo” quando isso for mais preciso.
+
 ## 6.8 Declaração pública
 
 Uma declaração pública comprova que determinada pessoa ou instituição expressou aquela posição no contexto identificado.
@@ -291,7 +320,8 @@ A interpretação deve:
 - ser identificável como interpretação quando não for mera descrição objetiva;
 - explicitar a base documental relevante;
 - evitar linguagem de certeza quando existirem leituras razoavelmente concorrentes;
-- não atribuir intenção não documentada.
+- não atribuir intenção não documentada;
+- não transformar sequência temporal ou correlação em causalidade sem base suficiente.
 
 ## 6.11 Rumor e informação sem confirmação suficiente
 
@@ -300,6 +330,12 @@ Rumor não deve ser convertido em registro factual apenas porque circula amplame
 O MVP não deve utilizar rumor como unidade de conteúdo.
 
 Uma informação ainda não confirmada só deve aparecer quando sua própria existência for material para compreender uma questão institucional e houver forma editorialmente responsável de explicar seu status.
+
+## 6.12 Terminologia jurídica e administrativa deve refletir o ato real
+
+Termos como “investigado”, “denunciado”, “réu”, “condenado”, “absolvido”, “arquivado”, “prescrito”, “cassado”, “afastado” ou equivalentes só devem ser usados quando o estado correspondente estiver efetivamente documentado e no contexto correto.
+
+O projeto não deve trocar um termo técnico por outro aparentemente parecido quando essa troca alterar o significado institucional ou jurídico.
 
 ---
 
@@ -328,6 +364,14 @@ Exemplo:
 não é equivalente a:
 
 > “A pessoa não votou dessa forma.”
+
+Da mesma forma:
+
+> “O documento não foi localizado no canal público consultado.”
+
+não é equivalente, sem evidência adicional, a:
+
+> “O documento foi ocultado.”
 
 Exceções em que a ausência em uma base comprovadamente exaustiva possa sustentar conclusão específica deverão ser tratadas com critérios próprios no FF-0011.
 
@@ -362,7 +406,7 @@ Atribuição precisa reduz o risco de transformar posição de uma parte do club
 
 ---
 
-# 9. Versões conflitantes e contraditório factual
+# 9. Versões conflitantes e respostas relevantes
 
 Quando existirem versões materialmente incompatíveis sobre uma questão, o projeto não deve resolver a divergência por preferência política ou afinidade com a fonte.
 
@@ -377,7 +421,9 @@ Deve procurar identificar:
 
 ## 9.1 Resposta pública materialmente relevante
 
-Quando uma pessoa, órgão ou organização diretamente afetada por uma acusação ou interpretação possuir resposta pública materialmente relevante e razoavelmente localizável, essa resposta deve ser considerada na reconstrução.
+Quando uma pessoa, órgão ou organização diretamente afetada por acusação material possuir resposta pública relevante e razoavelmente localizável, essa resposta deve ser considerada na reconstrução.
+
+A diligência exigida deve ser proporcional à gravidade da afirmação e ao risco de dano.
 
 Isso não significa que toda publicação exija contato prévio com todas as partes.
 
@@ -387,7 +433,9 @@ O MVP não assume obrigação universal de solicitar manifestação antes de pub
 
 Se nenhuma manifestação pública tiver sido localizada, essa ausência não deve ser apresentada como admissão, concordância ou prova de culpa.
 
-## 9.3 Contraditório não é equivalência automática
+Quando a existência ou ausência de resposta for material para compreender o caso, a formulação deve limitar-se ao que foi efetivamente verificado.
+
+## 9.3 Resposta não é equivalência automática
 
 Uma resposta sem evidência não recebe automaticamente o mesmo peso de documentação independente robusta.
 
@@ -420,7 +468,7 @@ Preferir:
 
 > “foi condenado definitivamente por [conduta/tipo], conforme decisão X”
 
-em vez de usar adjetivos identitários ou insultos como forma de caracterização editorial.
+quando essa qualificação estiver realmente documentada, em vez de usar adjetivos identitários ou insultos como forma de caracterização editorial.
 
 ## 10.2 Termos de forte carga acusatória
 
@@ -438,6 +486,27 @@ Palavras como:
 só devem ser utilizadas de forma afirmativa quando a formulação exata estiver sustentada pelo estado jurídico ou factual correspondente.
 
 Quando forem alegação, investigação, imputação ou tipificação atribuída a terceiro, isso deve ficar explícito na mesma unidade de sentido.
+
+## 10.3 Desfecho processual não deve ser ampliado além do que decide
+
+Arquivamento, absolvição, improcedência, prescrição, nulidade, extinção ou outra forma de encerramento possuem significados próprios.
+
+O projeto deve descrever o fundamento documentado e evitar converter automaticamente um desses estados em afirmações mais amplas como:
+
+- “a acusação era falsa”;
+- “o fato nunca aconteceu”;
+- “a pessoa foi inocentada de tudo”;
+- “não houve irregularidade”;
+
+quando a decisão ou evidência disponível não sustentar especificamente essa conclusão.
+
+O mesmo vale no sentido inverso: abertura de investigação, recebimento de denúncia, condição de réu ou decisão não definitiva não equivalem automaticamente a comprovação da acusação.
+
+## 10.4 Verdade jurídica e verdade material não são tratadas como conceitos idênticos
+
+O Fiel Fiscaliza deve registrar com precisão o que uma autoridade decidiu e quais efeitos o ato possui.
+
+Não cabe ao projeto transformar automaticamente o resultado jurídico em conclusão factual mais ampla nem ignorar decisão definitiva quando ela for materialmente relevante para o estado institucional da questão.
 
 ---
 
@@ -458,7 +527,8 @@ Sem evidência pública suficiente, o Fiel Fiscaliza não deve afirmar ou sugeri
 - participação em irregularidade;
 - coordenação entre pessoas;
 - troca de favores;
-- benefício oculto.
+- benefício oculto;
+- relação causal entre dois acontecimentos.
 
 ## 11.1 Coincidência não prova coordenação
 
@@ -473,6 +543,12 @@ Ela não autoriza concluir automaticamente apoio permanente, pertencimento a gru
 ## 11.3 Voto coletivo não prova voto individual
 
 Resultado de órgão colegiado não deve ser convertido em posição individual quando o voto nominal não estiver disponível.
+
+## 11.4 Sequência temporal não prova causalidade
+
+O fato de um acontecimento ocorrer antes de outro não demonstra, por si só, que tenha causado o evento posterior.
+
+Afirmações causais devem possuir base documental, metodológica ou analítica suficiente e devem ser qualificadas quando houver explicações concorrentes materialmente plausíveis.
 
 ---
 
@@ -585,6 +661,12 @@ Termos como “rombo”, “prejuízo”, “dívida”, “déficit”, “pass
 
 Não utilizar palavra de forte impacto apenas como sinônimo informal quando ela alterar o significado contábil ou institucional.
 
+## 14.3 Número não prova causa ou responsabilidade
+
+A existência de prejuízo, déficit, aumento de dívida ou outra variação financeira não demonstra por si só quem a causou, por qual motivo ocorreu ou se houve irregularidade.
+
+Atribuições de causa, responsabilidade ou intenção exigem base adicional própria.
+
 ---
 
 # 15. Títulos, resumos e destaques
@@ -608,6 +690,8 @@ Evitar títulos que:
 ## 15.2 Resumo não pode apagar qualificador material
 
 Se “não definitivo”, “alegado”, “segundo X”, “até a última verificação” ou outro qualificador for necessário para que a afirmação seja verdadeira, ele não deve desaparecer do resumo apenas por concisão.
+
+Quando um título ou destaque mencionar diretamente acusação material, a atribuição ou qualificação necessária deve aparecer na própria unidade de sentido, e não depender de o usuário abrir o texto completo para descobrir que se tratava apenas de alegação.
 
 ---
 
@@ -684,6 +768,12 @@ Isso não autoriza recomendar:
 
 Esses temas podem ser documentados, comparados e explicados sem endosso institucional do Fiel Fiscaliza.
 
+## 18.2 Crítica de resultado não autoriza inferência de motivação
+
+Mesmo quando um ato produzir consequência negativa verificável, o projeto não deve deduzir automaticamente má-fé, incompetência deliberada, intenção de ocultar, favorecimento ou motivação política.
+
+A crítica deve permanecer vinculada ao ato, ao processo, à regra ou à consequência que a evidência permite demonstrar.
+
 ---
 
 # 19. Relevância editorial e consistência de seleção
@@ -746,6 +836,8 @@ O projeto não deve utilizar curiosidade pública como justificativa para public
 
 Mesmo informação publicamente acessível pode ser editorialmente inadequada para republicação.
 
+Quanto maior o potencial de dano pessoal e menor a necessidade institucional, mais forte deve ser a presunção contra publicação ou identificação individual.
+
 Detalhamento técnico, jurídico e de segurança será tratado em FF-0028 e FF-0029.
 
 ---
@@ -771,7 +863,8 @@ Antes de publicação ou alteração material, deve haver revisão humana quando
 - informação financeira capaz de gerar interpretação material sobre gestão;
 - dado pessoal;
 - divergência relevante entre fontes;
-- classificação de certeza ou incerteza que altere a conclusão do usuário.
+- classificação de certeza ou incerteza que altere a conclusão do usuário;
+- inferência causal ou interpretação substantiva.
 
 ## 21.2 Automação não pode elevar certeza
 
@@ -781,7 +874,7 @@ Nenhum sistema automático pode transformar:
 - “em investigação” em “comprovado”;
 - “não localizado” em “não existe”;
 - “resultado coletivo” em “voto individual”;
-- correlação em aliança ou culpa.
+- correlação em aliança, causalidade ou culpa.
 
 ## 21.3 IA como assistência
 
@@ -795,6 +888,14 @@ IA pode auxiliar:
 - sugestão de texto.
 
 A responsabilidade editorial final sobre conteúdo substantivo publicado permanece humana.
+
+## 21.4 Revisão humana obrigatória não significa operação manual diária
+
+A exigência de julgamento humano deve ser compatível com manutenção por exceção.
+
+Atualizações estritamente mecânicas, que não alterem significado factual, status, certeza, atribuição, interpretação ou exposição de informação sensível, **podem futuramente ser elegíveis a automação de publicação** se FF-0010, FF-0011, FF-0018, FF-0020 e os controles de qualidade aplicáveis autorizarem esse comportamento.
+
+O FF-0009 não concede essa autorização por si só; apenas impede que a política editorial seja interpretada como obrigação de revisão manual de toda alteração irrelevante.
 
 ---
 
@@ -814,6 +915,17 @@ Quando necessário, utilizar formulações como:
 ## 22.1 Atualização não apaga formulação histórica correta
 
 Se o estado mudar, o projeto deve registrar a mudança conforme modelo temporal posterior, em vez de reescrever o passado como se o estado anterior nunca tivesse existido.
+
+## 22.2 Conhecimento posterior não deve contaminar o passado
+
+Ao reconstruir uma decisão, gestão ou controvérsia histórica, o projeto deve distinguir:
+
+- o que era publicamente conhecido naquele momento;
+- o que só foi revelado, documentado ou decidido posteriormente.
+
+Informação posterior pode ser usada para explicar o desfecho histórico, mas não deve ser retroativamente apresentada como se estivesse disponível aos atores ou ao público na data original.
+
+Essa regra protege a memória contra viés de retrospectiva e reinterpretação anacrônica.
 
 ---
 
@@ -867,6 +979,14 @@ Quando não for possível eliminar potencial conflito, a mitigação deve combin
 - revisão adicional quando proporcional;
 - separação entre posição pessoal e publicação do projeto.
 
+## 24.3 Conhecimento pessoal do mantenedor não substitui evidência pública
+
+Experiência própria, conversa privada, convivência, percepção pessoal ou informação recebida em ambiente não público podem ajudar André a identificar uma pergunta de pesquisa.
+
+Por padrão, porém, não devem ser convertidas em afirmação factual publicada no núcleo do Fiel Fiscaliza sem base pública adequada e compatível com as políticas canônicas.
+
+Isso preserva a independência do produto em relação a acesso privilegiado e evita que relações pessoais se transformem em fonte implícita não auditável.
+
 ---
 
 # 25. Checklist editorial mínimo de publicação
@@ -875,13 +995,17 @@ Antes de publicar uma Questão Institucional ou alteração substantiva, a revis
 
 - [ ] O tema está dentro do escopo canônico?
 - [ ] Cada afirmação material está formulada no nível correto de certeza?
+- [ ] A gravidade da afirmação recebeu padrão de evidência e revisão proporcional?
 - [ ] Alegações estão atribuídas?
 - [ ] Investigação/processo foi separado da veracidade da acusação?
 - [ ] Decisão não definitiva foi qualificada corretamente?
+- [ ] Termos jurídicos ou administrativos descrevem o estado real do procedimento?
 - [ ] Datas e referência temporal estão claras?
+- [ ] Conhecimento posterior foi separado do que era conhecido no momento histórico?
 - [ ] Versões conflitantes relevantes foram tratadas?
 - [ ] Ausências de informação não foram preenchidas por inferência?
 - [ ] Voto, intenção, culpa, aliança ou responsabilidade não foram inferidos sem base?
+- [ ] Causalidade não foi inferida apenas por sequência temporal ou correlação?
 - [ ] Números possuem contexto suficiente para não induzir comparação enganosa?
 - [ ] Título e resumo não afirmam mais que o corpo do conteúdo?
 - [ ] Informação pessoal incluída é necessária e proporcional?
@@ -901,13 +1025,15 @@ Os exemplos abaixo servem para demonstrar diferença de formulação. Não const
 
 | Evitar | Preferir |
 |---|---|
-| “Dirigente X desviou dinheiro.” | “O órgão Y investiga alegação de desvio atribuída a X; até a última verificação, a acusação não havia sido estabelecida como fato pelo Fiel Fiscaliza.” |
+| “Dirigente X desviou dinheiro.” | “O órgão Y investiga alegação de desvio atribuída a X; até a última verificação, não havia evidência suficiente para o Fiel Fiscaliza apresentar a acusação como fato confirmado.” |
 | “Todos votaram a favor.” | “A proposta foi aprovada por X a Y; não foi localizado registro público adequado do voto individual de todos os participantes.” |
 | “A dívida é R$ 2 bilhões.” | “A fonte X informou R$ 2 bilhões na data-base Y, utilizando o conceito Z.” |
 | “A Justiça acabou com a estrutura.” | “A decisão de [data] determinou X; seu caráter definitivo e eventuais recursos devem ser descritos conforme o estado processual conhecido.” |
 | “Fulano é aliado de Sicrano.” | “Fulano integrou a chapa de Sicrano em [ano]” ou outra relação verificável específica. |
 | “O clube escondeu o documento.” | “O documento não foi localizado no canal público consultado até [data]”, salvo existir evidência específica de ocultação deliberada. |
 | “A denúncia prova o esquema.” | “A denúncia apresenta a acusação X; sua existência não comprova automaticamente os fatos alegados.” |
+| “Depois da decisão X, a dívida aumentou; portanto X causou o aumento.” | “A dívida aumentou no período posterior à decisão X; a relação causal exige evidência adicional.” |
+| “O arquivamento provou que a denúncia era falsa.” | “O procedimento foi arquivado por [fundamento documentado]; esse resultado deve ser descrito nos limites do que a decisão efetivamente estabeleceu.” |
 
 ---
 
@@ -930,7 +1056,7 @@ Este documento deliberadamente não define em detalhe:
 - entidade ou estrutura conceitual de Claim;
 - estados formais de verificação;
 - relação entre Claim e evidência;
-- contraditório estruturado;
+- contraposição ou contestação estruturada;
 - evolução de status;
 - critérios formais de confirmação;
 - regras especializadas para ausência de evidência.
@@ -948,7 +1074,7 @@ Essas decisões não devem ser inferidas silenciosamente durante implementação
 
 ---
 
-# 28. Critérios para revisão crítica e canonização
+# 28. Critérios para canonização
 
 Antes de promover o FF-0009 para CANONICAL, deve-se confirmar que:
 
@@ -960,18 +1086,64 @@ Antes de promover o FF-0009 para CANONICAL, deve-se confirmar que:
 - diferencia fato, alegação, denúncia, investigação, processo, decisão, opinião e interpretação em nível editorial suficiente;
 - trata versões conflitantes sem falsa equivalência;
 - estabelece regra clara de desconhecimento;
-- impede inferências indevidas de voto, intenção, culpa, aliança e responsabilidade;
+- impede inferências indevidas de voto, intenção, culpa, aliança, causalidade e responsabilidade;
 - define linguagem politicamente sensível de forma utilizável;
 - estabelece padrão específico para investigações e decisões não definitivas;
+- trata desfechos processuais sem ampliar indevidamente seu significado;
 - trata números financeiros com contexto proporcional;
 - separa crítica institucional de ataque pessoal e militância eleitoral;
+- protege reconstrução histórica contra contaminação por conhecimento posterior;
 - não cria obrigação operacional incompatível com manutenção individual;
 - preserva revisão humana onde julgamento editorial é material;
 - não antecipa indevidamente a taxonomia de fontes, o modelo formal de Claims ou o fluxo detalhado de correções.
 
+A revisão crítica de 2026-09-04 considera esses critérios satisfeitos no conteúdo da v0.2, sujeito à aprovação explícita de André para promoção a CANONICAL.
+
 ---
 
-# 29. Impacto documental
+# 29. Revisão crítica de 2026-09-04
+
+A revisão da v0.1 identificou pontos de precisão e sustentabilidade editorial que foram tratados nesta versão.
+
+## 29.1 Certeza não era o único eixo de exagero editorial
+
+A regra central foi ampliada para impedir também exagero de abrangência, causalidade e efeito jurídico.
+
+Uma afirmação pode utilizar dados verdadeiros e ainda assim ser enganosa ao atribuir causa, responsabilidade ou consequência jurídica não demonstrada.
+
+## 29.2 Afirmações graves exigiam proporcionalidade mais explícita
+
+A v0.2 estabelece que o nível de diligência editorial cresce com a gravidade e o potencial de dano da afirmação, sem antecipar quantidade fixa de fontes.
+
+## 29.3 Desfechos jurídicos podiam ser interpretados de forma excessivamente binária
+
+Foram adicionadas regras para impedir que arquivamento, absolvição, improcedência, prescrição, nulidade ou outros desfechos sejam ampliados além do fundamento efetivamente documentado — assim como estágios acusatórios não podem ser transformados em culpa.
+
+## 29.4 Inferência causal estava menos protegida que inferência política
+
+A política agora proíbe tratar mera sequência temporal ou correlação como causalidade comprovada sem base adicional.
+
+## 29.5 Temporalidade precisava proteger também o conhecimento disponível no passado
+
+Foi acrescentada regra contra contaminação retrospectiva: informação descoberta depois pode explicar o desfecho, mas não deve ser apresentada como se já fosse conhecida na data histórica reconstruída.
+
+## 29.6 Revisão humana podia ser lida como obrigação manual universal
+
+A v0.2 preserva julgamento humano obrigatório para mudanças substantivas e sensíveis, mas deixa explícito que atualizações estritamente mecânicas podem futuramente ser automatizadas se os documentos especializados e controles posteriores autorizarem.
+
+## 29.7 Conhecimento pessoal do mantenedor precisava de limite editorial explícito
+
+Experiência pessoal ou informação não pública pode gerar uma hipótese de pesquisa, mas não substitui evidência pública auditável para publicação factual no núcleo do produto.
+
+## 29.8 Títulos de acusações precisavam de salvaguarda local
+
+Quando uma acusação material aparece em título ou destaque, sua atribuição ou qualificação necessária não pode ficar escondida apenas no corpo do texto.
+
+Após os ajustes, não foi identificado conflito canônico bloqueante com FF-0001, FF-0002, FF-0004, FF-0005, FF-0006, FF-0007 ou FF-0008.
+
+---
+
+# 30. Impacto documental
 
 ## É impactado por
 
@@ -1002,8 +1174,8 @@ Antes de promover o FF-0009 para CANONICAL, deve-se confirmar que:
 
 ---
 
-# 30. Vigência
+# 31. Vigência
 
-Esta versão permanece **DRAFT** até revisão crítica e aprovação explícita.
+Esta versão permanece **DRAFT** até aprovação explícita.
 
-**FF-0009 — EDITORIAL_POLICY v0.1 // DRAFT**
+**FF-0009 — EDITORIAL_POLICY v0.2 // DRAFT**
