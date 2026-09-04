@@ -553,7 +553,7 @@ A estrutura pode evoluir futuramente, mas IDs já utilizados não devem ser reut
 
 ---
 
-## FF-DEC-0020 — Rastreabilidade de impacto entre documentos canônicos
+## FF-DEC-0028 — Rastreabilidade de impacto entre documentos canônicos
 
 **Data:** 2026-09-04  
 **Status:** APROVADA  
@@ -578,7 +578,7 @@ Impedir que mudanças relevantes sejam feitas em uma especificação sem que seu
 
 ---
 
-## FF-DEC-0021 — Cota do Codex é recurso escasso
+## FF-DEC-0020 — Cota do Codex é recurso escasso
 
 **Data:** 2026-09-04  
 **Status:** APROVADA  
@@ -600,7 +600,7 @@ A cota disponível no plano de André é limitada e concorre com outros projetos
 
 ---
 
-## FF-DEC-0022 — Implementação regular só após estado CODEX READY
+## FF-DEC-0021 — Implementação regular só após estado CODEX READY
 
 **Data:** 2026-09-04  
 **Status:** APROVADA  
@@ -621,7 +621,7 @@ Evitar coding-first, desperdício de cota e retrabalho arquitetural/editorial.
 
 ---
 
-## FF-DEC-0023 — Classificação Verde, Amarela e Vermelha para uso do Codex
+## FF-DEC-0022 — Classificação Verde, Amarela e Vermelha para uso do Codex
 
 **Data:** 2026-09-04  
 **Status:** APROVADA  
@@ -644,7 +644,7 @@ Usar a cota onde a autonomia sobre múltiplos arquivos, testes e ciclos de corre
 
 ---
 
-## FF-DEC-0024 — CODEX READY é revalidável, não permanente
+## FF-DEC-0023 — CODEX READY é revalidável, não permanente
 
 **Data:** 2026-09-04  
 **Status:** APROVADA  
@@ -669,7 +669,7 @@ O Corinthians, as fontes públicas e a infraestrutura gratuita mudam ao longo do
 
 ---
 
-## FF-DEC-0025 — Stack e provedores de infraestrutura ainda não estão definidos
+## FF-DEC-0024 — Stack e provedores de infraestrutura ainda não estão definidos
 
 **Data:** 2026-09-04  
 **Status:** APROVADA  
@@ -702,7 +702,7 @@ Evitar transformar explorações prematuras em compromisso técnico antes de pro
 
 ---
 
-## FF-DEC-0026 — Licenciamento ainda não definido
+## FF-DEC-0025 — Licenciamento ainda não definido
 
 **Data:** 2026-09-04  
 **Status:** PENDENTE  
@@ -731,7 +731,7 @@ A disponibilidade pública do repositório não deve ser interpretada como autor
 
 ---
 
-## FF-DEC-0027 — FF-0001 promovido a CANONICAL v1.0
+## FF-DEC-0026 — FF-0001 promovido a CANONICAL v1.0
 
 **Data:** 2026-09-04  
 **Status:** APROVADA  
@@ -750,7 +750,7 @@ Toda decisão posterior deve respeitar ou formalmente alterar o FF-0001 quando h
 
 ---
 
-## FF-DEC-0028 — FF-0002 promovido a CANONICAL v1.0
+## FF-DEC-0027 — FF-0002 promovido a CANONICAL v1.0
 
 **Data:** 2026-09-04  
 **Status:** APROVADA  
