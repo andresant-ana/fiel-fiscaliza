@@ -2,7 +2,7 @@
 
 **Nome do documento:** Decision Log  
 **ID:** FF-0003  
-**Versão:** 1.3  
+**Versão:** 1.4  
 **Status:** CANONICAL  
 **Última revisão:** 2026-09-04  
 **Responsável:** André  
@@ -967,11 +967,47 @@ FF-0007 — SCOPE e FF-0008 — MVP_SPEC passam a poder utilizar usuários e cas
 
 ---
 
+## FF-DEC-0035 — FF-0007 promovido a CANONICAL v1.0
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+O **FF-0007 — SCOPE v1.0** foi aprovado após revisão crítica e tornou-se a fronteira canônica de produto do Fiel Fiscaliza.
+
+O documento estabelece, entre outros pontos, que:
+
+- o escopo permanente do produto, a cobertura atual e o escopo do MVP são camadas distintas;
+- o núcleo do produto é a vida institucional do SCCP e relações externas necessárias para compreender consequências institucionais materialmente relevantes;
+- temas adjacentes passam por teste de nexo, consequência institucional, utilidade e base pública/proporcionalidade;
+- temas esportivos permanecem fora por padrão e só entram quando houver consequência institucional documentável além da rotina esportiva;
+- memória institucional não deve se transformar em fluxo jornalístico cotidiano;
+- fiscalização não deve se transformar em campanha eleitoral, militância substantiva ou exposição desproporcional da vida pessoal;
+- acesso público não equivale automaticamente a autorização ou adequação para republicação integral;
+- expansão material de escopo exige revisão explícita do documento.
+
+### Motivação
+
+Transformar o escopo constitucional amplo em fronteiras operacionais claras sem antecipar o conteúdo do MVP, reduzir risco de scope creep e preservar sustentabilidade, independência editorial e proporcionalidade.
+
+### Formalização
+
+- FF-0007 — SCOPE v1.0 // CANONICAL.
+- Commit de formalização: `8093488b4e7514ada4957e25e2657f9eeac8a44f`.
+
+### Impacto
+
+- FF-0008 — MVP_SPEC deve selecionar explicitamente um subconjunto pequeno do escopo permanente;
+- documentos editoriais, de domínio, experiência, arquitetura e operações posteriores devem respeitar as fronteiras de escopo vigentes;
+- novos casos que já caibam nessas fronteiras não exigem alteração do FF-0007, mas expansão material da natureza do produto exige revisão formal.
+
+---
+
 # 10. Pendências abertas na data desta versão
 
 As entradas abaixo não constituem decisões aprovadas; apenas consolidam questões já reconhecidas como pendentes.
 
-- produzir, revisar e canonizar FF-0007 — SCOPE;
 - produzir, revisar e canonizar FF-0008 — MVP_SPEC;
 - continuar avaliando as hipóteses do FF-0005 de forma proporcional ao risco e preservar a dívida de validação do FF-0006;
 - concluir Gate F1 — Produto;
@@ -1006,6 +1042,6 @@ Ao adicionar uma nova entrada, deve-se verificar se ela:
 
 Esta versão possui status **CANONICAL** e entra em vigor em **2026-09-04** por aprovação explícita de André.
 
-**FF-0003 — DECISION_LOG v1.3 // CANONICAL**
+**FF-0003 — DECISION_LOG v1.4 // CANONICAL**
 
-Esta revisão registra o ajuste metodológico do FF-0005 para validação proporcional e a canonização do FF-0006, preservando explicitamente a dívida de validação comportamental para revisão posterior quando materialmente necessária.
+Esta revisão registra a canonização do FF-0007 e mantém como principal pendência de Produto a definição e canonização do FF-0008 — MVP_SPEC antes do Gate F1.
