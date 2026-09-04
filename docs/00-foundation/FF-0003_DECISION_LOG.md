@@ -2,8 +2,8 @@
 
 **Nome do documento:** Decision Log  
 **ID:** FF-0003  
-**Versão:** 0.1  
-**Status:** DRAFT  
+**Versão:** 1.0  
+**Status:** CANONICAL  
 **Última revisão:** 2026-09-04  
 **Responsável:** André  
 **Projeto:** Fiel Fiscaliza  
@@ -81,7 +81,8 @@ Entradas PENDENTES não constituem regra do projeto.
 Cada decisão deve, quando aplicável, registrar:
 
 - **ID**;
-- **data**;
+- **data da decisão**;
+- **data de registro**, quando diferente ou materialmente relevante;
 - **status**;
 - **decisão**;
 - **motivação**;
@@ -90,13 +91,27 @@ Cada decisão deve, quando aplicável, registrar:
 - **substitui / é substituída por**;
 - **observações**.
 
+Quando a data histórica exata de uma decisão reconstruída não puder ser determinada com segurança, ela não deve ser inventada. Nesse caso, o log deve indicar a data conhecida de formalização ou registrar explicitamente que a data original não foi determinada.
+
 A granularidade deve ser suficiente para reconstruir a evolução do projeto sem transformar o log em duplicação integral dos documentos canônicos.
+
+## 4.1 Identidade, preservação e correção das entradas
+
+IDs `FF-DEC-XXXX` já utilizados não devem ser reutilizados para outra decisão.
+
+Uma decisão substituída, revogada ou posteriormente considerada inadequada não deve ser simplesmente removida do histórico. Seu status deve evoluir e, quando aplicável, a entrada deve apontar para a decisão que a substituiu.
+
+Correções factuais do próprio Decision Log são permitidas. Quando a correção alterar materialmente o significado histórico de uma entrada, ela deve ser rastreável pelo versionamento do documento e explicada na própria entrada ou em decisão relacionada.
+
+O objetivo é preservar memória decisória sem transformar erro de redação em regra imutável.
 
 ---
 
 # 5. Decisões fundacionais reconstruídas
 
 As entradas desta seção consolidam decisões tomadas durante a concepção inicial do Fiel Fiscaliza e posteriormente formalizadas, total ou parcialmente, nos documentos canônicos do projeto.
+
+Nas entradas fundacionais abaixo, **2026-09-04 representa a data de formalização inicial no sistema documental**, salvo indicação diferente. O log não deve atribuir artificialmente um horário ou uma data anterior quando isso não estiver preservado de forma confiável.
 
 ---
 
@@ -132,7 +147,7 @@ O nome deve ser utilizado consistentemente em documentação, repositório, prod
 
 O Fiel Fiscaliza é um projeto independente, comunitário e sem fins lucrativos.
 
-Ele não existe para gerar retorno financeiro ao mantenedor nem como extensão de grupo político, dirigente, empresa ou instituição.
+O projeto não tem por objetivo gerar lucro para o mantenedor nem funcionar como extensão de grupo político, dirigente, empresa ou instituição.
 
 ### Motivação
 
@@ -472,6 +487,8 @@ O trabalho do Fiel Fiscaliza será dividido entre:
 
 Documentos CANONICAL mantidos no projeto e no repositório devem representar as mesmas decisões vigentes.
 
+A autoridade de uma decisão decorre de seu status e da hierarquia documental definida pelo FF-0001, e não simplesmente do local físico em que uma cópia do arquivo esteja armazenada.
+
 ### Motivação
 
 Separar elaboração intelectual, memória versionada e execução de código, reduzindo dependência da memória de qualquer ferramenta individual.
@@ -536,11 +553,32 @@ A estrutura pode evoluir futuramente, mas IDs já utilizados não devem ser reut
 
 ---
 
+## FF-DEC-0020 — Rastreabilidade de impacto entre documentos canônicos
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+Quando uma decisão de um documento puder alterar materialmente outro documento canônico, essa relação deve ser identificável por referência, seção de impacto, índice ou mecanismo equivalente.
+
+Não é obrigatório criar dependências artificiais entre todos os documentos.
+
+### Motivação
+
+Impedir que mudanças relevantes sejam feitas em uma especificação sem que seus efeitos sobre documentos relacionados sejam percebidos.
+
+### Formalização
+
+- FF-0002 — PRE_CODEX_CHECKLIST v1.0, seção 3.6 e Gate F0.
+
+---
+
 # 7. Uso do Codex e preparação para implementação
 
 ---
 
-## FF-DEC-0020 — Cota do Codex é recurso escasso
+## FF-DEC-0021 — Cota do Codex é recurso escasso
 
 **Data:** 2026-09-04  
 **Status:** APROVADA  
@@ -562,7 +600,7 @@ A cota disponível no plano de André é limitada e concorre com outros projetos
 
 ---
 
-## FF-DEC-0021 — Implementação regular só após estado CODEX READY
+## FF-DEC-0022 — Implementação regular só após estado CODEX READY
 
 **Data:** 2026-09-04  
 **Status:** APROVADA  
@@ -583,7 +621,7 @@ Evitar coding-first, desperdício de cota e retrabalho arquitetural/editorial.
 
 ---
 
-## FF-DEC-0022 — Classificação Verde, Amarela e Vermelha para uso do Codex
+## FF-DEC-0023 — Classificação Verde, Amarela e Vermelha para uso do Codex
 
 **Data:** 2026-09-04  
 **Status:** APROVADA  
@@ -606,7 +644,7 @@ Usar a cota onde a autonomia sobre múltiplos arquivos, testes e ciclos de corre
 
 ---
 
-## FF-DEC-0023 — CODEX READY é revalidável, não permanente
+## FF-DEC-0024 — CODEX READY é revalidável, não permanente
 
 **Data:** 2026-09-04  
 **Status:** APROVADA  
@@ -631,7 +669,7 @@ O Corinthians, as fontes públicas e a infraestrutura gratuita mudam ao longo do
 
 ---
 
-## FF-DEC-0024 — Stack e provedores de infraestrutura ainda não estão definidos
+## FF-DEC-0025 — Stack e provedores de infraestrutura ainda não estão definidos
 
 **Data:** 2026-09-04  
 **Status:** APROVADA  
@@ -664,7 +702,7 @@ Evitar transformar explorações prematuras em compromisso técnico antes de pro
 
 ---
 
-## FF-DEC-0025 — Licenciamento ainda não definido
+## FF-DEC-0026 — Licenciamento ainda não definido
 
 **Data:** 2026-09-04  
 **Status:** PENDENTE  
@@ -693,7 +731,7 @@ A disponibilidade pública do repositório não deve ser interpretada como autor
 
 ---
 
-## FF-DEC-0026 — FF-0001 promovido a CANONICAL v1.0
+## FF-DEC-0027 — FF-0001 promovido a CANONICAL v1.0
 
 **Data:** 2026-09-04  
 **Status:** APROVADA  
@@ -712,7 +750,7 @@ Toda decisão posterior deve respeitar ou formalmente alterar o FF-0001 quando h
 
 ---
 
-## FF-DEC-0027 — FF-0002 promovido a CANONICAL v1.0
+## FF-DEC-0028 — FF-0002 promovido a CANONICAL v1.0
 
 **Data:** 2026-09-04  
 **Status:** APROVADA  
@@ -731,14 +769,27 @@ O projeto permanece em fase pré-Codex e deve concluir os gates pertinentes ante
 
 ---
 
+## FF-DEC-0029 — FF-0003 promovido a CANONICAL v1.0
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+O **FF-0003 — DECISION_LOG v1.0** foi explicitamente aprovado por André após revisão final e tornou-se o registro canônico resumido da evolução das decisões relevantes do Fiel Fiscaliza, subordinado à hierarquia definida no FF-0001.
+
+### Impacto
+
+A partir desta versão, novas decisões relevantes devem ser registradas incrementalmente sem apagar silenciosamente decisões históricas.
+
+---
+
 # 10. Pendências abertas na data desta versão
 
 As entradas abaixo não constituem decisões aprovadas; apenas consolidam questões já reconhecidas como pendentes.
 
-- concluir e canonizar FF-0003;
 - produzir e canonizar FF-0004 — GLOSSARY;
-- definir convenção mínima de impacto/dependência entre documentos canônicos;
-- concluir Gate F0;
+- concluir Gate F0 após validação de consistência da Fundação;
 - definir produto e MVP nas fases posteriores;
 - definir arquitetura somente após requisitos, política editorial e domínio;
 - definir estratégia de licenciamento antes do marco estabelecido em FF-0002;
@@ -758,16 +809,19 @@ Se não houver documento específico e a decisão for relevante o suficiente par
 
 Decisões arquiteturais relevantes que exigirem análise de contexto, alternativas e consequências devem preferencialmente utilizar ADR.
 
+Ao adicionar uma nova entrada, deve-se verificar se ela:
+
+- contradiz documento de autoridade superior;
+- substitui ou revoga decisão anterior;
+- altera materialmente outro documento canônico;
+- exige atualização de referência ou seção de impacto relacionada.
+
 ---
 
 # 12. Vigência
 
-Esta versão possui status **DRAFT**.
-
-Ela reconstrói as principais decisões já tomadas até 2026-09-04, mas ainda depende de revisão e aprovação explícita de André.
-
-Quando aprovada, deverá ser promovida para:
+Esta versão possui status **CANONICAL** e entra em vigor em **2026-09-04** por aprovação explícita de André.
 
 **FF-0003 — DECISION_LOG v1.0 // CANONICAL**
 
-A partir dessa promoção, novas decisões relevantes deverão ser adicionadas de forma incremental, preservando as entradas históricas anteriores.
+A partir desta promoção, novas decisões relevantes devem ser adicionadas de forma incremental, preservando as entradas históricas anteriores e respeitando a hierarquia estabelecida no FF-0001.
