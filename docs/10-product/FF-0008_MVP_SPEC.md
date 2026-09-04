@@ -2,8 +2,8 @@
 
 **Nome do documento:** MVP Specification  
 **ID:** FF-0008  
-**Versão:** 0.2  
-**Status:** DRAFT  
+**Versão:** 1.0  
+**Status:** CANONICAL  
 **Última revisão:** 2026-09-04  
 **Responsável:** André  
 **Projeto:** Fiel Fiscaliza  
@@ -805,7 +805,7 @@ O FF-0008 não autoriza implementação regular antes do cumprimento dos gates d
 
 # 24. Critérios para canonização
 
-Antes de promover o FF-0008 para CANONICAL, deve-se confirmar que:
+A promoção para CANONICAL foi aprovada após confirmar que:
 
 - a proposta de valor mínima é coerente com FF-0005;
 - usuários e JTBD derivam de FF-0006;
@@ -826,12 +826,12 @@ Antes de promover o FF-0008 para CANONICAL, deve-se confirmar que:
 - a dívida de validação permanece explícita;
 - nenhuma decisão técnica futura foi canonizada prematuramente.
 
-A revisão crítica de 2026-09-04 considera esses critérios satisfeitos no conteúdo da v0.2, sujeito à aprovação explícita de André para promoção a CANONICAL.
+A revisão crítica de 2026-09-04 e a aprovação explícita de André confirmaram esses critérios sem identificar conflito canônico bloqueante.
 
 ---
 
 # 25. Vigência
 
-Esta versão permanece **DRAFT** até aprovação explícita.
+Esta versão possui status **CANONICAL** e entra em vigor em **2026-09-04** por aprovação explícita de André após revisão crítica de Produto.
 
-**FF-0008 — MVP_SPEC v0.2 // DRAFT**
+**FF-0008 — MVP_SPEC v1.0 // CANONICAL**
