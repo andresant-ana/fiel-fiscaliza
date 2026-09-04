@@ -2,7 +2,7 @@
 
 **Nome do documento:** Pre-Codex Checklist  
 **ID:** FF-0002  
-**Versão:** 1.1  
+**Versão:** 1.2  
 **Status:** CANONICAL  
 **Última revisão:** 2026-09-04  
 **Responsável:** André  
@@ -127,7 +127,7 @@ Garantir que o projeto possua identidade, autoridade documental, memória de dec
 - [x] Estrutura documental inicial criada no repositório.
 - [x] Instruções permanentes do projeto definidas no ChatGPT.
 - [x] FF-0001 — PROJECT_CONSTITUTION v1.0 // CANONICAL.
-- [x] FF-0002 — PRE_CODEX_CHECKLIST v1.1 // CANONICAL.
+- [x] FF-0002 — PRE_CODEX_CHECKLIST v1.2 // CANONICAL.
 - [x] FF-0003 — DECISION_LOG com o conjunto inicial de decisões já tomadas.
 - [x] FF-0004 — GLOSSARY com o vocabulário inicial oficial.
 - [x] Definir e aplicar convenção mínima de impacto/dependência entre documentos canônicos quando materialmente relevante.
@@ -167,41 +167,56 @@ Definir claramente qual problema o Fiel Fiscaliza resolve, para quem, quais resu
 
 ### Problema e valor
 
-- [ ] Formular o problema central do produto sem descrever prematuramente a solução técnica.
-- [ ] Identificar quais dificuldades reais de fiscalização o sistema pretende reduzir.
-- [ ] Mapear iniciativas já existentes e quais problemas elas já resolvem.
-- [ ] Identificar lacunas que justifiquem a existência do Fiel Fiscaliza.
-- [ ] Definir quais resultados tornam a ferramenta útil mesmo com audiência pequena.
+- [x] Formular o problema central do produto sem descrever prematuramente a solução técnica.
+- [x] Identificar quais dificuldades reais de fiscalização o sistema pretende reduzir.
+- [x] Mapear iniciativas já existentes e quais problemas elas já resolvem.
+- [x] Identificar lacunas que justifiquem a existência do Fiel Fiscaliza.
+- [x] Definir quais resultados tornam a ferramenta útil mesmo com audiência pequena.
 
 ### Usuários
 
-- [ ] Identificar usuários primários do MVP.
-- [ ] Identificar usuários secundários relevantes.
-- [ ] Definir necessidades e capacidades distintas desses usuários.
-- [ ] Documentar casos de uso prioritários.
-- [ ] Evitar presumir acesso privilegiado ao SCCP, Gaviões ou qualquer outra instituição.
+- [x] Identificar usuários primários do MVP.
+- [x] Identificar usuários secundários relevantes.
+- [x] Definir necessidades e capacidades distintas desses usuários.
+- [x] Documentar casos de uso prioritários.
+- [x] Evitar presumir acesso privilegiado ao SCCP, Gaviões ou qualquer outra instituição.
 
 ### Escopo
 
-- [ ] Definir explicitamente o que pertence ao produto.
-- [ ] Definir explicitamente o que não pertence ao produto.
-- [ ] Definir critérios para temas esportivos que adquirem relevância institucional.
-- [ ] Definir fronteiras entre memória institucional, fiscalização e portal de notícias.
+- [x] Definir explicitamente o que pertence ao produto.
+- [x] Definir explicitamente o que não pertence ao produto.
+- [x] Definir critérios para temas esportivos que adquirem relevância institucional.
+- [x] Definir fronteiras entre memória institucional, fiscalização e portal de notícias.
 
 ### MVP
 
-- [ ] Definir a proposta de valor mínima.
-- [ ] Definir funcionalidades obrigatórias do MVP.
-- [ ] Definir funcionalidades conscientemente adiadas.
-- [ ] Definir jornada principal do usuário.
-- [ ] Definir critérios objetivos de aceite do MVP.
-- [ ] Definir o que significa “MVP publicável”.
-- [ ] Confirmar que o MVP é sustentável por uma pessoa.
-- [ ] Confirmar que o MVP não depende de acesso institucional privilegiado.
+- [x] Definir a proposta de valor mínima.
+- [x] Definir funcionalidades obrigatórias do MVP.
+- [x] Definir funcionalidades conscientemente adiadas.
+- [x] Definir jornada principal do usuário.
+- [x] Definir critérios objetivos de aceite do MVP.
+- [x] Definir o que significa “MVP publicável”.
+- [x] Confirmar que o MVP é sustentável por uma pessoa.
+- [x] Confirmar que o MVP não depende de acesso institucional privilegiado.
 
 ## Gate F1
 
 A fase Produto está concluída quando FF-0005 a FF-0008 estiverem CANONICAL e o MVP puder ser descrito sem depender de decisões técnicas ainda não tomadas.
+
+**Status do Gate F1:** APROVADO em 2026-09-04.
+
+A auditoria de consistência confirmou que:
+
+- FF-0005 — PRODUCT_VISION v1.1 define problema, tese, transformação desejada e critérios de sucesso sem antecipar solução técnica;
+- FF-0006 — USERS_AND_USE_CASES v1.0 define usuário primário, usuários secundários, JTBD prioritários, contraprovas e dívida de validação sem alegar demanda empiricamente comprovada;
+- FF-0007 — SCOPE v1.0 estabelece fronteiras institucionais, critérios para temas esportivos, proporcionalidade, limites de exposição e controle de expansão de escopo;
+- FF-0008 — MVP_SPEC v1.0 seleciona um MVP pequeno baseado em Questões Institucionais, com capacidades obrigatórias, corpus mínimo, jornada principal, funcionalidades adiadas e critérios verificáveis de aceite;
+- o MVP pode ser descrito em nível de Produto sem depender de stack, banco, hospedagem, schema, provedor ou layout ainda não decididos;
+- o MVP preserva custo operacional mensal obrigatório possível de R$ 0, manutenção individual, ausência de obrigação editorial diária e independência de acesso institucional privilegiado;
+- a dívida de validação comportamental permanece explícita e não foi transformada em certeza inexistente;
+- não foi identificado conflito CANONICAL bloqueante entre FF-0005, FF-0006, FF-0007, FF-0008 e FF-0001.
+
+A aprovação do Gate F1 encerra a **FASE 1 — Produto**, mas não autoriza implementação regular do MVP nem release público. O projeto segue para as fases subsequentes do checklist, começando pela **FASE 2 — Política editorial e evidências**.
 
 ---
 
@@ -648,8 +663,8 @@ O Codex está formalmente liberado para implementação regular do MVP somente q
 
 ## Produto
 
-- [ ] Gate F1 aprovado.
-- [ ] MVP possui escopo e critérios de aceite claros.
+- [x] Gate F1 aprovado.
+- [x] MVP possui escopo e critérios de aceite claros.
 
 ## Editorial
 
@@ -869,15 +884,18 @@ Usar implementação manual, ChatGPT, Codex, scripts ou experimentos como forma 
 Na entrada em vigor desta versão:
 
 - FF-0001 está **CANONICAL v1.0**;
-- FF-0002 está **CANONICAL v1.1**;
-- FF-0003 está **CANONICAL v1.0**;
+- FF-0002 está **CANONICAL v1.2**;
+- FF-0003 está **CANONICAL** e preserva as decisões vigentes;
 - FF-0004 está **CANONICAL v1.0**;
+- FF-0005 está **CANONICAL v1.1**;
+- FF-0006 está **CANONICAL v1.0**;
+- FF-0007 está **CANONICAL v1.0**;
+- FF-0008 está **CANONICAL v1.0**;
 - o **Gate F0 — Fundação está APROVADO**;
-- o repositório GitHub e a estrutura documental estão criados;
-- o Fiel Fiscaliza entra na **FASE 1 — Produto**;
+- o **Gate F1 — Produto está APROVADO**;
+- a **FASE 1 — Produto está concluída**;
+- o projeto segue para a **FASE 2 — Política editorial e evidências**;
 - Codex continua **não liberado para implementação regular do produto**.
-
-O próximo objetivo é concluir a Fase 1 por meio de FF-0005 — PRODUCT_VISION, FF-0006 — USERS_AND_USE_CASES, FF-0007 — SCOPE e FF-0008 — MVP_SPEC.
 
 ---
 
@@ -885,6 +903,6 @@ O próximo objetivo é concluir a Fase 1 por meio de FF-0005 — PRODUCT_VISION,
 
 Esta versão possui status **CANONICAL** e entra em vigor em **2026-09-04** por aprovação explícita de André.
 
-**FF-0002 — PRE_CODEX_CHECKLIST v1.1 // CANONICAL**
+**FF-0002 — PRE_CODEX_CHECKLIST v1.2 // CANONICAL**
 
-Esta revisão registra a conclusão e aprovação do **Gate F0 — Fundação** após auditoria de consistência dos documentos FF-0001 a FF-0004.
+Esta revisão registra a canonização do FF-0008, a auditoria e aprovação do **Gate F1 — Produto**, e o avanço formal do projeto para a Fase 2, sem liberar ainda o Codex para implementação regular.
