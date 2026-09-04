@@ -2,7 +2,7 @@
 
 **Nome do documento:** Users and Use Cases  
 **ID:** FF-0006  
-**Versão:** 0.3  
+**Versão:** 0.4  
 **Status:** DRAFT  
 **Última revisão:** 2026-09-04  
 **Responsável:** André  
@@ -23,7 +23,8 @@ O documento deve permitir responder:
 - quais usuários são primários e secundários;
 - quais casos de uso possuem prioridade de produto;
 - quais incertezas permanecem abertas;
-- quais usos não devem orientar o produto.
+- quais usos não devem orientar o produto;
+- qual nível de evidência sustenta cada decisão.
 
 O FF-0006 é subordinado ao:
 
@@ -36,31 +37,34 @@ A Product Vision estabelece que a unidade básica de valor do Fiel Fiscaliza é 
 
 ---
 
-# 2. Mudança metodológica da versão 0.3
+# 2. Estado desta revisão
 
-A versão 0.2 previa entrevistas semiestruturadas e testes de tarefa como condição para promover segmentos e casos de uso a `VALIDADO PARA F1`.
+A versão 0.4 resulta da revisão crítica da proposta v0.3.
 
-Essa exigência foi reavaliada em 2026-09-04.
+A revisão confirmou que a decisão de evitar entrevistas obrigatórias pré-MVP é coerente com a filosofia de manutenção individual e com o objetivo de evitar discovery burocrático. Entretanto, identificou uma **tensão material com o FF-0005 — PRODUCT_VISION v1.0 // CANONICAL**, detalhada na seção 15.
 
-Para evitar que discovery síncrono se transforme em gargalo desproporcional para um projeto individual, a pesquisa comportamental pré-MVP deixa de ser requisito obrigatório para o Gate F1.
+Por esse motivo, esta versão permanece **DRAFT** e não deve ser promovida a CANONICAL até que essa tensão seja resolvida pelo processo documental aplicável.
 
-A decisão **não** significa que entrevistas ou testes de usuários sejam inúteis.
+A revisão também:
 
-Significa que, neste estágio, o projeto aceita avançar com:
-
-1. pesquisa documental pública já realizada;
-2. análise explícita de alternativas e contraprovas;
-3. decisões de produto com nível de confiança declarado;
-4. MVP deliberadamente pequeno e reversível;
-5. validação posterior por uso real, feedback público ou pesquisa direcionada quando uma incerteza material justificar o custo.
-
-A consequência é uma **dívida de validação de produto conscientemente aceita**, registrada neste documento.
+- diferencia classificação local de evidência dos status formais do projeto;
+- explicita critérios de confiança;
+- reforça a proveniência da desk research;
+- preserva contraprovas e alternativas existentes;
+- evita apresentar escolha de usuário primário como demanda empiricamente validada;
+- mantém FF-0008 responsável por selecionar o conteúdo efetivo do MVP.
 
 ---
 
-# 3. Regra epistemológica
+# 3. Classificações locais de evidência e decisão
 
-As seguintes classificações são utilizadas no FF-0006.
+As classificações abaixo existem apenas dentro do FF-0006 para expressar força de evidência e grau de decisão de produto.
+
+Elas **não substituem**:
+
+- os estados documentais `DRAFT`, `CANONICAL` e `DEPRECATED`;
+- os status de entradas do FF-0003 — DECISION_LOG;
+- qualquer taxonomia editorial futura de claims ou evidências.
 
 ## HIPÓTESE
 
@@ -76,9 +80,9 @@ Demonstra que a tarefa ou necessidade existe publicamente, mas não prova frequ�
 
 Decisão de produto adotada com base na melhor evidência disponível para permitir avanço de escopo e MVP.
 
-`DECIDIDO PARA F1` **não significa validação empírica de demanda**.
+`DECIDIDO PARA F1` **não significa validação empírica de demanda ou comportamento**.
 
-A decisão pode ser revista se uso real, feedback ou nova pesquisa produzir contraprova relevante.
+A decisão deve permanecer revisável diante de uso real, feedback, nova pesquisa ou contraprova relevante.
 
 ## REFUTADO / DEPRIORIZADO
 
@@ -88,36 +92,74 @@ O projeto não deve utilizar a palavra “validado” para descrever demanda ou 
 
 ---
 
-# 4. Base de evidência disponível
+# 4. Escala local de confiança
 
-A versão 0.3 utiliza como principal evidência de discovery uma pesquisa documental pública aprofundada realizada em 2026-09-04 sobre o ecossistema de informação, transparência, governança, fiscalização e memória institucional do Corinthians.
+A indicação de confiança deste documento é qualitativa e serve apenas para tornar a incerteza explícita.
 
-A pesquisa examinou, entre outros:
+## ALTA
 
-- portal oficial de Transparência do SCCP;
-- demonstrações financeiras, eleições, conselhos, atas e regimentos publicados pelo clube;
-- Gaviões da Fiel;
-- Meu Timão e Fórum Meu Timão;
-- ge;
-- UOL;
-- Central do Timão;
-- Alambrado Alvinegro;
-- SAFiel;
-- Coletivo Voz Corinthiana;
-- Projeto Time do Povo;
-- Reddit r/Corinthians;
-- produção acadêmica;
-- MPSP;
-- TJSP;
-- CVM / Fundos.NET;
-- Receita Federal e dados públicos de CNPJ;
-- Diários Oficiais e outras bases públicas auxiliares.
+Há evidência consistente em múltiplos tipos de fonte e pouca contraprova material conhecida para a decisão em questão.
 
-A pesquisa procurou evidências favoráveis e contraprovas para a tese do FF-0005.
+## MODERADA
+
+Há sinais documentais consistentes, mas permanecem incertezas relevantes sobre comportamento, frequência, intensidade ou adoção.
+
+## BAIXA
+
+A proposição é plausível, porém sustentada por evidência limitada, indireta ou excessivamente concentrada em um segmento.
+
+A escala não deve ser convertida em porcentagens artificiais.
 
 ---
 
-# 5. Síntese do problema observado
+# 5. Base e proveniência da pesquisa documental
+
+A principal evidência de discovery disponível é uma pesquisa documental pública aprofundada realizada em **2026-09-04** sobre informação, transparência, governança, fiscalização e memória institucional do Corinthians.
+
+A pesquisa buscou evidências favoráveis e contraprovas para a tese do FF-0005.
+
+## 5.1 Fontes e ecossistemas examinados
+
+Entre as fontes e iniciativas examinadas estão:
+
+- SCCP — Transparência: https://www.corinthians.com.br/clube/transparencia
+- SCCP — demonstrações financeiras: https://www.corinthians.com.br/clube/transparencia/demonstracoes-financeiras-e-balancetes-patrimoniais
+- SCCP — eleições: https://www.corinthians.com.br/clube/transparencia/eleicoes
+- SCCP — atas do Conselho: https://www.corinthians.com.br/clube/transparencia/atas-do-conselho
+- SCCP — Conselho Deliberativo: https://www.corinthians.com.br/clube/transparencia/conselho-deliberativo
+- SCCP — presidência e diretoria: https://www.corinthians.com.br/clube/transparencia/presidencia-e-diretoria
+- SCCP — regimentos: https://www.corinthians.com.br/clube/transparencia/regimentos
+- Gaviões da Fiel: https://gavioes.com.br/
+- Meu Timão: https://www.meutimao.com.br/
+- Fórum Meu Timão: https://www.meutimao.com.br/forum-do-corinthians/
+- ge Corinthians: https://ge.globo.com/futebol/times/corinthians/
+- UOL Esporte: https://www.uol.com.br/esporte/
+- Central do Timão: https://centraldotimao.com.br/
+- Alambrado Alvinegro: https://alambradoalvinegro.com.br/
+- SAFiel: https://safiel.com.br/
+- Reddit r/Corinthians: https://www.reddit.com/r/Corinthians/
+- MPSP: https://www.mpsp.mp.br/
+- TJSP — Processos: https://www.tjsp.jus.br/Processos
+- CVM: https://cvmweb.cvm.gov.br/
+- Dados Abertos CVM: https://dados.cvm.gov.br/
+- Receita Federal — dados abertos: https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/dados-abertos/cadastros
+- JUCESP: https://vre.jucesp.sp.gov.br/
+- Diário Oficial do Estado de São Paulo: https://www.doe.sp.gov.br/
+- Diário Oficial da Cidade de São Paulo: https://diariooficial.prefeitura.sp.gov.br/
+- Diário Oficial da União: https://www.gov.br/pt-br/servicos/acessar-o-diario-oficial-da-uniao
+- Portal da Transparência: https://portaldatransparencia.gov.br/
+
+Também foram examinados materiais públicos relacionados a coletivos, movimentos, debates institucionais e produção acadêmica.
+
+## 5.2 Limite de proveniência desta versão
+
+Esta lista preserva as principais origens consultadas, mas não substitui futuros FF-0010 — SOURCE_POLICY e FF-0031 — SOURCE_REGISTRY.
+
+Quando uma afirmação factual específica do produto depender de uma fonte determinada, sua proveniência deverá ser preservada em granularidade maior que este inventário de discovery.
+
+---
+
+# 6. Síntese do problema observado
 
 A pesquisa não encontrou ausência absoluta de informação institucional sobre o Corinthians.
 
@@ -139,13 +181,13 @@ A oportunidade de produto permanece **plausível, não comprovada como demanda d
 
 ---
 
-# 6. Contraprovas e alternativas atuais
+# 7. Contraprovas e alternativas atuais
 
 O Fiel Fiscaliza não parte da premissa de que usuários estejam sem solução.
 
 Hoje muitas perguntas podem ser respondidas utilizando uma combinação de:
 
-- Google e outros mecanismos de busca;
+- mecanismos de busca;
 - portal oficial do SCCP;
 - veículos de imprensa;
 - portais especializados;
@@ -163,11 +205,13 @@ Portanto, o produto só se justifica se reduzir materialmente algum dos seguinte
 - dificuldade de compreender status, vigência ou incerteza;
 - perda de memória histórica.
 
-A existência dessas alternativas é contraprova permanente contra qualquer tentativa de construir apenas “mais um lugar com as mesmas notícias”.
+A existência dessas alternativas é contraprova permanente contra construir apenas “mais um lugar com as mesmas notícias”.
+
+A desk research também possui viés de observação: fóruns, Reddit, torcidas e coletivos tendem a super-representar pessoas já engajadas em política e governança.
 
 ---
 
-# 7. Usuário, stakeholder e objeto de fiscalização
+# 8. Usuário, stakeholder e objeto de fiscalização
 
 ## Usuário
 
@@ -183,17 +227,17 @@ Pessoa, órgão, organização, decisão, documento, contrato, processo, votaç�
 
 Ser objeto de fiscalização não torna alguém usuário do produto.
 
-O produto deve ser desenhado prioritariamente para quem precisa compreender a instituição, não para agradar as pessoas fiscalizadas.
+O produto deve ser desenhado prioritariamente para quem precisa compreender a instituição, não para satisfazer interesses das pessoas fiscalizadas.
 
 ---
 
-# 8. Usuário primário do MVP
+# 9. Usuário primário proposto para F1
 
-## 8.1 Torcedor institucionalmente engajado
+## 9.1 Torcedor institucionalmente engajado
 
-**Status:** DECIDIDO PARA F1  
-**Nível de confiança:** moderado  
-**Papel:** usuário primário do MVP
+**Classificação:** DECIDIDO PARA F1 — condicionado à resolução da seção 15  
+**Confiança:** MODERADA  
+**Papel proposto:** usuário primário do MVP
 
 É o corinthiano que acompanha com alguma recorrência temas como:
 
@@ -209,19 +253,15 @@ O produto deve ser desenhado prioritariamente para quem precisa compreender a in
 
 Pode ou não participar de organizada, associação, movimento, fórum ou grupo político.
 
-A escolha não presume qualquer alinhamento partidário interno.
+A escolha não presume alinhamento político interno.
 
-### Por que foi escolhido
+### Justificativa
 
-A pesquisa documental encontrou os sinais mais consistentes de necessidade recorrente nesse grupo:
+A pesquisa documental encontrou os sinais mais consistentes de interesse e necessidade de reconstrução documental nesse grupo, incluindo debates públicos recorrentes, mobilização em torno de governança, consulta a múltiplos tipos de fonte e interesse por finanças, estatuto, decisões e memória institucional.
 
-- debates públicos frequentes;
-- mobilização de torcidas e coletivos;
-- necessidade de reconstruir fatos e documentos;
-- interesse em votações, finanças, estatuto e responsabilização;
-- uso repetido de fontes distintas para sustentar discussões.
+Sob incerteza, esse segmento também reduz risco de MVP: é onde a intensidade aparente do problema é maior, sem impedir que a experiência permaneça acessível a usuários menos especializados.
 
-### Necessidades principais
+### Necessidades candidatas principais
 
 - verificar afirmações;
 - reencontrar documentos e fontes;
@@ -231,56 +271,55 @@ A pesquisa documental encontrou os sinais mais consistentes de necessidade recor
 - compreender decisões sem inferir informação ausente;
 - usar histórico em vez de memória informal.
 
-### Limitação da decisão
+### Limitação
 
-Não foi demonstrado por entrevista ou analytics que esse usuário utilizará o produto com determinada frequência.
+Não foi demonstrado por pesquisa comportamental que esse segmento utilizará uma ferramenta dedicada com determinada frequência.
 
-A decisão é suficiente para orientar um MVP pequeno, mas deverá ser reavaliada após evidência de uso real.
+A escolha é uma decisão estratégica reversível, não uma alegação de demanda comprovada.
 
 ---
 
-# 9. Usuários secundários
+# 10. Usuários secundários propostos
 
-## 9.1 Torcedor com dúvida institucional pontual
+## 10.1 Torcedor com dúvida institucional pontual
 
-**Status:** DECIDIDO PARA F1  
-**Nível de confiança:** moderado  
-**Papel:** usuário secundário relevante
+**Classificação:** DECIDIDO PARA F1 — condicionado à resolução da seção 15  
+**Confiança:** MODERADA
 
 Não acompanha política diariamente, mas procura contexto quando uma crise, eleição, investigação, dívida ou decisão ganha relevância.
 
-Este usuário exige baixa barreira cognitiva e ajuda a impedir que o produto seja compreensível apenas por especialistas.
+Sua inclusão como usuário secundário protege o requisito de acessibilidade informacional e evita uma experiência compreensível apenas para especialistas.
 
-## 9.2 Jornalista, comunicador ou criador de conteúdo
+## 10.2 Jornalista, comunicador ou criador de conteúdo
 
-**Status:** DECIDIDO PARA F1  
-**Nível de confiança:** moderado  
-**Papel:** usuário secundário / power user
+**Classificação:** DECIDIDO PARA F1 — condicionado à resolução da seção 15  
+**Confiança:** MODERADA
 
 Pode obter valor ao localizar fonte original, datas, cronologias e registros públicos.
 
 O produto não deve se tornar serviço de pauta, clipping ou substituto de apuração jornalística.
 
-## 9.3 Pesquisador histórico, acadêmico ou analista externo
+## 10.3 Pesquisador histórico, acadêmico ou analista externo
 
-**Status:** DECIDIDO PARA F1  
-**Nível de confiança:** moderado/baixo para o MVP; alto para visão de longo prazo  
-**Papel:** usuário secundário
+**Classificação:** DECIDIDO PARA F1 — condicionado à resolução da seção 15  
+**Confiança:** BAIXA para o MVP; MODERADA para a visão de longo prazo
 
-Pode obter alto valor do patrimônio acumulado, mas não deve comandar o escopo inicial.
+Pode obter valor do patrimônio acumulado, mas não deve comandar o escopo inicial.
 
-## 9.4 Associado, conselheiro ou participante institucional
+## 10.4 Associado, conselheiro ou participante institucional
 
-**Status:** HIPÓTESE COM EVIDÊNCIA DOCUMENTAL PARCIAL  
-**Papel:** usuário secundário possível
+**Classificação:** HIPÓTESE COM EVIDÊNCIA DOCUMENTAL PARCIAL  
+**Confiança:** BAIXA
 
 Pode se beneficiar de memória pública, mas o produto não dependerá de acesso interno, credenciais privilegiadas, documentos confidenciais ou relacionamento político.
 
 ---
 
-# 10. Jobs to Be Done prioritários
+# 11. Jobs to Be Done prioritários propostos
 
-## P0 — orientar escopo e MVP
+As prioridades abaixo orientam discussão de escopo. Elas **não obrigam** o FF-0008 a implementar todos os P0 no MVP.
+
+## P0 — candidatos centrais
 
 ### JTBD-01 — Verificar uma afirmação e chegar à fonte
 
@@ -288,9 +327,7 @@ Pode se beneficiar de memória pública, mas o produto não dependerá de acesso
 **quero** identificar quem afirmou, a origem, o status e a evidência disponível,  
 **para** distinguir o documentado do alegado, inferido, contestado ou desconhecido.
 
-**Status:** DECIDIDO PARA F1
-
-Este JTBD incorpora a necessidade de chegar ao documento, decisão, declaração ou registro de origem quando disponível.
+**Classificação:** DECIDIDO PARA F1 — condicionado à resolução da seção 15
 
 ---
 
@@ -300,7 +337,7 @@ Este JTBD incorpora a necessidade de chegar ao documento, decisão, declaração
 **quero** reconstruir sua evolução e identificar seu estado conhecido atual,  
 **para** entender o que mudou sem depender da última notícia que lembro ter visto.
 
-**Status:** DECIDIDO PARA F1
+**Classificação:** DECIDIDO PARA F1 — condicionado à resolução da seção 15
 
 ---
 
@@ -310,7 +347,7 @@ Este JTBD incorpora a necessidade de chegar ao documento, decisão, declaração
 **quero** saber valor, data-base, conceito, método e fonte,  
 **para** evitar comparar números diferentes como se fossem equivalentes.
 
-**Status:** DECIDIDO PARA F1
+**Classificação:** DECIDIDO PARA F1 — condicionado à resolução da seção 15
 
 ---
 
@@ -320,37 +357,33 @@ Este JTBD incorpora a necessidade de chegar ao documento, decisão, declaração
 **quero** saber qual órgão decidiu, quando, qual era a pauta, qual foi o resultado e quais informações individuais estão publicamente disponíveis,  
 **para** compreender a decisão sem inferir votos, alianças ou posições não documentadas.
 
-**Status:** DECIDIDO PARA F1
+**Classificação:** DECIDIDO PARA F1 — condicionado à resolução da seção 15
 
 Voto individual não publicado deve permanecer **desconhecido / não disponível publicamente**.
 
 ---
 
-# 11. Jobs to Be Done secundários
-
-## P1
+## P1 — relevantes, não obrigatórios para o MVP
 
 ### JTBD-05 — Entender o estágio real de investigação ou processo
 
 Identificar o que está em investigação, o que foi decidido, o que ainda pode mudar e qual é o estado processual conhecido.
 
-**Status:** DECIDIDO PARA F1  
-**Risco editorial:** alto
-
-A presença no conjunto de casos de uso não significa cobertura ampla obrigatória no MVP.
+**Classificação:** DECIDIDO PARA F1 — condicionado à resolução da seção 15  
+**Risco editorial:** ALTO
 
 ### JTBD-06 — Comparar versões ou claims conflitantes
 
 Identificar quem afirmou cada versão, quais evidências estão associadas e o que permanece contestado.
 
-**Status:** DECIDIDO PARA F1  
-**Risco editorial:** alto
+**Classificação:** DECIDIDO PARA F1 — condicionado à resolução da seção 15  
+**Risco editorial:** ALTO
 
 ### JTBD-07 — Recuperar atuação institucional publicamente documentada
 
 Encontrar cargos, mandatos, decisões, posições e votações publicamente verificáveis relacionados a pessoa ou órgão.
 
-**Status:** DECIDIDO PARA F1
+**Classificação:** DECIDIDO PARA F1 — condicionado à resolução da seção 15
 
 Não autoriza inferir voto secreto, aliança, intenção ou culpa.
 
@@ -358,29 +391,29 @@ Não autoriza inferir voto secreto, aliança, intenção ou culpa.
 
 Reconstruir o estado documental disponível em um momento passado para reduzir anacronismo.
 
-**Status:** DECIDIDO PARA F1
+**Classificação:** DECIDIDO PARA F1 — condicionado à resolução da seção 15
 
 ---
 
-## P2 / ADIADO
+## P2 — adiados
 
 ### JTBD-09 — Alertas de mudança
 
-**Status:** DEPRIORIZADO PARA O MVP
+**Classificação:** DEPRIORIZADO PARA O MVP
 
 A dispersão de fontes torna a ideia plausível, mas não existe evidência suficiente de que alertas devam orientar a primeira versão.
 
 ### JTBD-10 — Pesquisa acadêmica avançada / exportações especializadas
 
-**Status:** DEPRIORIZADO PARA O MVP
+**Classificação:** DEPRIORIZADO PARA O MVP
 
-Compatível com visão de longo prazo, mas não necessário para provar utilidade inicial.
+Compatível com a visão de longo prazo, mas não necessário para provar utilidade inicial.
 
 ---
 
-# 12. Matriz de prioridade
+# 12. Matriz de prioridade provisória
 
-| Caso de uso | Prioridade F1 | Evidência | Risco | Observação |
+| Caso de uso | Prioridade F1 proposta | Evidência | Risco | Observação |
 |---|---|---|---|---|
 | Verificar afirmação + fonte original | P0 | documental forte | médio | capacidade transversal central |
 | Cronologia + estado atual | P0 | documental forte | médio | núcleo da memória institucional |
@@ -393,11 +426,11 @@ Compatível com visão de longo prazo, mas não necessário para provar utilidad
 | Alertas | P2 | parcial | médio | adiado |
 | Pesquisa acadêmica avançada | P2 | documental | baixo | não orienta MVP |
 
-As prioridades P0/P1/P2 orientam FF-0007 e FF-0008, mas o FF-0008 continua responsável por decidir quais capacidades efetivamente entram no MVP.
+O FF-0008 permanece responsável por selecionar quais capacidades efetivamente entram no MVP.
 
 ---
 
-# 13. Não usuários prioritários e anti-use-cases
+# 13. Anti-use-cases
 
 O Fiel Fiscaliza não deve otimizar sua experiência para:
 
@@ -411,113 +444,132 @@ O Fiel Fiscaliza não deve otimizar sua experiência para:
 - ranking simplista de “bons” e “maus” dirigentes ou conselheiros;
 - gamificação de pessoas fiscalizadas.
 
-O projeto fiscaliza atos, decisões, recursos e relações institucionais publicamente documentadas.
+O projeto fiscaliza atos e estruturas institucionais publicamente documentáveis, sem transformar pessoas em alvos de perseguição.
 
 ---
 
-# 14. O que a pesquisa já permite decidir
+# 14. Dívida de validação e gatilhos de reabertura
 
-Com confiança suficiente para avançar na Fase 1:
-
-- o MVP deve ser desenhado prioritariamente para o torcedor institucionalmente engajado;
-- precisa continuar compreensível para o torcedor que chega com uma dúvida pontual;
-- jornalistas/comunicadores e pesquisadores são usuários secundários relevantes;
-- fonte original/proveniência, temporalidade, contexto financeiro e decisões institucionais são casos de uso fortes;
-- o produto não deve competir por velocidade de notícia;
-- informação ausente deve poder permanecer desconhecida;
-- soluções atuais já resolvem partes do problema e devem ser tratadas como concorrência funcional;
-- um MVP pequeno pode ser utilizado como instrumento adicional de validação da própria tese de produto.
-
----
-
-# 15. O que continua desconhecido
-
-A decisão de avançar sem entrevistas preserva explicitamente as seguintes incertezas:
+Caso o projeto avance sem pesquisa comportamental pré-MVP, permanecerão explicitamente desconhecidos:
 
 - frequência real de uso por pessoa;
 - intensidade subjetiva da dor;
 - taxa de retorno a uma ferramenta dedicada;
 - preferência de interface;
-- quantidade de contexto que usuários não especializados toleram;
-- quanto tempo o Fiel Fiscaliza efetivamente economiza;
-- quais segmentos gerarão maior uso real;
-- se determinados recursos aparentemente valiosos serão pouco utilizados.
+- quantidade de contexto tolerada por usuários não especializados;
+- economia efetiva de tempo;
+- segmentos que gerarão maior uso real;
+- recursos aparentemente valiosos que podem ser pouco utilizados.
 
-Nenhuma dessas incertezas deve ser convertida em alegação de demanda comprovada.
-
----
-
-# 16. Dívida de validação aceita
-
-A ausência de entrevistas pré-MVP gera uma dívida consciente de validação.
-
-Ela deve ser paga de forma proporcional, sem se transformar em novo gate automático.
-
-Formas aceitáveis incluem:
+Essa dívida pode ser reduzida por:
 
 - feedback espontâneo após protótipo ou MVP;
 - formulário curto no produto;
-- issues/discussões públicas;
+- issues ou discussões públicas;
 - análise agregada de uso quando compatível com privacidade;
-- conversas assíncronas com usuários;
-- entrevistas direcionadas somente quando uma decisão material continuar incerta;
-- testes de tarefa quando uma interface concreta existir e houver algo real a observar.
+- conversas assíncronas;
+- entrevistas direcionadas quando uma decisão material continuar incerta;
+- testes de tarefa quando existir interface concreta a observar.
 
-Pesquisa adicional deve ser realizada **quando puder alterar uma decisão**, não apenas para cumprir ritual de discovery.
+Nova pesquisa deve ser fortemente considerada quando:
 
----
-
-# 17. Gatilhos para reabrir pesquisa de usuários
-
-Nova pesquisa passa a ser recomendada quando ocorrer pelo menos uma das condições:
-
-1. dois caminhos de produto relevantes possuírem evidência documental semelhante e a escolha depender de comportamento de usuário;
-2. o MVP não demonstrar uso suficiente para seus casos de uso centrais;
-3. usuários apresentarem dificuldade recorrente de compreensão;
+1. dois caminhos relevantes possuírem evidência semelhante e a escolha depender de comportamento do usuário;
+2. o MVP não demonstrar utilidade suficiente nos casos centrais;
+3. houver dificuldade recorrente de compreensão;
 4. um recurso de alto custo operacional depender de demanda ainda desconhecida;
-5. surgir contraprova relevante de que solução existente atende melhor o problema;
-6. o produto começar a atrair principalmente um segmento diferente do usuário primário definido neste documento.
-
-Esses gatilhos permitem pesquisa sob demanda em vez de pesquisa como etapa burocrática obrigatória.
+5. surgir contraprova relevante de que uma solução existente atende melhor o problema;
+6. o produto atrair principalmente um segmento diferente do usuário primário proposto.
 
 ---
 
-# 18. Relação com o FF-0005
+# 15. Revisão de consistência canônica
 
-O FF-0005 exige que hipóteses de produto sejam testadas e que contraprovas sejam procuradas antes do Gate F1.
+## 15.1 FF-0001 — PROJECT_CONSTITUTION
 
-A pesquisa documental realizada em 2026-09-04 cumpriu parte material dessa obrigação e produziu evidências favoráveis e contrárias.
+A revisão não identificou conflito material com o FF-0001.
 
-O FF-0005 **não exige entrevistas como método específico**.
+A decisão proposta de limitar discovery obrigatório é coerente com manutenção individual, utilidade antes de abrangência, especificação antes de implementação e sustentabilidade operacional.
 
-Portanto, adiar pesquisa comportamental não cria conflito com a Product Vision, desde que:
+## 15.2 FF-0002 — PRE_CODEX_CHECKLIST
 
-- a incerteza permaneça explícita;
-- decisões não sejam apresentadas como demanda empiricamente validada;
-- o MVP permaneça pequeno e reversível;
-- nova evidência possa provocar revisão posterior.
+O FF-0002 exige na Fase 1:
+
+- identificação de usuários primários e secundários;
+- definição de necessidades distintas;
+- documentação de casos de uso prioritários;
+- consideração das iniciativas existentes e das lacunas do produto.
+
+Ele não prescreve entrevistas ou testes comportamentais como método obrigatório.
+
+Portanto, a metodologia proposta não entra diretamente em conflito com o FF-0002.
+
+## 15.3 FF-0005 — PRODUCT_VISION
+
+A revisão identificou **tensão material que não deve ser ocultada**.
+
+O FF-0005 v1.0 // CANONICAL determina, na Fase 1, que a pesquisa produza evidência suficiente sobre pontos como:
+
+- quem são usuários primários e secundários;
+- quais perguntas são mais caras, demoradas ou frustrantes;
+- como as pessoas resolvem os problemas atualmente;
+- quais casos de uso geram valor recorrente;
+- qual subconjunto possui melhor relação entre valor e custo para o MVP.
+
+Além disso, a seção de hipóteses do FF-0005 descreve hipóteses de dor, valor, usuário e compreensão como hipóteses a validar na Fase 1.
+
+A desk research fortalece várias dessas hipóteses, mas esta versão do FF-0006 admite explicitamente que ainda **não conhece frequência individual, intensidade subjetiva da dor, recorrência de uso nem comportamento real de adoção**.
+
+Por isso, não é seguro afirmar que a metodologia v0.4 satisfaz integralmente a redação CANONICAL atual do FF-0005.
+
+### Conclusão da revisão
+
+Há duas formas válidas de resolver a tensão:
+
+**Opção A — manter o FF-0005 intacto:** realizar evidência comportamental suficiente antes do Gate F1.
+
+**Opção B — alterar explicitamente o FF-0005:** permitir que, em um projeto individual e de baixo risco reversível, a Fase 1 tome decisões provisórias com base em desk research robusta, contraprovas e incerteza declarada, transferindo a validação comportamental não crítica para depois do protótipo/MVP.
+
+A preferência atual de André por evitar esse gargalo aponta para a **Opção B**, mas essa alteração atinge um documento CANONICAL e **não pode ser tratada como aprovada sem autorização explícita**.
 
 ---
 
-# 19. Critérios para promoção a CANONICAL
+# 16. Alteração proposta ao FF-0005
 
-Antes de promover FF-0006 para CANONICAL, deve-se confirmar que:
+**Status desta seção:** PROPOSTA — NÃO CANÔNICA.
 
-- o usuário primário está explicitamente definido;
+Se André aprovar a Opção B, recomenda-se uma alteração estreita no FF-0005, sem mudar sua visão, tese ou princípios.
+
+A alteração deve:
+
+1. preservar a obrigação de procurar evidência e contraprova;
+2. permitir que “evidência suficiente para F1” seja proporcional ao risco e à reversibilidade da decisão;
+3. deixar explícito que pesquisa comportamental pré-MVP não é sempre obrigatória;
+4. permitir dívida de validação documentada quando a ausência de pesquisa não impedir decisão responsável e reversível;
+5. exigir reabertura da pesquisa quando a incerteza puder alterar materialmente escopo, custo, risco editorial ou compreensão do produto;
+6. impedir que decisões provisórias sejam descritas como demanda empiricamente validada.
+
+A alteração deveria gerar nova versão CANONICAL do FF-0005 e entrada correspondente no FF-0003 — DECISION_LOG antes da canonização do FF-0006.
+
+---
+
+# 17. Critérios para promoção do FF-0006 a CANONICAL
+
+Antes de promover este documento, deve-se confirmar que:
+
+- a tensão descrita na seção 15.3 foi formalmente resolvida;
+- o usuário primário foi explicitamente definido;
 - usuários secundários estão diferenciados;
-- os JTBD P0/P1 são compatíveis com FF-0001 e FF-0005;
-- a escolha é apresentada como decisão de produto, não como prova científica de comportamento;
+- JTBD P0/P1 são compatíveis com FF-0001 e com a versão vigente do FF-0005;
+- as escolhas são apresentadas como decisões de produto e não como prova científica de comportamento;
 - alternativas existentes e contraprovas foram consideradas;
 - anti-use-cases permanecem explícitos;
 - nenhuma necessidade presume acesso privilegiado, voto secreto, aliança, culpa ou dado privado;
 - a dívida de validação e seus gatilhos estão registrados;
 - as decisões são suficientes para orientar FF-0007 e FF-0008 sem escolher tecnologia ou interface prematuramente.
 
-Entrevistas ou testes de tarefa **não são requisito obrigatório de canonização desta versão**.
-
 ---
 
-# 20. Impacto e dependências documentais
+# 18. Impacto e dependências documentais
 
 ## É impactado por
 
@@ -537,10 +589,10 @@ As prioridades deste documento não selecionam automaticamente funcionalidades d
 
 ---
 
-# 21. Vigência
+# 19. Vigência
 
-Esta versão permanece **DRAFT** até revisão crítica e aprovação explícita.
+Esta versão permanece **DRAFT**.
 
-**FF-0006 — USERS_AND_USE_CASES v0.3 // DRAFT**
+**FF-0006 — USERS_AND_USE_CASES v0.4 // DRAFT**
 
-A versão 0.3 registra a decisão de **adiar pesquisa comportamental obrigatória pré-MVP**, define usuários e JTBD com base na melhor evidência documental disponível e preserva explicitamente a dívida de validação para revisão posterior orientada por necessidade.
+A revisão crítica concluiu que o conteúdo de usuários e casos de uso é adequado para avanço, mas a decisão de adiar pesquisa comportamental pré-MVP exige primeiro resolver explicitamente a tensão com o FF-0005 v1.0 // CANONICAL.
