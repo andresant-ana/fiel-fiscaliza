@@ -2,7 +2,7 @@
 
 **Nome do documento:** Pre-Codex Checklist  
 **ID:** FF-0002  
-**Versão:** 1.0  
+**Versão:** 1.1  
 **Status:** CANONICAL  
 **Última revisão:** 2026-09-04  
 **Responsável:** André  
@@ -127,15 +127,26 @@ Garantir que o projeto possua identidade, autoridade documental, memória de dec
 - [x] Estrutura documental inicial criada no repositório.
 - [x] Instruções permanentes do projeto definidas no ChatGPT.
 - [x] FF-0001 — PROJECT_CONSTITUTION v1.0 // CANONICAL.
-- [x] FF-0002 — PRE_CODEX_CHECKLIST v1.0 // CANONICAL.
-- [ ] FF-0003 — DECISION_LOG com o conjunto inicial de decisões já tomadas.
-- [ ] FF-0004 — GLOSSARY com o vocabulário inicial oficial.
-- [ ] Definir e aplicar convenção mínima de impacto/dependência entre documentos canônicos quando materialmente relevante.
-- [ ] Confirmar que nenhum documento da Fundação contradiz o FF-0001.
+- [x] FF-0002 — PRE_CODEX_CHECKLIST v1.1 // CANONICAL.
+- [x] FF-0003 — DECISION_LOG com o conjunto inicial de decisões já tomadas.
+- [x] FF-0004 — GLOSSARY com o vocabulário inicial oficial.
+- [x] Definir e aplicar convenção mínima de impacto/dependência entre documentos canônicos quando materialmente relevante.
+- [x] Confirmar que nenhum documento da Fundação contradiz o FF-0001.
 
 ## Gate F0
 
 A Fundação está concluída quando FF-0001, FF-0002, FF-0003 e FF-0004 estiverem em estado CANONICAL e consistentes entre si.
+
+**Status do Gate F0:** APROVADO em 2026-09-04.
+
+A auditoria de consistência confirmou que:
+
+- FF-0001 permanece como autoridade normativa máxima;
+- FF-0002 operacionaliza gates e uso do Codex sem alterar princípios constitucionais;
+- FF-0003 preserva decisões em nível subordinado às fontes de autoridade superiores;
+- FF-0004 padroniza vocabulário sem antecipar decisões de produto, domínio ou arquitetura;
+- os estados documentais, a hierarquia de autoridade e as regras de conflito são consistentes entre os quatro documentos;
+- as pendências de licenciamento, produto, domínio e arquitetura estão conscientemente alocadas a fases posteriores e não bloqueiam a Fundação.
 
 ---
 
@@ -631,9 +642,9 @@ O Codex está formalmente liberado para implementação regular do MVP somente q
 
 ## Governança
 
-- [ ] Gate F0 aprovado.
-- [ ] FF-0001 continua vigente e sem conflito conhecido.
-- [ ] Nenhum conflito CANONICAL não resolvido existe.
+- [x] Gate F0 aprovado.
+- [x] FF-0001 continua vigente e sem conflito conhecido.
+- [x] Nenhum conflito CANONICAL não resolvido existe.
 
 ## Produto
 
@@ -858,13 +869,15 @@ Usar implementação manual, ChatGPT, Codex, scripts ou experimentos como forma 
 Na entrada em vigor desta versão:
 
 - FF-0001 está **CANONICAL v1.0**;
-- FF-0002 está **CANONICAL v1.0**;
-- o repositório GitHub está criado;
-- a estrutura documental está criada;
-- o Fiel Fiscaliza permanece em fase de fundação e especificação;
-- Codex ainda **não está liberado para implementação regular do produto**.
+- FF-0002 está **CANONICAL v1.1**;
+- FF-0003 está **CANONICAL v1.0**;
+- FF-0004 está **CANONICAL v1.0**;
+- o **Gate F0 — Fundação está APROVADO**;
+- o repositório GitHub e a estrutura documental estão criados;
+- o Fiel Fiscaliza entra na **FASE 1 — Produto**;
+- Codex continua **não liberado para implementação regular do produto**.
 
-O próximo objetivo é concluir a Fundação por meio do FF-0003 — DECISION_LOG e FF-0004 — GLOSSARY.
+O próximo objetivo é concluir a Fase 1 por meio de FF-0005 — PRODUCT_VISION, FF-0006 — USERS_AND_USE_CASES, FF-0007 — SCOPE e FF-0008 — MVP_SPEC.
 
 ---
 
@@ -872,6 +885,6 @@ O próximo objetivo é concluir a Fundação por meio do FF-0003 — DECISION_LO
 
 Esta versão possui status **CANONICAL** e entra em vigor em **2026-09-04** por aprovação explícita de André.
 
-**FF-0002 — PRE_CODEX_CHECKLIST v1.0 // CANONICAL**
+**FF-0002 — PRE_CODEX_CHECKLIST v1.1 // CANONICAL**
 
-A partir desta data, este documento constitui o mapa oficial de preparação do Fiel Fiscaliza até o estado CODEX READY.
+Esta revisão registra a conclusão e aprovação do **Gate F0 — Fundação** após auditoria de consistência dos documentos FF-0001 a FF-0004.
