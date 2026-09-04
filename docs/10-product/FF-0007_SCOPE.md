@@ -2,7 +2,7 @@
 
 **Nome do documento:** Scope  
 **ID:** FF-0007  
-**Versão:** 0.1  
+**Versão:** 0.2  
 **Status:** DRAFT  
 **Última revisão:** 2026-09-04  
 **Responsável:** André  
@@ -21,7 +21,8 @@ Seu objetivo é responder, sem escolher ainda arquitetura, interface ou funciona
 - quando um tema esportivo passa a possuir relevância institucional;
 - quais limites separam memória institucional, fiscalização, jornalismo cotidiano, militância política e exposição pessoal;
 - como tratar assuntos parcialmente públicos, incompletos ou difíceis de documentar;
-- como distinguir escopo permanente do produto de cobertura atual e de escopo do MVP.
+- como distinguir escopo permanente do produto, cobertura atual e escopo do MVP;
+- como evitar expansão silenciosa de escopo ao longo do tempo.
 
 O FF-0007 não define quais páginas existirão, quais módulos serão implementados, quais fontes serão automatizadas nem quais capacidades entrarão no MVP.
 
@@ -46,15 +47,16 @@ Em particular, o escopo deve respeitar que:
 - o usuário primário da Fase 1 é o torcedor institucionalmente engajado;
 - os JTBD centrais envolvem verificação de afirmações e fontes, reconstrução temporal, contextualização financeira e reconstrução de decisões institucionais públicas;
 - assuntos de alto risco editorial não devem ser ampliados apenas porque geram atenção;
-- informação desconhecida ou não disponível publicamente pode permanecer explicitamente desconhecida.
+- informação desconhecida ou não disponível publicamente pode permanecer explicitamente desconhecida;
+- acesso público a uma informação não significa automaticamente que sua coleta, armazenamento ou republicação integral seja apropriada.
 
 ---
 
 # 3. Princípio central de escopo
 
-O Fiel Fiscaliza deve cobrir **a vida institucional do Sport Club Corinthians Paulista e relações externas que produzam efeito institucional materialmente relevante sobre o clube**.
+O Fiel Fiscaliza deve cobrir **a vida institucional do Sport Club Corinthians Paulista e relações externas que produzam consequência institucional materialmente relevante sobre o clube**.
 
-O critério não é simplesmente se um assunto “fala do Corinthians”.
+O critério não é simplesmente se um assunto “fala do Corinthians”, gera engajamento ou aparece muito na imprensa.
 
 Um assunto pertence ao produto quando sua compreensão ajuda materialmente a reconstruir, verificar, preservar ou fiscalizar pelo menos uma das seguintes dimensões:
 
@@ -69,21 +71,64 @@ Um assunto pertence ao produto quando sua compreensão ajuda materialmente a rec
 
 A presença em uma dessas dimensões torna o tema **elegível** ao produto, não automaticamente prioritário para cobertura atual ou MVP.
 
+## 3.1 O que significa “materialmente relevante”
+
+Neste documento, materialidade é qualitativa.
+
+Uma consequência é materialmente relevante quando pode alterar de maneira não trivial a compreensão de pelo menos um dos seguintes elementos:
+
+- quem exerce poder ou possui competência institucional;
+- qual regra, decisão, direito, obrigação ou procedimento está vigente;
+- posição financeira ou patrimonial relevante do clube;
+- estado jurídico, regulatório ou investigativo de questão institucional;
+- capacidade de participação, representação ou controle associativo;
+- interpretação histórica de ato, gestão, decisão ou relação institucional.
+
+Materialidade **não é sinônimo de popularidade, repercussão, valor absoluto alto ou controvérsia pública**.
+
+Um tema muito comentado pode permanecer fora de escopo; um documento pouco comentado pode ser central para o produto.
+
 ---
 
-# 4. Três camadas que não devem ser confundidas
+# 4. Teste de pertinência institucional
 
-## 4.1 Escopo do produto
+Antes de tratar um tema adjacente ou duvidoso como parte da cobertura, devem ser respondidas quatro perguntas.
+
+## 4.1 Nexo
+
+Existe relação direta e demonstrável com o SCCP em capacidade institucional, e não apenas proximidade pessoal, esportiva ou midiática?
+
+## 4.2 Consequência
+
+O tema altera, documenta ou ajuda a compreender alguma dimensão material descrita na seção 3.1?
+
+## 4.3 Utilidade
+
+Sua inclusão contribui para pelo menos um JTBD do FF-0006 ou para a memória institucional necessária a esses Jobs?
+
+## 4.4 Base pública e proporcionalidade
+
+Existe base pública adequada para tratamento responsável, e a informação a ser armazenada ou publicada é proporcional à finalidade institucional?
+
+Se o nexo ou a consequência institucional não puderem ser demonstrados, o tema deve permanecer fora de escopo.
+
+Se o tema passar pelo teste, ele se torna elegível; prioridade de cobertura continua sujeita à seção 19.
+
+---
+
+# 5. Três camadas que não devem ser confundidas
+
+## 5.1 Escopo do produto
 
 Define aquilo que o Fiel Fiscaliza pode legitimamente cobrir ao longo de sua vida.
 
-## 4.2 Cobertura atual
+## 5.2 Cobertura atual
 
 Define aquilo que o projeto consegue efetivamente manter com qualidade em determinado momento.
 
 A ausência de cobertura de um tema em escopo não significa que ele deixou de pertencer ao produto.
 
-## 4.3 Escopo do MVP
+## 5.3 Escopo do MVP
 
 Define o menor subconjunto de problemas e capacidades que será implementado na primeira versão publicável.
 
@@ -95,11 +140,11 @@ Essa separação impede que “está no escopo” se transforme em compromisso d
 
 ---
 
-# 5. Domínios institucionais em escopo
+# 6. Domínios institucionais em escopo
 
-Os domínios abaixo pertencem ao universo legítimo do Fiel Fiscaliza, sujeitos a relevância, disponibilidade de evidência e capacidade de manutenção.
+Os domínios abaixo formam o núcleo institucional legítimo do Fiel Fiscaliza, sujeitos a relevância, disponibilidade de evidência e capacidade de manutenção.
 
-## 5.1 Governança e estrutura institucional
+## 6.1 Governança e estrutura institucional
 
 Inclui, quando publicamente documentável:
 
@@ -117,7 +162,7 @@ Inclui, quando publicamente documentável:
 
 ---
 
-## 5.2 Estatuto, regimentos e regras institucionais
+## 6.2 Estatuto, regimentos e regras institucionais
 
 Inclui:
 
@@ -133,7 +178,7 @@ O produto deve preservar versões e vigências quando essas diferenças forem re
 
 ---
 
-## 5.3 Eleições, chapas e participação associativa
+## 6.3 Eleições, chapas e participação associativa
 
 Inclui:
 
@@ -150,7 +195,7 @@ A cobertura não autoriza inferir alinhamento político, apoio, voto ou pertenci
 
 ---
 
-## 5.4 Decisões, votações e atuação institucional
+## 6.4 Decisões, votações e atuação institucional
 
 Inclui:
 
@@ -163,9 +208,11 @@ Inclui:
 
 Resultado coletivo não deve ser transformado em voto individual presumido.
 
+Declarações isoladas não precisam ser catalogadas apenas por existirem; devem possuir valor para reconstrução de questão institucional relevante.
+
 ---
 
-## 5.5 Finanças e patrimônio
+## 6.5 Finanças e patrimônio
 
 Inclui, quando institucionalmente relevante:
 
@@ -185,7 +232,7 @@ O FF-0007 não estabelece limiar numérico universal de materialidade financeira
 
 ---
 
-## 5.6 Arena e estruturas relacionadas
+## 6.6 Arena e estruturas relacionadas
 
 A Neo Química Arena e relações jurídicas, financeiras e administrativas diretamente associadas a ela pertencem ao escopo quando forem relevantes para compreender:
 
@@ -202,25 +249,27 @@ O projeto não precisa cobrir operação cotidiana do estádio sem consequência
 
 ---
 
-## 5.7 Contratos, parcerias e operações institucionalmente relevantes
+## 6.7 Contratos, parcerias e operações institucionalmente relevantes
 
 Contratos e relações comerciais podem entrar no produto quando sua importância ultrapassar a rotina esportiva ou administrativa e houver consequência institucional relevante.
 
-Exemplos de fatores de relevância:
+Fatores que podem sustentar relevância incluem:
 
-- impacto financeiro material;
-- duração ou obrigação de longo prazo;
-- efeito relevante sobre patrimônio ou direitos do clube;
-- controvérsia jurídica ou regulatória relevante;
+- obrigação material em relação à realidade financeira do clube;
+- duração ou comprometimento relevante de longo prazo;
+- efeito sobre patrimônio, direitos, marca ou receitas futuras;
+- controvérsia jurídica ou regulatória material;
 - participação em investigação ou processo;
 - mudança estrutural na forma de exploração de ativo, marca ou atividade;
 - necessidade de compreender decisão de governança relevante.
 
-O produto **não assume que todo contrato do clube deve ser catalogado**.
+Valor nominal alto, isoladamente, não transforma todo contrato esportivo em item obrigatório do produto.
+
+O Fiel Fiscaliza **não assume que todo contrato do clube deve ser catalogado**.
 
 ---
 
-## 5.8 Investigações, processos e decisões jurídicas ou regulatórias
+## 6.8 Investigações, processos e decisões jurídicas ou regulatórias
 
 Inclui procedimentos que tenham conexão institucional relevante com o SCCP, sua governança, patrimônio, administração ou atos praticados em capacidade institucional.
 
@@ -242,7 +291,7 @@ Assuntos estritamente pessoais de indivíduos ligados ao clube permanecem fora d
 
 ---
 
-## 5.9 Transparência e documentos institucionais
+## 6.9 Transparência e documentos institucionais
 
 Inclui:
 
@@ -263,7 +312,7 @@ Isso **não implica obrigação de republicar integralmente todo documento acess
 
 ---
 
-## 5.10 Pessoas em capacidade institucional
+## 6.10 Pessoas em capacidade institucional
 
 Pessoas podem ser documentadas na medida necessária para compreender sua atuação pública no ecossistema institucional do Corinthians.
 
@@ -292,7 +341,7 @@ O objetivo de um eventual perfil é reconstruir atuação institucional, não pr
 
 ---
 
-# 6. Entidades externas ao SCCP
+# 7. Entidades externas ao SCCP
 
 Organizações e pessoas externas podem aparecer quando forem necessárias para compreender uma questão institucional do Corinthians.
 
@@ -314,16 +363,18 @@ O Fiel Fiscaliza não deve ampliar silenciosamente seu escopo para fiscalizar in
 
 ---
 
-# 7. Torcidas organizadas, movimentos e coletivos
+# 8. Torcidas organizadas, movimentos e coletivos
 
-A atuação de torcidas organizadas, movimentos, coletivos e grupos de associados pode entrar no produto quando houver conexão direta com:
+A atuação de torcidas organizadas, movimentos, coletivos e grupos de associados pode entrar no produto quando houver conexão direta e material com:
 
 - governança do SCCP;
 - eleição ou reforma estatutária;
-- mobilização sobre decisão institucional;
-- proposição formal;
-- posicionamento público relevante para questão institucional;
-- participação documentada em processo ou acontecimento institucional.
+- proposição ou pedido formal dirigido à instituição;
+- participação documentada em processo, assembleia ou acontecimento institucional;
+- mobilização cujo efeito institucional seja necessário para reconstruir determinada questão;
+- posicionamento público cuja preservação seja necessária para compreender debate, decisão ou mudança institucional relevante.
+
+A mera existência de opinião política, postagem, disputa interna ou mobilização sem consequência institucional não gera obrigação de registro.
 
 A vida interna desses grupos, suas disputas próprias, carnaval, atividades sociais ou outros assuntos sem consequência institucional para o SCCP não pertencem automaticamente ao escopo.
 
@@ -331,7 +382,7 @@ O Fiel Fiscaliza deve registrar posições desses grupos como **posições atrib
 
 ---
 
-# 8. Critério para temas esportivos adquirirem relevância institucional
+# 9. Critério para temas esportivos adquirirem relevância institucional
 
 Um tema de futebol que normalmente estaria fora de escopo pode entrar quando deixar de ser apenas esportivo e passar a produzir consequência institucional documentável.
 
@@ -347,7 +398,7 @@ Além dessa conexão, a inclusão deve contribuir para pelo menos um JTBD releva
 
 ---
 
-# 9. Exemplos de fronteira esportivo × institucional
+# 10. Exemplos de fronteira esportivo × institucional
 
 Os exemplos abaixo são orientativos e não substituem análise do caso concreto.
 
@@ -358,10 +409,10 @@ Os exemplos abaixo são orientativos e não substituem análise do caso concreto
 | análise tática | fora de escopo |
 | resultado de jogo | fora de escopo, salvo quando necessário como contexto mínimo de consequência institucional |
 | rumor comum de transferência | fora de escopo |
-| contratação de jogador | normalmente fora; pode entrar se houver questão financeira, contratual, jurídica ou de governança materialmente relevante |
+| contratação de jogador | normalmente fora; pode entrar se houver questão financeira, contratual, jurídica ou de governança materialmente relevante além da rotina esportiva |
 | rescisão de atleta ou treinador | normalmente fora; pode entrar quando produzir obrigação financeira, litígio ou decisão institucional relevante |
 | punição esportiva | pode entrar quando houver consequência jurídica, regulatória, financeira ou institucional relevante |
-| patrocínio relevante | em escopo quando possuir efeito financeiro, contratual ou de governança materialmente relevante |
+| patrocínio relevante | em escopo quando possuir efeito financeiro, contratual, patrimonial ou de governança materialmente relevante |
 | conflito entre dirigente e atleta | fora por padrão; entra apenas se evoluir para questão institucional documentável |
 | venda de mando / uso de estádio | pode entrar se houver impacto patrimonial, contratual, financeiro ou decisório relevante |
 
@@ -369,7 +420,7 @@ O Fiel Fiscaliza deve registrar somente o contexto esportivo necessário para co
 
 ---
 
-# 10. Fronteira entre memória institucional e portal de notícias
+# 11. Fronteira entre memória institucional e portal de notícias
 
 O Fiel Fiscaliza não deve competir com a imprensa pela cobertura de tudo que acontece no Corinthians.
 
@@ -392,31 +443,35 @@ O objetivo é preservar **estado, mudança, decisão, evidência e contexto**, n
 
 ---
 
-# 11. Fronteira entre fiscalização e militância política
+# 12. Fronteira entre fiscalização e militância política
 
-O Fiel Fiscaliza pode defender institucionalmente princípios compatíveis com sua Constituição, como:
+O Fiel Fiscaliza pode defender os princípios procedimentais já assumidos por sua Constituição, como:
 
 - transparência;
 - prestação de contas;
 - memória institucional;
 - verificabilidade;
-- governança responsável;
-- acesso público adequado à informação institucional.
+- acesso público adequado à informação institucional;
+- preservação de incerteza e de evidência.
 
-Isso não autoriza o projeto a funcionar como:
+Essa defesa não autoriza transformar o produto em campanha por resultados políticos ou modelos institucionais específicos.
 
-- campanha de chapa;
-- veículo de situação ou oposição;
-- plataforma de mobilização eleitoral;
-- instrumento de ataque pessoal;
-- sistema de recomendação de voto;
-- mecanismo de classificação automática de atores em “bons” e “maus”.
+Por padrão, o Fiel Fiscaliza não deve recomendar ou fazer campanha por:
 
-O produto pode documentar posições políticas e disputas institucionais quando forem relevantes, preservando atribuição, evidência e contexto.
+- candidatura ou chapa;
+- situação ou oposição;
+- voto em eleição interna;
+- manutenção ou destituição de pessoa em cargo;
+- adoção ou rejeição de SAF;
+- modelo estatutário específico;
+- sistema eleitoral específico;
+- outro resultado político substantivo do clube.
+
+O projeto pode documentar propostas, argumentos, posições e consequências desses modelos quando forem institucionalmente relevantes, sem converter documentação em endosso.
 
 ---
 
-# 12. Fronteira entre fiscalização e exposição pessoal
+# 13. Fronteira entre fiscalização e exposição pessoal
 
 A relevância pública de um cargo não transforma toda a vida de seu ocupante em assunto do Fiel Fiscaliza.
 
@@ -432,7 +487,7 @@ Mesmo quando uma informação é publicamente encontrável, sua publicação pel
 
 ---
 
-# 13. Rumores, denúncias e conteúdo não verificado
+# 14. Rumores, denúncias e conteúdo não verificado
 
 Rumor não constitui motivo suficiente para inclusão factual.
 
@@ -448,7 +503,7 @@ O Fiel Fiscaliza não deve operar como caixa de denúncias anônimas irrestrita 
 
 ---
 
-# 14. Temas normalmente fora de escopo
+# 15. Temas normalmente fora de escopo
 
 Permanecem normalmente fora do produto:
 
@@ -474,7 +529,7 @@ Permanecem normalmente fora do produto:
 
 ---
 
-# 15. Informação pública insuficiente
+# 16. Informação pública insuficiente
 
 Um assunto pode pertencer ao escopo conceitual e ainda assim não ser publicável com o nível de detalhe desejado.
 
@@ -493,7 +548,27 @@ Também não cria obrigação de abandonar definitivamente o assunto quando ele 
 
 ---
 
-# 16. Escopo temporal
+# 17. Público não significa automaticamente apropriado para republicação
+
+Uma informação ser acessível publicamente é condição relevante para o projeto, mas não é autorização automática para coleta ou republicação irrestrita.
+
+Antes de armazenar ou republicar conteúdo, devem ser considerados, conforme o caso:
+
+- necessidade institucional;
+- proporcionalidade;
+- privacidade e risco de reidentificação;
+- direitos autorais e limites de reprodução;
+- termos e limitações legítimas da fonte;
+- segurança de pessoas;
+- existência de alternativa menos invasiva, como registrar metadados, resumo, hash ou link de origem.
+
+As regras especializadas pertencerão principalmente ao FF-0010 — SOURCE_POLICY e aos documentos de segurança, privacidade e risco legal.
+
+Esta seção estabelece somente a fronteira de produto: **o Fiel Fiscaliza não deve usar “está na internet” como justificativa suficiente para armazenar ou republicar informação.**
+
+---
+
+# 18. Escopo temporal
 
 O Fiel Fiscaliza é um projeto de memória acumulativa e não deve possuir, como regra permanente, um corte histórico que impeça representar acontecimentos antigos relevantes.
 
@@ -511,27 +586,28 @@ O FF-0008 poderá estabelecer um recorte temporal específico para o MVP sem alt
 
 ---
 
-# 17. Critério de inclusão editorial-operacional
+# 19. Critério de inclusão editorial-operacional
 
 Um item estar em escopo não significa que deve ser imediatamente coletado ou publicado.
 
 Antes de priorizar cobertura, deve-se avaliar pelo menos:
 
-1. **relevância institucional:** ajuda a compreender poder, regra, decisão, patrimônio, finanças, obrigação, processo ou memória relevante?;
+1. **relevância institucional:** altera ou ajuda a compreender poder, regra, decisão, patrimônio, finanças, obrigação, processo ou memória relevante?;
 2. **utilidade:** atende a JTBD ou pergunta relevante do produto?;
 3. **evidência:** existe base pública suficiente para tratamento responsável?;
 4. **temporalidade:** preservar mudança ou histórico acrescenta valor?;
 5. **risco editorial:** existe risco elevado de acusação, assédio, privacidade ou interpretação indevida?;
 6. **sustentabilidade:** o custo recorrente de manter a cobertura é compatível com uma pessoa?;
-7. **duplicação:** soluções existentes já resolvem suficientemente a tarefa sem ganho material do Fiel Fiscaliza?
+7. **duplicação:** soluções existentes já resolvem suficientemente a tarefa sem ganho material do Fiel Fiscaliza?;
+8. **proporcionalidade:** a quantidade e granularidade da informação são necessárias para a finalidade institucional?
 
-Esses fatores orientam priorização; não constituem ainda uma fórmula numérica ou algoritmo automático.
+Esses fatores orientam priorização; não constituem fórmula numérica, ranking automático ou autorização para automatizar julgamento editorial.
 
 ---
 
-# 18. Critérios de não inclusão mesmo quando há interesse público
+# 20. Critérios de não inclusão mesmo quando há interesse da torcida
 
-O interesse ou curiosidade da torcida não é suficiente quando:
+Interesse, curiosidade, repercussão ou pressão pública não são suficientes quando:
 
 - a informação é privada e sem necessidade institucional proporcional;
 - a alegação não possui base pública adequada;
@@ -543,7 +619,7 @@ O interesse ou curiosidade da torcida não é suficiente quando:
 
 ---
 
-# 19. Relação com os JTBD do FF-0006
+# 21. Relação com os JTBD do FF-0006
 
 O escopo deve permitir principalmente que o usuário consiga:
 
@@ -558,7 +634,24 @@ A inclusão de um domínio no FF-0007 não supera dependências futuras de FF-00
 
 ---
 
-# 20. Decisões deliberadamente adiadas
+# 22. Controle de expansão de escopo
+
+Novos casos concretos que se enquadrem claramente nas fronteiras deste documento não exigem alteração do FF-0007.
+
+Entretanto, deve haver revisão explícita deste documento antes de:
+
+- incorporar um novo domínio permanente não coberto pelas categorias atuais;
+- transformar atividade hoje considerada fora de escopo em função regular do produto;
+- ampliar a fiscalização para organizações externas como objetivo próprio;
+- adotar cobertura esportiva cotidiana;
+- introduzir função de mobilização política, denúncia aberta ou avaliação reputacional de indivíduos;
+- alterar materialmente a fronteira entre informação institucional e vida privada.
+
+Expansão relevante de escopo não deve ocorrer silenciosamente por acumulação de pequenas funcionalidades.
+
+---
+
+# 23. Decisões deliberadamente adiadas
 
 Este documento não decide:
 
@@ -580,25 +673,58 @@ Essas questões devem permanecer abertas até os documentos responsáveis por el
 
 ---
 
-# 21. Critérios para revisão crítica e canonização
+# 24. Revisão crítica de 2026-09-04
+
+A revisão da v0.1 identificou cinco riscos principais e os tratou nesta versão.
+
+## 24.1 Circularidade de “relevância institucional”
+
+A v0.1 utilizava materialidade como critério correto, porém ainda amplo. A v0.2 define materialidade qualitativa e adiciona teste de pertinência institucional.
+
+## 24.2 Escopo excessivo de atores externos e movimentos
+
+A redação foi estreitada para impedir que posições, disputas ou atividades de organizações externas sejam cobertas apenas por proximidade temática.
+
+## 24.3 Risco de militância substantiva
+
+A fronteira política agora distingue defesa de princípios procedimentais já canônicos de campanha por candidaturas, modelos institucionais ou resultados políticos específicos.
+
+## 24.4 Confusão entre acesso público e adequação para publicação
+
+A v0.2 deixa explícito que conteúdo acessível na internet pode ainda ser inadequado para armazenamento ou republicação integral.
+
+## 24.5 Scope creep por acumulação
+
+Foi criada regra de controle de expansão para exigir revisão documental quando a natureza permanente do produto mudar.
+
+A revisão não identificou conflito material bloqueante com FF-0001, FF-0002, FF-0005 ou FF-0006.
+
+---
+
+# 25. Critérios para canonização
 
 Antes de promover o FF-0007 para CANONICAL, deve-se confirmar que:
 
 - as fronteiras são compatíveis com FF-0001;
 - o documento satisfaz o checklist de Escopo do FF-0002;
 - o escopo deriva dos usuários e JTBD do FF-0006 sem transformar todos os casos de uso em obrigação de MVP;
+- materialidade e pertinência institucional possuem critérios utilizáveis sem fórmula artificial;
 - temas esportivos possuem critério claro de promoção para relevância institucional;
 - memória institucional está claramente separada de portal de notícias;
 - fiscalização está separada de militância eleitoral e exposição pessoal;
 - assuntos jurídicos ou investigativos não presumem culpa;
 - a existência de escopo conceitual não implica cobertura integral;
 - ausências de informação podem permanecer desconhecidas;
+- acesso público não é tratado como autorização automática de republicação;
+- expansão relevante de escopo exige revisão explícita;
 - não foram introduzidas decisões técnicas ou de interface prematuras;
 - o documento oferece fronteira suficiente para o FF-0008 escolher um MVP pequeno e sustentável.
 
+A revisão crítica de 2026-09-04 considera esses critérios satisfeitos no conteúdo da v0.2, sujeito à aprovação explícita de André para promoção a CANONICAL.
+
 ---
 
-# 22. Impacto e dependências documentais
+# 26. Impacto e dependências documentais
 
 ## É impactado por
 
@@ -620,8 +746,8 @@ Antes de promover o FF-0007 para CANONICAL, deve-se confirmar que:
 
 ---
 
-# 23. Vigência
+# 27. Vigência
 
-Esta versão permanece **DRAFT** até revisão crítica e aprovação explícita.
+Esta versão permanece **DRAFT** até aprovação explícita.
 
-**FF-0007 — SCOPE v0.1 // DRAFT**
+**FF-0007 — SCOPE v0.2 // DRAFT**
