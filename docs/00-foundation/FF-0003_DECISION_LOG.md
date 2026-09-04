@@ -2,7 +2,7 @@
 
 **Nome do documento:** Decision Log  
 **ID:** FF-0003  
-**Versão:** 1.1  
+**Versão:** 1.2  
 **Status:** CANONICAL  
 **Última revisão:** 2026-09-04  
 **Responsável:** André  
@@ -855,14 +855,47 @@ O Fiel Fiscaliza entra formalmente na **FASE 1 — Produto**, permanecendo pré-
 
 ---
 
+## FF-DEC-0032 — FF-0005 promovido a CANONICAL v1.0
+
+**Data:** 2026-09-04  
+**Status:** APROVADA  
+
+### Decisão
+
+O **FF-0005 — PRODUCT_VISION v1.0** foi aprovado após revisão crítica de produto e tornou-se a visão canônica do Fiel Fiscaliza para a Fase 1.
+
+A visão estabelece como tese de produto que memória institucional estruturada, temporal, verificável e auditável pode reduzir o custo de compreensão e fiscalização da vida institucional do Corinthians.
+
+### Salvaguardas da decisão
+
+A canonização da visão não confirma empiricamente que:
+
+- a dor percebida possui magnitude suficiente para usuários externos;
+- existe lacuna de mercado já comprovada;
+- as iniciativas atuais são insuficientes;
+- determinado conjunto de funcionalidades deve compor o MVP.
+
+Esses pontos permanecem hipóteses explícitas a serem testadas antes do Gate F1.
+
+### Formalização
+
+- FF-0005 — PRODUCT_VISION v1.0 // CANONICAL.
+- Commit de formalização: `3951684f72445173899518c82074ac3348432fa0`.
+
+### Impacto
+
+FF-0006, FF-0007 e FF-0008 devem derivar da visão sem transformar hipóteses ainda não validadas em fatos ou requisitos silenciosos.
+
+---
+
 # 10. Pendências abertas na data desta versão
 
 As entradas abaixo não constituem decisões aprovadas; apenas consolidam questões já reconhecidas como pendentes.
 
-- produzir, revisar e canonizar FF-0005 — PRODUCT_VISION;
 - produzir, revisar e canonizar FF-0006 — USERS_AND_USE_CASES;
 - produzir, revisar e canonizar FF-0007 — SCOPE;
 - produzir, revisar e canonizar FF-0008 — MVP_SPEC;
+- validar as hipóteses centrais do FF-0005 durante a Fase 1;
 - concluir Gate F1 — Produto;
 - definir arquitetura somente após requisitos, política editorial e domínio;
 - definir estratégia de licenciamento antes do marco estabelecido em FF-0002;
@@ -895,6 +928,6 @@ Ao adicionar uma nova entrada, deve-se verificar se ela:
 
 Esta versão possui status **CANONICAL** e entra em vigor em **2026-09-04** por aprovação explícita de André.
 
-**FF-0003 — DECISION_LOG v1.1 // CANONICAL**
+**FF-0003 — DECISION_LOG v1.2 // CANONICAL**
 
-Esta revisão registra a canonização do FF-0004 e a aprovação do **Gate F0 — Fundação**, preservando as decisões históricas anteriores e respeitando a hierarquia estabelecida no FF-0001.
+Esta revisão registra a canonização do FF-0005, preservando as decisões históricas anteriores e mantendo explícitas as hipóteses de produto que ainda precisam ser validadas antes do Gate F1.
