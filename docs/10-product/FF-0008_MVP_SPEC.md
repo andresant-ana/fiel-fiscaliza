@@ -2,7 +2,7 @@
 
 **Nome do documento:** MVP Specification  
 **ID:** FF-0008  
-**Versão:** 0.1  
+**Versão:** 0.2  
 **Status:** DRAFT  
 **Última revisão:** 2026-09-04  
 **Responsável:** André  
@@ -21,10 +21,11 @@ Seu objetivo é responder:
 - qual é a unidade principal de experiência do MVP;
 - quais capacidades são obrigatórias;
 - qual conteúdo mínimo precisa existir no lançamento;
-- quais funcionalidades ficam conscientemente adiadas;
+- quais funcionalidades compatíveis com a visão ficam conscientemente adiadas;
+- quais elementos permanecem fora do produto sob as regras canônicas atuais;
 - qual é a jornada principal do usuário;
 - quais critérios objetivos determinam se o MVP está aceitável;
-- o que significa “MVP publicável” em sentido de produto;
+- o que significa “MVP publicável” em sentido de Produto;
 - como o MVP permanece sustentável para uma pessoa;
 - quais incertezas de produto continuam abertas após a Fase 1.
 
@@ -56,7 +57,10 @@ Em particular, o MVP deve respeitar que:
 - o MVP deve ser sustentável por uma pessoa;
 - a aplicação pública não pode depender de acesso privilegiado ao SCCP, Gaviões da Fiel ou qualquer grupo político;
 - custo operacional mensal obrigatório deve poder permanecer em R$ 0 enquanto André mantiver pessoalmente o projeto;
-- IA paga não pode ser requisito do caminho crítico público.
+- IA paga não pode ser requisito do caminho crítico público;
+- acesso público a uma informação não significa automaticamente que sua republicação integral seja apropriada.
+
+A revisão crítica desta versão não identificou conflito canônico bloqueante com esses documentos.
 
 ---
 
@@ -66,11 +70,13 @@ O MVP não tentará provar que o Fiel Fiscaliza consegue cobrir toda a vida inst
 
 Ele deve testar uma proposição menor e mais útil:
 
-> **É possível transformar um conjunto pequeno de questões institucionais públicas do Corinthians em registros temporais, verificáveis e compreensíveis que reduzam o trabalho necessário para descobrir o que aconteceu, qual é o estado conhecido atual e quais fontes sustentam essa reconstrução.**
+> **É possível transformar um conjunto pequeno de questões institucionais públicas do Corinthians em representações temporais, verificáveis e compreensíveis que reduzam o trabalho necessário para descobrir o que aconteceu, qual era o estado conhecido na última verificação e quais fontes sustentam essa reconstrução.**
 
 O MVP será considerado coerente com a visão se demonstrar essa capacidade em profundidade suficiente, mesmo com corpus pequeno.
 
 O foco inicial é **profundidade verificável, não abrangência**.
+
+O MVP não promete conhecimento em tempo real nem cobertura exaustiva do estado institucional do clube.
 
 ---
 
@@ -78,7 +84,7 @@ O foco inicial é **profundidade verificável, não abrangência**.
 
 A proposta de valor mínima do MVP é:
 
-> **Ao chegar com uma dúvida institucional relevante sobre o Corinthians, o usuário deve conseguir compreender o estado conhecido da questão, reconstruir seus principais acontecimentos no tempo e chegar às fontes que sustentam a representação apresentada — sem depender de uma sequência extensa de buscas, notícias antigas e memória informal.**
+> **Ao chegar com uma dúvida institucional relevante sobre o Corinthians, o usuário deve conseguir compreender o estado conhecido da questão na última verificação do projeto, reconstruir seus principais acontecimentos e chegar às fontes que sustentam a representação apresentada — sem depender de uma sequência extensa de buscas, notícias antigas e memória informal.**
 
 Quando a questão envolver número financeiro, o produto deve permitir compreender o valor com seu contexto mínimo adequado.
 
@@ -89,7 +95,7 @@ O MVP não precisa resolver todos os JTBD do FF-0006 em todos os casos publicado
 Ele deve, porém, demonstrar concretamente os quatro JTBD P0 no conjunto do corpus inicial:
 
 1. verificar uma afirmação e chegar à fonte;
-2. reconstruir história e estado atual de uma questão;
+2. reconstruir história e estado conhecido de uma questão;
 3. entender um número financeiro no tempo;
 4. reconstruir uma decisão institucional pública.
 
@@ -119,24 +125,26 @@ Especialistas podem aprofundar pela proveniência; não especialistas devem cons
 
 # 6. Unidade principal de experiência: Questão Institucional
 
-A unidade central do MVP será a **Questão Institucional**.
+A unidade central de experiência do MVP será a **Questão Institucional**.
 
-Uma Questão Institucional representa um problema, acontecimento ou assunto delimitado cuja compreensão exige relacionar fatos, eventos, fontes e estados ao longo do tempo.
+Uma Questão Institucional representa um problema, acontecimento ou assunto delimitado cuja compreensão exige relacionar fatos, mudanças, fontes e estados ao longo do tempo.
 
 Exemplos abstratos:
 
 - como determinada obrigação financeira evoluiu e por que valores diferentes aparecem em momentos distintos;
-- como uma decisão institucional foi tomada e qual é seu estado atual;
+- como uma decisão institucional foi tomada e qual era seu estado conhecido na última verificação;
 - como uma regra, estrutura ou processo de governança mudou;
 - qual é a sequência documental necessária para entender uma controvérsia institucional sem transformar alegação em fato.
 
 “Questão Institucional” é conceito de produto desta especificação.
 
-O modelo formal de domínio que representará tecnicamente esse conceito pertence ao FF-0013 — DOMAIN_MODEL e não deve ser antecipado aqui.
+Ela **não obriga** o FF-0013 a criar uma entidade de domínio com esse nome, não determina schema de persistência e não exige que cada questão corresponda tecnicamente a uma única página ou rota.
+
+O modelo formal de domínio e a arquitetura de informação poderão decompor essa experiência em entidades e estruturas diferentes, desde que preservem a proposta de valor canônica.
 
 ## 6.1 Por que a Questão Institucional é a unidade do MVP
 
-Ela conecta diretamente os principais valores definidos anteriormente:
+Ela conecta diretamente:
 
 - contexto;
 - temporalidade;
@@ -159,31 +167,37 @@ O usuário deve conseguir identificar claramente qual questão aquela unidade pr
 
 ## 7.2 Resumo contextual
 
-Deve existir uma explicação curta do contexto necessário para que um usuário não especializado entenda por que a questão importa institucionalmente.
+Deve existir explicação curta do contexto necessário para que um usuário não especializado entenda por que a questão importa institucionalmente.
 
-## 7.3 Estado conhecido atual
+## 7.3 Estado conhecido na última verificação
 
-A questão deve indicar o estado conhecido mais recente que o projeto consegue sustentar documentalmente.
+A questão deve indicar o estado mais recente que o projeto conseguiu sustentar documentalmente no momento de sua última verificação.
 
-Esse estado deve possuir data de referência ou indicação equivalente de atualidade.
+Isso não deve ser apresentado como garantia de tempo real.
 
-## 7.4 Data de última verificação
+Quando a questão estiver encerrada ou for estritamente histórica, o equivalente pode ser o desfecho ou estado historicamente relevante documentado, em vez de uma falsa noção de “situação atual”.
 
-O usuário deve conseguir distinguir:
+## 7.4 Referência temporal e última verificação
+
+O usuário deve conseguir distinguir, quando aplicável:
 
 - data do acontecimento;
-- data ou período a que o estado se refere;
+- data ou período a que determinado estado se refere;
 - momento em que o Fiel Fiscaliza verificou aquela representação.
 
-A implementação exata pertence às fases posteriores.
+A data de última verificação informa **quando o projeto conferiu o conteúdo**, não constitui promessa de que nenhuma mudança ocorreu posteriormente.
 
-## 7.5 Linha temporal dos acontecimentos materiais
+O MVP não possui SLA de atualização em tempo real.
 
-A questão deve permitir reconstruir os principais acontecimentos relevantes em ordem temporal.
+## 7.5 Reconstrução temporal suficiente
 
-A linha temporal não deve registrar todo conteúdo publicado sobre o tema.
+A questão deve permitir compreender os acontecimentos materiais necessários para reconstruir sua evolução.
 
-Deve registrar eventos que alterem, esclareçam ou documentem materialmente o estado da questão.
+Não é obrigatório criar uma linha temporal artificial quando o caso não possuir múltiplos eventos materiais.
+
+Quando houver evolução relevante, estados anteriores não devem ser apagados silenciosamente por atualizações posteriores.
+
+O produto não deve registrar todo conteúdo publicado sobre o tema; apenas eventos que alterem, esclareçam ou documentem materialmente a questão.
 
 ## 7.6 Proveniência e fontes
 
@@ -216,9 +230,11 @@ As capacidades abaixo são requisitos de produto. Elas não determinam tecnologi
 
 ## MVP-CAP-01 — Descoberta do corpus publicado
 
-O usuário deve conseguir visualizar quais Questões Institucionais estão publicadas e acessar cada uma sem conhecer previamente sua URL.
+O usuário deve conseguir descobrir quais Questões Institucionais estão publicadas e acessar cada uma sem conhecer previamente sua URL.
 
 Não é obrigatório existir busca textual global no MVP.
+
+A descoberta pode ser resolvida por mecanismo simples, cuja forma pertence à Fase de Experiência.
 
 ## MVP-CAP-02 — Compreensão rápida da questão
 
@@ -226,18 +242,18 @@ Ao acessar uma Questão Institucional, o usuário deve conseguir identificar:
 
 - qual é a pergunta ou problema;
 - por que é institucionalmente relevante;
-- qual é o estado conhecido atual;
+- qual era o estado conhecido na última verificação;
 - quando essa representação foi verificada.
 
 ## MVP-CAP-03 — Reconstrução temporal
 
-O usuário deve conseguir percorrer os acontecimentos materiais da questão em ordem temporal e distinguir estados anteriores do estado atual.
+O usuário deve conseguir compreender a sequência dos acontecimentos materiais quando houver evolução temporal relevante e distinguir estados anteriores do estado conhecido na última verificação.
 
-Atualizações futuras não devem apagar silenciosamente eventos históricos materiais.
+O produto não deve fabricar cronologia apenas para preencher estrutura.
 
 ## MVP-CAP-04 — Inspeção de proveniência
 
-O usuário deve conseguir identificar a origem das informações factuais relevantes e acessar a fonte quando ela estiver publicamente disponível.
+O usuário deve conseguir identificar a origem das informações factuais relevantes e acessar a fonte quando ela estiver publicamente disponível e sua exposição for apropriada.
 
 A evidência deve permanecer próxima o suficiente da informação para permitir auditoria razoável da representação.
 
@@ -281,7 +297,9 @@ O usuário deve conseguir identificar que o Fiel Fiscaliza:
 - não representa oficialmente SCCP, Gaviões ou grupo político;
 - trabalha com informação pública e proveniência;
 - admite incerteza;
-- possui meio público ou acessível de apontar erro, correção ou fonte adicional.
+- possui meio acessível de apontar possível erro, pedir correção ou indicar fonte adicional.
+
+Esse mecanismo não precisa funcionar como fórum, comentários públicos ou atendimento em tempo real, e não cria obrigação de aceitar automaticamente alegações recebidas.
 
 A política formal de correções será definida em FF-0012.
 
@@ -291,54 +309,70 @@ A consulta ao conteúdo essencial do MVP não deve exigir cadastro, login, pagam
 
 ## MVP-CAP-10 — Atualização sem obrigação de fluxo diário
 
-O produto deve poder permanecer correto e útil sem exigir publicação cotidiana.
+O produto deve poder permanecer útil sem exigir publicação cotidiana.
 
 A manutenção deve ocorrer em função de mudanças materiais nas questões acompanhadas e das capacidades operacionais definidas posteriormente.
+
+A data de última verificação deve impedir que ausência de atualização seja apresentada como certeza de atualidade.
 
 ---
 
 # 9. Corpus mínimo de lançamento
 
-O MVP deve ser lançado com um **corpus pequeno e deliberadamente curado**, suficiente para demonstrar a tese sem simular cobertura total.
+O MVP deve ser lançado com um **corpus pequeno, coerente e deliberadamente curado**, suficiente para demonstrar a tese sem simular cobertura total.
 
 ## 9.1 Quantidade mínima
 
 O corpus inicial deve conter **pelo menos 3 Questões Institucionais completas** segundo os critérios desta especificação.
 
-Esse número é um critério de demonstração do produto, não uma alegação de que três casos validam demanda de mercado.
+Esse número é um critério pragmático de demonstração de repetibilidade do formato, não uma alegação de que três casos validam demanda de mercado.
+
+O objetivo é evitar tanto um protótipo de caso único quanto um catálogo amplo demais para a primeira versão.
 
 ## 9.2 Cobertura mínima dos JTBD P0
 
 No conjunto das questões iniciais:
 
-- todas devem demonstrar verificação de fontes e reconstrução temporal;
+- todas devem demonstrar proveniência adequada e contexto temporal suficiente;
+- pelo menos uma deve demonstrar evolução temporal com mais de um acontecimento material;
 - pelo menos uma deve demonstrar contextualização financeira;
 - pelo menos uma deve demonstrar reconstrução de decisão institucional pública.
 
 Uma mesma questão pode satisfazer mais de um requisito.
 
-## 9.3 Critérios para selecionar as questões iniciais
+## 9.3 Coerência do corpus
+
+As três questões não devem ser escolhidas apenas para representar três “módulos” diferentes.
+
+Sempre que possível, o corpus inicial deve favorecer **coerência temática, reaproveitamento de contexto e fontes e menor custo de manutenção**, desde que continue demonstrando os JTBD obrigatórios.
+
+Um conjunto tematicamente relacionado pode ser preferível a três verticais independentes se conseguir provar a proposta de valor com menos dispersão operacional.
+
+A escolha concreta será registrada antes do release, sem transformar essa preferência em obrigação de um único tema.
+
+## 9.4 Critérios para selecionar as questões iniciais
 
 As questões devem:
 
 - estar claramente dentro do FF-0007;
 - possuir relevância institucional demonstrável;
 - possuir conjunto razoável de fontes públicas adequadas;
-- permitir reconstrução temporal útil;
+- permitir contexto temporal útil;
 - ter custo de manutenção compatível com uma pessoa;
 - não depender de acesso privilegiado;
 - não exigir que o MVP resolva investigação de culpa ou acusação sensível para demonstrar seu valor;
-- permitir testar o valor de proveniência e contexto sem exigir cobertura diária.
+- permitir testar proveniência e contexto sem exigir cobertura diária;
+- evitar volatilidade tão alta que torne a primeira versão obsoleta imediatamente sem acompanhamento contínuo.
 
-## 9.4 Tipos recomendados para o corpus inicial
+## 9.5 Composição recomendada, não obrigatória
 
-Como direção de produto, o conjunto inicial deve preferencialmente conter:
+O corpus deve cobrir, no conjunto:
 
-1. uma questão de **finanças ou Arena** com valores em momentos ou conceitos distintos;
-2. uma questão de **governança, votação ou decisão institucional pública**;
-3. uma questão de **regra, estrutura, estatuto, participação ou outra mudança institucional temporalmente reconstruível**.
+- pelo menos uma questão com componente de **finanças ou Arena** suficientemente rico para contextualização de números;
+- pelo menos uma questão com **governança, votação ou decisão institucional pública**;
+- uma terceira questão que aprofunde o mesmo núcleo temático ou explore **regra, estrutura, estatuto, participação ou outra mudança institucional**, conforme a combinação mais coerente e sustentável.
 
-A escolha dos casos concretos deve ser feita antes da publicação do MVP e documentada de forma rastreável, mas esta versão não canoniza acontecimentos específicos como conteúdo obrigatório.
+A escolha dos acontecimentos concretos deve ser feita antes da publicação do MVP e documentada de forma rastreável, mas esta versão não canoniza casos históricos específicos como conteúdo obrigatório.
 
 ---
 
@@ -346,14 +380,14 @@ A escolha dos casos concretos deve ser feita antes da publicação do MVP e docu
 
 A jornada principal do MVP é:
 
-1. o usuário chega ao Fiel Fiscaliza com uma dúvida institucional ou interesse em compreender uma questão;
-2. visualiza o conjunto de Questões Institucionais publicadas;
-3. seleciona uma questão relevante;
-4. compreende rapidamente o problema, o contexto e o estado conhecido atual;
-5. percorre a evolução temporal para entender o que mudou;
-6. inspeciona as fontes associadas aos fatos ou acontecimentos que deseja verificar;
-7. quando aplicável, consulta o contexto de números financeiros ou decisões institucionais;
-8. identifica claramente o que permanece desconhecido, contestado ou não disponível;
+1. o usuário chega ao Fiel Fiscaliza por descoberta do corpus ou diretamente por uma Questão Institucional;
+2. identifica claramente a pergunta tratada;
+3. compreende rapidamente o contexto e o estado conhecido na última verificação;
+4. percorre os acontecimentos materiais necessários para entender o que mudou, quando aplicável;
+5. inspeciona as fontes associadas aos fatos ou acontecimentos que deseja verificar;
+6. quando aplicável, consulta o contexto de números financeiros ou decisões institucionais;
+7. identifica claramente o que permanece desconhecido, contestado, desatualizado ou não disponível;
+8. consegue navegar para outras Questões Institucionais publicadas sem conhecer URLs internas;
 9. sai com base suficiente para explicar ou continuar investigando a questão sem depender apenas da autoridade do Fiel Fiscaliza.
 
 O objetivo central não é maximizar tempo de permanência.
@@ -362,44 +396,59 @@ O objetivo central não é maximizar tempo de permanência.
 
 ---
 
-# 11. Funcionalidades conscientemente adiadas
+# 11. Funcionalidades conscientemente adiadas, mas compatíveis com a visão
 
-As funcionalidades abaixo podem ser valiosas no futuro, mas **não são requisitos do MVP**.
+As capacidades abaixo podem ser valiosas no futuro, mas **não são requisitos do MVP** e sua eventual inclusão dependerá dos documentos responsáveis:
 
 - busca global textual ou semântica;
 - alertas e notificações;
 - contas de usuário;
 - favoritos;
 - personalização;
-- comentários e comunidade;
-- fórum;
-- feed de notícias;
-- cobertura esportiva;
-- perfis completos de dirigentes ou conselheiros;
-- grafo político ou visualização avançada de relações;
-- ranking de atores políticos;
-- painel completo de todos os conselheiros;
-- cobertura ampla de todas as votações;
-- painel financeiro universal;
-- catálogo completo de contratos;
-- arquivo integral de todos os documentos institucionais;
-- cobertura ampla de processos e investigações;
-- backfill histórico completo;
+- comentários limitados ou mecanismos de participação compatíveis com as políticas futuras;
+- perfis institucionais mais completos de dirigentes ou conselheiros;
+- visualizações de relações institucionais verificáveis;
+- painel mais amplo de conselheiros;
+- cobertura mais ampla de votações;
+- painel financeiro mais abrangente;
+- catálogo maior de contratos institucionalmente relevantes;
+- arquivo mais amplo de documentos institucionais;
+- cobertura mais ampla de processos e investigações;
+- backfill histórico extenso;
 - exportações acadêmicas avançadas;
 - API pública;
 - aplicativo móvel nativo;
-- assistente público de IA;
-- geração automática de conclusões ou julgamento editorial por IA;
-- tradução para outros idiomas;
-- participação política, votação ou mobilização interna pelo produto.
+- assistente público de IA compatível com os requisitos canônicos;
+- tradução para outros idiomas.
 
-Adiar não significa proibir permanentemente.
+Adiar significa apenas que essas capacidades não são necessárias para demonstrar a tese do MVP.
 
-Qualquer inclusão futura deve respeitar FF-0001 e FF-0007 e passar pelos documentos responsáveis.
+Não significa que sua implementação futura esteja automaticamente aprovada.
 
 ---
 
-# 12. Cobertura jurídica, investigativa e de claims conflitantes no MVP
+# 12. Elementos que não são “apenas adiados” sob o escopo canônico atual
+
+Algumas ideias não devem ser descritas como simples backlog futuro porque conflitam com as fronteiras vigentes do produto ou exigiriam revisão canônica material antes de serem consideradas.
+
+Sob FF-0001, FF-0005 e FF-0007 atuais, o MVP não inclui e o projeto não deve introduzir silenciosamente:
+
+- portal ou feed geral de notícias esportivas;
+- cobertura esportiva cotidiana sem consequência institucional;
+- ranking automático de “bons” e “maus” atores políticos;
+- sistema aberto de acusações ou denúncias irrestritas por usuários;
+- campanha por chapa, candidato, situação, oposição, SAF ou outro resultado político substantivo;
+- mecanismo de recomendação de voto interno;
+- mobilização política eleitoral como função do produto;
+- dossiê de vida privada;
+- geração automática de culpa, intenção, aliança ou reputação;
+- delegação de julgamento editorial substantivo à IA.
+
+Uma futura decisão de introduzir algo materialmente equivalente exigiria primeiro revisar os documentos CANONICAL afetados, e não apenas mover um item de backlog para “feito”.
+
+---
+
+# 13. Cobertura jurídica, investigativa e de claims conflitantes no MVP
 
 Processos, investigações e claims conflitantes pertencem ao escopo permanente, mas possuem risco editorial elevado no FF-0006.
 
@@ -416,7 +465,7 @@ O MVP não deve escolher como vitrine inicial um caso cujo valor dependa princip
 
 ---
 
-# 13. Requisitos editoriais e de proveniência antes da publicação
+# 14. Requisitos editoriais e de proveniência antes da publicação
 
 O FF-0008 define requisitos de produto, mas a publicação real do MVP dependerá das regras posteriores de editorial, fonte, claims e correções.
 
@@ -431,13 +480,14 @@ Antes de uma Questão Institucional ser publicável, deve ser possível demonstr
 - relações políticas não documentadas não foram inventadas;
 - informação privada desnecessária não foi incorporada;
 - divergências de números ou versões relevantes receberam contexto suficiente;
-- correções futuras podem ser feitas sem apagar silenciosamente histórico material.
+- correções futuras podem ser feitas sem apagar silenciosamente histórico material;
+- a representação não implica cobertura exaustiva ou atualização em tempo real que o projeto não oferece.
 
 Os estados, regras e metadados formais serão definidos por FF-0009 a FF-0012.
 
 ---
 
-# 14. Sustentabilidade operacional do MVP
+# 15. Sustentabilidade operacional do MVP
 
 O MVP deve ser compatível com manutenção pessoal por André.
 
@@ -451,19 +501,24 @@ Isso significa que o produto **não pode exigir como condição de qualidade**:
 - alimentação manual diária de grande volume;
 - contratação de serviço pago indispensável.
 
-## 14.1 Estratégia de manutenção compatível com o MVP
+## 15.1 Estratégia de manutenção compatível com o MVP
 
 A primeira versão pode operar com corpus pequeno e atualização por mudança material.
 
-O produto deve permitir indicar quando uma questão foi verificada pela última vez, reduzindo a necessidade de fingir atualização contínua.
+O produto deve informar quando cada questão foi verificada pela última vez, sem transformar esse campo em promessa de atualidade posterior.
 
 Automação de coleta e manutenção por exceção permanece direção constitucional, mas o nível de automação concreto será definido nas fases de arquitetura e operações.
 
-O MVP pode começar com processos parcialmente manuais ou semiautomáticos desde que isso não crie obrigação recorrente incompatível com uma pessoa e que o caminho para manutenção sustentável não dependa de serviço pago essencial.
+O MVP pode começar com processos parcialmente manuais ou semiautomáticos desde que:
+
+- não exista tarefa manual diária obrigatória para manter o produto minimamente correto;
+- o corpus inicial possa permanecer publicável durante períodos sem novidade material;
+- processos manuais não sejam usados para justificar expansão de cobertura incompatível com uma pessoa;
+- o caminho para manutenção sustentável não dependa de serviço pago essencial.
 
 ---
 
-# 15. Independência de acesso privilegiado
+# 16. Independência de acesso privilegiado
 
 Nenhum requisito do MVP pode depender de:
 
@@ -480,9 +535,9 @@ Informação fornecida legitimamente por terceiros pode ser avaliada futuramente
 
 ---
 
-# 16. Critérios objetivos de aceite do MVP
+# 17. Critérios objetivos de aceite do MVP
 
-Os critérios abaixo devem ser verificáveis antes de declarar a especificação implementada em nível de produto.
+Os critérios abaixo devem ser verificáveis antes de declarar a especificação implementada em nível de Produto.
 
 ## MVP-AC-01 — Corpus mínimo
 
@@ -492,27 +547,35 @@ Existem pelo menos 3 Questões Institucionais publicáveis e completas.
 
 Um usuário consegue encontrar e abrir todas as Questões Institucionais publicadas sem conhecer previamente URLs internas.
 
-## MVP-AC-03 — Estado atual
+## MVP-AC-03 — Estado conhecido
 
-Cada questão apresenta um estado conhecido atual ou explicita que esse estado não pôde ser determinado com segurança.
+Cada questão apresenta o estado conhecido na última verificação ou explicita que esse estado não pôde ser determinado com segurança.
+
+Questões encerradas ou históricas podem apresentar desfecho ou estado histórico relevante em vez de falsa noção de atualidade.
 
 ## MVP-AC-04 — Referência temporal
 
-Cada questão permite identificar a data ou período relevante do estado atual e a última verificação feita pelo projeto.
+Cada questão permite identificar a data ou período relevante das informações apresentadas e a última verificação feita pelo projeto.
 
-## MVP-AC-05 — Histórico preservado
+A interface ou conteúdo não transforma a última verificação em garantia de tempo real.
 
-Cada questão possui reconstrução temporal dos acontecimentos materiais necessários para compreender sua evolução, sem sobrescrever estados anteriores relevantes.
+## MVP-AC-05 — Histórico preservado sem cronologia artificial
+
+Cada questão apresenta o contexto temporal necessário para compreensão.
+
+Quando houver mais de um acontecimento material, a evolução pode ser reconstruída sem sobrescrever estados anteriores relevantes.
+
+Quando não houver múltiplos eventos materiais, o produto não fabrica uma timeline apenas para satisfazer formato.
 
 ## MVP-AC-06 — Proveniência
 
 Toda informação factual materialmente relevante publicada possui fonte ou proveniência suficiente segundo as políticas canônicas vigentes no momento do release.
 
-## MVP-AC-07 — Fonte acessível ou explicada
+## MVP-AC-07 — Fonte acessível ou adequadamente tratada
 
-Quando uma fonte original estiver publicamente acessível, o usuário consegue chegar a ela a partir da representação do produto.
+Quando uma fonte original estiver publicamente acessível e sua exposição for apropriada, o usuário consegue chegar a ela a partir da representação do produto.
 
-Quando não estiver mais acessível, o produto não inventa sua disponibilidade e aplica a política de proveniência definida posteriormente.
+Quando não estiver acessível ou sua republicação direta não for adequada, o produto aplica a política de proveniência vigente sem inventar disponibilidade.
 
 ## MVP-AC-08 — Incerteza visível
 
@@ -536,33 +599,52 @@ O conteúdo essencial pode ser consultado sem cadastro ou pagamento.
 
 ## MVP-AC-13 — Correção acessível
 
-Existe mecanismo acessível para que uma pessoa indique possível erro, fonte adicional ou pedido de correção, sem exigir que o Fiel Fiscaliza aceite automaticamente a alegação enviada.
+Existe mecanismo acessível para que uma pessoa indique possível erro, fonte adicional ou pedido de correção, sem exigir comentários públicos, resposta em tempo real ou aceitação automática da alegação enviada.
 
 ## MVP-AC-14 — Sem acesso privilegiado
 
 Nenhuma das três Questões Institucionais mínimas depende de fonte privada, credencial interna ou acesso não público para entregar sua proposta de valor.
 
-## MVP-AC-15 — Sustentabilidade
+## MVP-AC-15 — Sustentabilidade mínima verificável
 
-O corpus inicial pode ser mantido sem obrigação editorial diária e sem serviço pago indispensável.
+Nenhuma capacidade obrigatória do MVP exige:
+
+- publicação diária;
+- moderação contínua de comunidade;
+- resposta em tempo real;
+- tarefa manual diária inevitável;
+- serviço pago indispensável à consulta pública essencial.
+
+O corpus inicial pode permanecer correto em seus próprios termos por meio de data de verificação e atualização baseada em mudança material, sem fingir cobertura contínua.
 
 ## MVP-AC-16 — Escopo preservado
 
-Nenhuma capacidade implementada transforma o produto em portal esportivo, campanha política, sistema de denúncias irrestrito ou dossiê de vida privada.
+Nenhuma capacidade implementada transforma o produto em portal esportivo geral, campanha política, sistema de denúncias irrestrito ou dossiê de vida privada.
 
 ## MVP-AC-17 — Compreensão básica independente de especialização
 
 A representação inicial de cada questão explica contexto suficiente para que um torcedor sem conhecimento técnico especializado consiga compreender a pergunta central e o estado conhecido antes de abrir documentos de origem.
 
+## MVP-AC-18 — Limites de cobertura explícitos
+
+O produto não induz o usuário a concluir que o corpus representa cobertura completa da vida institucional do Corinthians nem que todas as questões estão atualizadas em tempo real.
+
 ---
 
-# 17. O que significa “MVP publicável”
+# 18. O que significa “MVP publicável”
 
-Neste documento, **MVP publicável** significa que a especificação de produto está completa e que a implementação futura satisfaz os critérios de aceite acima.
+O FF-0002 exige que a Fase 1 defina o significado de “MVP publicável”.
 
-Isso **não autoriza publicação imediata ao final da Fase 1**.
+Neste documento, **MVP publicável em sentido de Produto** significa que a futura implementação:
 
-O release público real continua dependente das fases posteriores do FF-0002, incluindo, quando aplicáveis:
+- contém o corpus mínimo definido;
+- satisfaz as capacidades obrigatórias;
+- satisfaz os critérios de aceite de Produto;
+- consegue ser descrita sem depender de funcionalidade essencial ainda indefinida nesta fase.
+
+Essa expressão **não equivale a autorização de release público**.
+
+O release real continua dependente dos gates posteriores do FF-0002, incluindo, quando aplicáveis:
 
 - política editorial;
 - política de fontes e evidências;
@@ -575,11 +657,11 @@ O release público real continua dependente das fases posteriores do FF-0002, in
 
 Portanto:
 
-> **FF-0008 define o produto que poderá ser publicado; os gates posteriores determinam se ele está pronto para ser publicado com segurança e qualidade.**
+> **FF-0008 define quando o produto mínimo está funcionalmente especificado; os gates posteriores determinam quando sua implementação está segura e pronta para publicação real.**
 
 ---
 
-# 18. Critério de sucesso inicial após o lançamento
+# 19. Critério de sucesso inicial após o lançamento
 
 O MVP não terá meta artificial de tráfego ou crescimento como condição de sucesso.
 
@@ -587,7 +669,7 @@ Os primeiros sinais de valor devem procurar responder:
 
 - usuários conseguem compreender uma questão sem recorrer imediatamente a múltiplas buscas externas?;
 - conseguem identificar a fonte e auditar a representação?;
-- a cronologia reduz confusão sobre o que aconteceu e o que mudou?;
+- o contexto temporal reduz confusão sobre o que aconteceu e o que mudou?;
 - valores financeiros contextualizados evitam comparação enganosa?;
 - decisões institucionais ficam mais claras sem inferir informação ausente?;
 - a manutenção real permanece sustentável para André?;
@@ -595,11 +677,13 @@ Os primeiros sinais de valor devem procurar responder:
 
 Esses sinais podem ser avaliados posteriormente por uso real, feedback, observação e pesquisa proporcional ao risco.
 
+Eles **não constituem requisito adicional para fechar o Gate F1**, porque dependem de comportamento observável posterior ao lançamento.
+
 A dívida de validação do FF-0006 permanece ativa.
 
 ---
 
-# 19. Gatilhos para rever o MVP após evidência real
+# 20. Gatilhos para rever o MVP após evidência real
 
 A especificação deve ser reavaliada se ocorrer, entre outros:
 
@@ -610,7 +694,8 @@ A especificação deve ser reavaliada se ocorrer, entre outros:
 5. a contextualização necessária tornar a experiência excessivamente complexa para usuários não especializados;
 6. soluções existentes demonstrarem atender melhor os mesmos casos de uso;
 7. um recurso adiado se mostrar claramente necessário para completar a jornada principal;
-8. risco editorial, jurídico ou de privacidade tornar alguma capacidade inadequada.
+8. risco editorial, jurídico ou de privacidade tornar alguma capacidade inadequada;
+9. a exigência de três questões mostrar custo desproporcional sem acrescentar demonstração real de repetibilidade.
 
 Esses gatilhos não implicam pivot automático.
 
@@ -618,7 +703,7 @@ Eles exigem revisão da evidência e decisão explícita.
 
 ---
 
-# 20. Decisões deliberadamente não tomadas pelo FF-0008
+# 21. Decisões deliberadamente não tomadas pelo FF-0008
 
 Permanecem para fases posteriores:
 
@@ -647,7 +732,51 @@ Essas decisões não devem ser inferidas silenciosamente por implementação.
 
 ---
 
-# 21. Impacto e dependências documentais
+# 22. Revisão crítica de 2026-09-04
+
+A revisão da v0.1 identificou riscos relevantes e os tratou nesta versão.
+
+## 22.1 “Estado atual” poderia criar falsa promessa de atualização
+
+A redação foi alterada para **estado conhecido na última verificação**, com separação entre data do fato, período de referência e momento de verificação.
+
+O MVP não promete tempo real.
+
+## 22.2 Timeline obrigatória em todo caso poderia produzir estrutura artificial
+
+A temporalidade continua obrigatória quando necessária, mas o produto não deve fabricar múltiplos eventos para questões que não possuam evolução material.
+
+## 22.3 Três verticais independentes poderiam aumentar escopo e manutenção
+
+O mínimo de três questões foi preservado, mas a seleção agora privilegia coerência temática, reaproveitamento de fontes/contexto e menor dispersão operacional.
+
+## 22.4 “Questão Institucional” poderia ser interpretada prematuramente como entidade técnica
+
+A v0.2 deixa explícito que se trata de unidade de experiência de Produto, sem impor entidade de domínio, schema, página ou rota específica.
+
+## 22.5 Itens incompatíveis com o escopo estavam misturados com backlog adiado
+
+Portal esportivo geral, ranking político, denúncia irrestrita, mobilização eleitoral, dossiê privado e julgamento editorial automatizado não são descritos como simples funcionalidades futuras.
+
+Sua introdução exigiria revisão dos documentos CANONICAL afetados.
+
+## 22.6 Sustentabilidade estava correta, mas pouco verificável
+
+O aceite agora proíbe explicitamente dependência de publicação diária, moderação contínua, resposta em tempo real, tarefa manual diária inevitável ou serviço pago indispensável.
+
+## 22.7 “MVP publicável” poderia ser confundido com autorização de release
+
+A v0.2 separa explicitamente suficiência de Produto de readiness real de publicação, que permanece dependente das fases posteriores.
+
+## 22.8 Sucesso pós-lançamento não deve reabrir o Gate F1
+
+Sinais de comportamento real continuam importantes para a dívida de validação, mas não são condição retroativa para fechar a especificação de Produto.
+
+A revisão não identificou conflito canônico bloqueante com FF-0001, FF-0002, FF-0005, FF-0006 ou FF-0007 após esses ajustes.
+
+---
+
+# 23. Impacto e dependências documentais
 
 ## É impactado por
 
@@ -674,7 +803,7 @@ O FF-0008 não autoriza implementação regular antes do cumprimento dos gates d
 
 ---
 
-# 22. Critérios para revisão crítica e canonização
+# 24. Critérios para canonização
 
 Antes de promover o FF-0008 para CANONICAL, deve-se confirmar que:
 
@@ -682,10 +811,12 @@ Antes de promover o FF-0008 para CANONICAL, deve-se confirmar que:
 - usuários e JTBD derivam de FF-0006;
 - nenhuma capacidade viola FF-0007;
 - o MVP é menor que o escopo permanente do produto;
-- o corpus mínimo demonstra utilidade real sem exigir cobertura ampla;
+- o corpus mínimo demonstra utilidade sem exigir cobertura ampla;
+- a quantidade mínima de questões não cria obrigação desproporcional para o primeiro release;
 - as capacidades obrigatórias podem ser descritas sem stack ou arquitetura;
+- “Questão Institucional” não antecipa modelo de domínio ou estrutura técnica;
 - a jornada principal está explícita;
-- funcionalidades adiadas estão registradas;
+- funcionalidades adiadas estão separadas de ideias incompatíveis com o escopo canônico atual;
 - critérios de aceite são verificáveis;
 - “MVP publicável” está separado de “pronto para release público”;
 - a manutenção não exige operação diária;
@@ -695,10 +826,12 @@ Antes de promover o FF-0008 para CANONICAL, deve-se confirmar que:
 - a dívida de validação permanece explícita;
 - nenhuma decisão técnica futura foi canonizada prematuramente.
 
+A revisão crítica de 2026-09-04 considera esses critérios satisfeitos no conteúdo da v0.2, sujeito à aprovação explícita de André para promoção a CANONICAL.
+
 ---
 
-# 23. Vigência
+# 25. Vigência
 
-Esta versão permanece **DRAFT** até revisão crítica e aprovação explícita.
+Esta versão permanece **DRAFT** até aprovação explícita.
 
-**FF-0008 — MVP_SPEC v0.1 // DRAFT**
+**FF-0008 — MVP_SPEC v0.2 // DRAFT**
