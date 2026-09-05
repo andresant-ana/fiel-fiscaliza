@@ -2,7 +2,7 @@
 
 **Nome do documento:** Source Policy  
 **ID:** FF-0010  
-**Versão:** 0.1  
+**Versão:** 0.2  
 **Status:** DRAFT  
 **Última revisão:** 2026-09-04  
 **Responsável:** André  
@@ -28,6 +28,9 @@ Seu objetivo é estabelecer regras reproduzíveis para decidir:
 - como lidar com fontes removidas, alteradas ou posteriormente indisponíveis;
 - quais metadados mínimos de proveniência devem ser preservados;
 - como separar autoridade sobre um ato da verdade material de alegações contidas na própria fonte;
+- como tratar bases estruturadas, consultas e datasets;
+- como avaliar afirmações negativas baseadas na ausência de registro;
+- como preservar a cadeia entre fonte original, reprodução, transcrição, tradução e dado derivado;
 - como evitar que quantidade de links seja confundida com qualidade de evidência.
 
 O FF-0010 trata de **adequação, classificação, prioridade, proveniência e uso editorial de fontes**.
@@ -64,13 +67,15 @@ Em particular, esta política deve preservar que:
 - conhecimento pessoal ou não público do mantenedor não substitui evidência pública auditável no núcleo factual do produto;
 - o estado conhecido na última verificação não deve ser apresentado como garantia de tempo real.
 
+A revisão crítica desta versão não identificou conflito canônico bloqueante com esses documentos.
+
 ---
 
 # 3. Princípio central
 
 A regra central desta política é:
 
-> **A qualidade de uma fonte depende da afirmação específica que ela pretende sustentar, e não de um rótulo global de confiança atribuído ao emissor.**
+> **A adequação de uma fonte depende da afirmação específica que ela pretende sustentar, do período a que essa afirmação se refere e da cadeia de evidência disponível — não de um rótulo global de confiança atribuído ao emissor.**
 
 Consequentemente:
 
@@ -78,9 +83,12 @@ Consequentemente:
 - uma fonte oficial pode comprovar que um órgão publicou ou decidiu algo sem comprovar materialmente toda acusação existente no documento;
 - uma reportagem pode ser secundária para um acontecimento e primária para uma entrevista realizada pelo próprio veículo;
 - uma postagem em rede social pode comprovar que determinada pessoa publicou uma declaração sem comprovar o fato narrado nessa declaração;
+- uma fonte correta para um estado histórico pode ser inadequada para descrever o estado conhecido mais recente;
 - várias publicações diferentes podem representar apenas uma única cadeia de evidência se todas reproduzirem a mesma origem.
 
 O Fiel Fiscaliza não deve manter um ranking absoluto de veículos, instituições ou pessoas como “fontes confiáveis” ou “fontes não confiáveis” que substitua análise caso a caso.
+
+Também não deve utilizar pontuação numérica global de “confiabilidade da fonte” como atalho para decidir se um Claim está suficientemente sustentado.
 
 ---
 
@@ -105,6 +113,7 @@ Pode ser, entre outros:
 - áudio;
 - postagem pública;
 - dataset;
+- resultado de consulta estruturada;
 - registro arquivado.
 
 ## 4.2 Evidência
@@ -127,7 +136,7 @@ A pergunta editorial correta não é apenas:
 
 É:
 
-> **“Esta fonte é adequada para sustentar esta afirmação, neste nível de certeza e neste contexto temporal?”**
+> **“Esta fonte é adequada para sustentar esta afirmação, neste nível de certeza, neste contexto temporal e para este significado específico?”**
 
 ---
 
@@ -219,6 +228,8 @@ Exemplos:
 
 Fonte oficial é especialmente adequada para comprovar **o ato da própria instituição**, mas deve ser analisada como fonte de parte interessada quando faz alegações sobre fatos controvertidos que ultrapassam esse ato.
 
+A condição de “oficial” não torna o emissor competente para afirmar qualquer coisa fora de sua atribuição.
+
 ## 6.2 Fonte de parte interessada
 
 Fonte emitida por pessoa ou organização que possui interesse direto na controvérsia, decisão ou resultado descrito.
@@ -287,6 +298,14 @@ Pode ser útil para provar o estado histórico de uma página ou documento quand
 
 Não deve ocultar que o material consultado é uma reprodução ou captura, e não necessariamente o endereço original ainda disponível.
 
+## 6.7 Fonte estruturada ou base consultável
+
+Base de dados, API, sistema de consulta, exportação oficial ou dataset que permite recuperar registros a partir de filtros, parâmetros ou identificadores.
+
+Seu uso exige atenção adicional ao escopo da base, cobertura, atualização, filtros aplicados, possibilidade de lacunas e data de extração.
+
+O fato de uma consulta retornar zero resultados não permite, por si só, concluir inexistência do objeto procurado.
+
 ---
 
 # 7. Critérios de avaliação de uma fonte
@@ -335,6 +354,28 @@ A origem pode ser reencontrada, versionada, localizada internamente ou preservad
 
 Quando a fonte apresenta cálculo, estimativa, estudo, ranking ou consolidação, o método necessário para interpretar o resultado é identificável?
 
+## 7.11 Cadeia de transformação
+
+O conteúdo consultado é original ou passou por:
+
+- reprodução;
+- recorte;
+- transcrição;
+- tradução;
+- resumo;
+- OCR;
+- cálculo derivado;
+- agregação;
+- outra transformação?
+
+Transformações podem ser legítimas, mas precisam ser identificadas quando forem capazes de alterar significado ou auditabilidade.
+
+## 7.12 Cobertura e exaustividade
+
+Quando a conclusão depende de saber se uma base ou conjunto contém **todos** os registros relevantes, existe fundamento para considerar a fonte exaustiva naquele escopo?
+
+Uma fonte excelente para localizar ocorrências não é automaticamente adequada para provar ausência.
+
 ---
 
 # 8. Prioridade de fontes primárias
@@ -367,6 +408,14 @@ O projeto deve preferir fonte oficial para comprovar o ato oficial correspondent
 
 Isso não obriga o Fiel Fiscaliza a aceitar como verdade material alegações favoráveis à própria instituição apenas porque foram publicadas oficialmente.
 
+## 8.3 Documento normativo ou declaratório não prova automaticamente prática efetiva
+
+Um estatuto pode provar qual regra estava formalmente prevista.
+
+Ele não prova, sozinho, que a regra foi efetivamente cumprida em determinado caso.
+
+Da mesma forma, um comunicado pode provar que uma instituição declarou ter feito algo, mas a execução material da ação pode exigir evidência adicional.
+
 ---
 
 # 9. Quando uma única fonte pode ser suficiente
@@ -378,6 +427,7 @@ Uma única fonte pode ser suficiente quando:
 - é primária, autêntica e diretamente competente para o ato afirmado;
 - a afirmação está limitada ao que a fonte realmente estabelece;
 - não existe contestação material conhecida que altere a compreensão;
+- não existe fonte materialmente incompatível ignorada pelo projeto;
 - a gravidade e o risco não exigem diligência adicional;
 - a informação é verificável de forma auditável.
 
@@ -407,7 +457,10 @@ A exigência aumenta quando:
 - a informação pode ter mudado e a fonte é antiga;
 - a fonte original está indisponível e só existem reproduções;
 - a afirmação deriva de material incompleto, editado ou fora de contexto;
-- a conclusão ultrapassa o ato formal documentado.
+- a conclusão ultrapassa o ato formal documentado;
+- a conclusão depende da **ausência** de registro;
+- uma transcrição, tradução, OCR ou resumo automático contém termo materialmente sensível;
+- uma fonte contraditória relevante existe e pode alterar a formulação.
 
 O FF-0011 definirá como a suficiência da evidência se relaciona aos estados formais dos Claims.
 
@@ -444,6 +497,18 @@ A multiplicação de URLs não cria corroboração independente.
 
 Duas fontes podem compartilhar parte do contexto e ainda possuir evidência independente se cada uma tiver acesso próprio a documentos, observação, dados ou apuração distintos.
 
+## 11.4 Independência deve ser avaliada na raiz evidencial
+
+Dois veículos diferentes que tiveram acesso independente ao mesmo documento podem oferecer confirmação de autenticidade ou contexto, mas continuam compartilhando o mesmo documento como raiz para o conteúdo material daquele documento.
+
+A análise deve distinguir independência de publicação de independência de evidência.
+
+## 11.5 Seleção de fontes não pode ser orientada pelo resultado desejado
+
+Quando existirem fontes relevantes que sustentem, contradigam ou qualifiquem materialmente uma afirmação, o projeto não deve selecionar apenas aquelas compatíveis com uma narrativa preferida.
+
+O dever editorial é representar a evidência materialmente relevante, não montar um conjunto de citações que apenas confirme a conclusão desejada.
+
 ---
 
 # 12. Uso aceitável de imprensa
@@ -462,21 +527,34 @@ Ela pode:
 - identificar consequências práticas;
 - cobrir eventos sem registro institucional completo.
 
-## 12.1 Quando a imprensa pode sustentar fato material
+## 12.1 Quando uma fonte jornalística secundária pode ser suficiente
 
-Uma reportagem pode sustentar informação factual quando sua apuração for suficientemente específica, verificável e adequada ao nível de certeza publicado.
+Uma reportagem secundária pode ser suficiente para sustentar uma afirmação factual limitada quando, em conjunto:
 
-O projeto deve considerar, entre outros:
+- não há fonte primária razoavelmente acessível ou o fato não gera naturalmente documento primário público;
+- a reportagem é específica sobre o que afirma;
+- autoria, data e veículo são identificáveis;
+- há indicação suficiente da base da apuração;
+- não existe contradição material conhecida ignorada;
+- a formulação do Fiel Fiscaliza não é mais forte que a reportagem permite;
+- a gravidade e o risco não exigem corroboração adicional.
 
-- se há autoria identificada;
-- se a matéria distingue fato de alegação;
-- se apresenta documentos, dados ou fontes nomeadas;
-- se há apuração original;
-- se outras evidências independentes corroboram a informação quando necessário;
-- se houve correção posterior;
-- se o conteúdo ainda corresponde ao estado temporal representado.
+Quando esses critérios não forem atendidos, a reportagem pode continuar servindo como contexto, pista ou informação atribuída ao veículo sem ser promovida a fato confirmado próprio.
 
-## 12.2 Informação atribuída a fontes anônimas da imprensa
+## 12.2 Quando a imprensa sustenta fato material por apuração original
+
+Uma reportagem pode ter força evidencial maior quando contém, por exemplo:
+
+- documentos obtidos e descritos de forma verificável;
+- entrevista direta;
+- observação própria de evento;
+- dados originais;
+- múltiplas fontes independentes;
+- metodologia de apuração suficientemente transparente.
+
+A publicação jornalística continua devendo ser avaliada Claim a Claim.
+
+## 12.3 Informação atribuída a fontes anônimas da imprensa
 
 Reportagens baseadas em fontes anônimas podem ser editorialmente relevantes, mas o Fiel Fiscaliza não deve converter automaticamente o conteúdo anônimo em fato confirmado próprio.
 
@@ -488,7 +566,7 @@ Por padrão, quando material para a questão, deve ser representado como:
 
 Afirmações graves não devem depender exclusivamente de fonte anônima de terceiro para serem apresentadas pelo Fiel Fiscaliza como fato material confirmado.
 
-## 12.3 Republicação em cadeia
+## 12.4 Republicação em cadeia
 
 Veículos que apenas reproduzem notícia de outro veículo não constituem nova confirmação independente.
 
@@ -521,6 +599,8 @@ O projeto deve avaliar:
 
 Parecer técnico não transforma automaticamente interpretação em fato quando houver leituras profissionais razoavelmente concorrentes.
 
+Uma opinião especializada também não substitui o ato oficial correspondente quando o Claim é sobre o conteúdo ou estado jurídico daquele ato.
+
 ---
 
 # 14. Documentos e canais oficiais do SCCP
@@ -546,6 +626,12 @@ Sua verdade material deve ser avaliada separadamente quando relevante.
 ## 14.2 Órgão específico deve ser identificado
 
 Sempre que possível, registrar qual órgão, departamento ou representante emitiu o documento, evitando atribuir genericamente “ao Corinthians” posição que pertença apenas a parte da estrutura institucional.
+
+## 14.3 Página atual não substitui documento histórico
+
+Quando uma página institucional atual descreve composição, regra ou estrutura, ela não deve ser usada automaticamente para reconstruir período histórico anterior.
+
+A fonte deve corresponder ao momento que está sendo representado.
 
 ---
 
@@ -577,6 +663,12 @@ Ausência de resultado em busca pública não autoriza concluir inexistência de
 - a consulta utilizou identificadores corretos;
 - o tipo de procedimento aparece naquele sistema.
 
+## 15.3 Metadado processual não substitui necessariamente a peça
+
+Uma movimentação, resumo de andamento ou campo estruturado pode ser suficiente para comprovar o estado exibido pelo sistema.
+
+Quando a afirmação depender do fundamento, alcance ou teor de uma decisão, deve-se preferir a peça correspondente quando acessível.
+
 ---
 
 # 16. Redes sociais e declarações públicas
@@ -592,7 +684,9 @@ Conforme a relevância e o risco, considerar:
 - URL original;
 - data e horário quando disponíveis;
 - confirmação por canal relacionado;
-- ausência de sinais de montagem ou adulteração.
+- ausência de sinais de montagem, adulteração, paródia, impersonação ou comprometimento da conta.
+
+Selo de verificação de plataforma, quando existir, é apenas um sinal e não substitui análise de contexto.
 
 ## 16.2 Conteúdo da postagem
 
@@ -626,6 +720,12 @@ Conteúdo obtido de conta privada, grupo fechado ou ambiente restrito não deve 
 
 O MVP não depende desse tipo de acesso.
 
+## 16.5 Conteúdo sintético, manipulado ou de autenticidade duvidosa
+
+Áudio, vídeo, imagem ou texto com sinais razoáveis de manipulação, edição enganosa, geração sintética ou atribuição falsa deve permanecer não autenticado até verificação adequada.
+
+O Fiel Fiscaliza não deve usar material de autenticidade materialmente duvidosa como base exclusiva de afirmação grave.
+
 ---
 
 # 17. Entrevistas, vídeos, áudios e declarações ao vivo
@@ -644,6 +744,14 @@ O projeto deve preservar, quando relevante:
 Transcrição automática ou legenda não deve ser presumida perfeita quando uma palavra puder alterar materialmente o significado.
 
 Em caso de dúvida relevante, deve-se conferir o áudio ou vídeo original.
+
+## 17.1 Transcrição, OCR e tradução são camadas derivadas
+
+Transcrição, OCR e tradução podem tornar uma fonte mais acessível, mas não substituem silenciosamente o original.
+
+Quando uma palavra, número, nome, negação, qualificador ou termo jurídico puder alterar materialmente a conclusão, a conferência deve voltar ao conteúdo original sempre que razoavelmente possível.
+
+Tradução própria ou automática deve ser identificável como tradução quando a formulação exata for material.
 
 ---
 
@@ -670,6 +778,12 @@ O Fiel Fiscaliza não deve solicitar, incentivar, adquirir por invasão nem publ
 A simples chegada espontânea de material ao projeto não elimina a necessidade de avaliar legalidade, autenticidade, proporcionalidade e risco antes de qualquer uso.
 
 Casos excepcionais não cobertos por esta política exigem revisão dos documentos de segurança/legal aplicáveis antes de publicação.
+
+## 18.4 Exposição acidental não transforma informação privada em fonte pública adequada
+
+Credenciais expostas, diretórios mal configurados, arquivos deixados acidentalmente acessíveis, endpoints sem proteção ou outros erros de segurança não devem ser tratados como autorização pública de acesso apenas porque uma URL responde tecnicamente.
+
+O projeto não deve explorar falha de acesso para obter conteúdo fora de sua finalidade pública legítima.
 
 ---
 
@@ -710,6 +824,21 @@ Uma afirmação grave sustentada apenas por fonte que se tornou não verificáve
 
 O FF-0011 e FF-0012 definirão os efeitos formais sobre Claim e correção.
 
+## 19.4 Versões divergentes da mesma origem
+
+Se duas versões do mesmo documento ou página divergirem materialmente, o projeto não deve presumir automaticamente que a mais recente torna a anterior “errada”.
+
+Deve determinar, quando possível, se houve:
+
+- correção;
+- substituição normativa;
+- atualização de estado;
+- edição sem explicação;
+- erro anterior;
+- simples mudança temporal.
+
+A relação entre versões deve permanecer rastreável.
+
 ---
 
 # 20. Versionamento, snapshots e integridade
@@ -739,6 +868,12 @@ Não comprova autoria, autenticidade jurídica ou verdade material do conteúdo 
 
 Quando uma versão arquivada for usada, isso deve permanecer identificável na proveniência.
 
+## 20.3 Assinatura, selo ou metadado técnico são sinais, não atalhos absolutos
+
+Assinatura digital, certificado, protocolo, identificador oficial ou metadado técnico podem fortalecer autenticidade.
+
+Seu significado deve ser interpretado conforme o sistema que os emitiu e não transforma automaticamente todo conteúdo em verdade material.
+
 ---
 
 # 21. Metadados mínimos de proveniência
@@ -751,10 +886,12 @@ Toda fonte utilizada para sustentar informação factual material deve permitir 
 - **URL, identificador público ou referência documental**;
 - **data de publicação, emissão ou ocorrência documental**;
 - **data de coleta ou verificação pelo Fiel Fiscaliza**;
+- **data de vigência, competência ou período coberto**, quando distinta da publicação e material para a interpretação;
 - **relação temporal ou versão relevante**;
 - **localizador interno**, quando necessário, como página, seção, item, timestamp ou trecho identificável;
 - **status de acessibilidade**, quando material;
 - **origem original e eventual reprodução/arquivo**, quando diferentes;
+- **transformações relevantes**, como transcrição, OCR, tradução, cálculo ou agregação;
 - **informação suficiente para distinguir fonte primária, secundária ou de descoberta no contexto da afirmação**, ainda que a implementação futura utilize estrutura diferente.
 
 Quando algum metadado não existir ou não puder ser determinado, isso não deve ser inventado.
@@ -782,6 +919,8 @@ Quando uma afirmação depender de trecho específico de documento extenso, o Fi
 - identificador equivalente.
 
 O objetivo é reduzir o custo de o usuário reencontrar a evidência sem retirar o trecho de seu contexto material.
+
+Quando o trecho isolado puder induzir leitura enganosa, o localizador deve permitir acessar contexto suficiente da seção correspondente.
 
 ---
 
@@ -817,6 +956,8 @@ Quando conteúdo material depender de fonte com paywall, cadastro, autenticaçã
 
 Por padrão, o núcleo mínimo do MVP deve evitar depender exclusivamente de fonte restrita para uma afirmação central quando houver alternativa pública adequada.
 
+Uma fonte legitimamente restrita pode ainda ser usada de forma atribuída e proporcional quando não houver alternativa melhor, desde que sua restrição seja transparente e o Claim não dependa de acesso privilegiado incompatível com o MVP.
+
 ---
 
 # 25. Fontes corrigidas, retratadas ou invalidadas
@@ -828,9 +969,11 @@ O Fiel Fiscaliza deve acompanhar, quando materialmente relevante, se uma fonte:
 - retirou alegação;
 - substituiu documento;
 - teve sua autenticidade questionada;
-- foi invalidada por fonte de autoridade superior.
+- foi invalidada por fonte de autoridade superior para o ponto correspondente.
 
 O histórico da existência da fonte pode continuar relevante, mas sua capacidade de sustentar afirmações atuais deve ser reavaliada.
+
+“Invalidação” deve ser entendida em relação ao Claim específico: uma fonte pode deixar de sustentar uma afirmação e continuar válida para comprovar que determinada declaração ou versão existiu historicamente.
 
 O fluxo formal de correção pertence ao FF-0012.
 
@@ -880,6 +1023,12 @@ Quando o Fiel Fiscaliza produzir cálculo derivado, as fontes de entrada e o mé
 
 O cálculo próprio não deve ser apresentado como número oficialmente publicado por terceiro.
 
+## 27.3 Auditoria externa não transforma toda afirmação contábil em verdade absoluta
+
+Relatório de auditoria deve ser interpretado conforme seu escopo, opinião, ressalvas, materialidade e período.
+
+A existência de auditoria não autoriza atribuir ao auditor afirmações que não constem de sua opinião nem elimina a necessidade de compreender notas e critérios contábeis relevantes.
+
 ---
 
 # 28. Fontes sobre eleições, votos e relações políticas
@@ -897,6 +1046,10 @@ Resultado coletivo não sustenta inferência de voto individual.
 Autodeclaração, documento de chapa, declaração pública de apoio, nomeação ou vínculo formal podem comprovar relações específicas.
 
 Nenhuma dessas evidências autoriza automaticamente concluir aliança permanente, coordenação ampla ou concordância total além do vínculo documentado.
+
+## 28.3 Lista produzida por terceiro não substitui prova da relação
+
+Compilações de “aliados”, “oposição”, “grupo” ou “base” devem ser tratadas como análise ou classificação do emissor, salvo quando cada vínculo puder ser reconstruído por evidência própria adequada.
 
 ---
 
@@ -928,7 +1081,68 @@ Essas fontes não devem ser utilizadas como atalho para evitar reconstrução de
 
 ---
 
-# 31. Automação de coleta e avaliação de fonte
+# 31. Bases estruturadas, APIs, consultas e datasets
+
+Quando um Claim depender de resultado obtido por consulta a base estruturada, o projeto deve preservar informação suficiente para tornar a consulta reproduzível ou auditável quando razoavelmente possível.
+
+Isso pode incluir:
+
+- nome da base ou sistema;
+- publicador;
+- data e horário de extração quando material;
+- filtros aplicados;
+- termos ou identificadores pesquisados;
+- parâmetros da consulta;
+- período coberto;
+- versão do dataset ou endpoint quando houver;
+- campos utilizados;
+- paginação ou limite de resultados quando capaz de afetar a conclusão;
+- transformações ou cálculos feitos após a extração.
+
+## 31.1 Resultado de consulta não é automaticamente retrato completo da realidade
+
+Uma base pode possuir atraso, recorte, erro, sigilo, cobertura parcial ou regra de indexação própria.
+
+O Claim deve respeitar o que a base realmente permite concluir.
+
+## 31.2 Dado derivado precisa preservar sua linhagem
+
+Quando o Fiel Fiscaliza combinar, limpar, agregar ou calcular dados provenientes de uma ou mais fontes, deve ser possível identificar:
+
+- dados de entrada;
+- transformações relevantes;
+- método;
+- momento da extração;
+- diferença entre valor original e resultado produzido pelo projeto.
+
+---
+
+# 32. Afirmações negativas baseadas na ausência de registro
+
+Claims como:
+
+- “não existe documento”;
+- “não houve publicação”;
+- “não consta processo”;
+- “não houve voto registrado”;
+- “ninguém declarou apoio”;
+
+exigem padrão mais rigoroso do que simplesmente não encontrar resultado em uma busca.
+
+Antes de transformar ausência de resultado em afirmação negativa, o projeto deve considerar:
+
+- se a fonte consultada é exaustiva para aquele universo;
+- se o período pesquisado está completo;
+- se podem existir sigilo, atraso, indexação incompleta ou alteração de nomenclatura;
+- se os termos e identificadores utilizados são suficientes;
+- se foram consultadas fontes alternativas proporcionais ao risco;
+- se a formulação correta deve ser “não localizamos” em vez de “não existe”.
+
+Por padrão, quando a exaustividade não puder ser demonstrada, o Fiel Fiscaliza deve preferir formulações de **não localização** ou **não confirmação**, em consonância com o FF-0009.
+
+---
+
+# 33. Automação de coleta e avaliação de fonte
 
 Automação pode:
 
@@ -949,13 +1163,14 @@ Automação não deve, sem controles posteriores aprovados:
 - ignorar conflito de interesse;
 - preencher metadado desconhecido por inferência;
 - concluir que ausência em busca significa inexistência;
-- elevar automaticamente o status editorial de um Claim.
+- elevar automaticamente o status editorial de um Claim;
+- tratar transformação automática, como OCR ou tradução, como se fosse o original sem marcar sua derivação.
 
 A publicação automática de mudanças mecânicas dependerá de FF-0011, FF-0018, FF-0020 e dos controles de qualidade aplicáveis.
 
 ---
 
-# 32. Relação com o SOURCE_REGISTRY
+# 34. Relação com o SOURCE_REGISTRY
 
 FF-0010 define **as regras editoriais gerais de uso de fontes**.
 
@@ -975,7 +1190,7 @@ A adequação continua sendo avaliada em relação ao Claim e às políticas edi
 
 ---
 
-# 33. Checklist mínimo de uso de fonte
+# 35. Checklist mínimo de uso de fonte
 
 Antes de utilizar uma fonte para sustentar afirmação material, deve ser possível responder, conforme aplicável:
 
@@ -986,13 +1201,18 @@ Antes de utilizar uma fonte para sustentar afirmação material, deve ser possí
 - [ ] O emissor possui competência ou proximidade adequada para o ponto afirmado?
 - [ ] A fonte é parte interessada?
 - [ ] O conteúdo sustenta exatamente a formulação publicada?
-- [ ] A data e a versão correspondem ao estado temporal representado?
+- [ ] A data, vigência e versão correspondem ao estado temporal representado?
 - [ ] Existe fonte primária melhor e razoavelmente acessível?
-- [ ] Se múltiplas fontes forem usadas, elas são realmente independentes?
+- [ ] A fonte primária comprova o ato ou também a verdade material do Claim específico?
+- [ ] Se múltiplas fontes forem usadas, elas são realmente independentes na raiz evidencial?
 - [ ] Há cadeia de republicação ou circularidade?
+- [ ] Existe fonte materialmente contraditória ou qualificadora que não pode ser ignorada?
 - [ ] Existe contestação material ou correção posterior?
+- [ ] O conteúdo passou por transcrição, OCR, tradução, resumo, cálculo ou outra transformação relevante?
 - [ ] O local exato da evidência dentro da fonte pode ser reencontrado?
 - [ ] Os metadados mínimos de proveniência foram preservados?
+- [ ] Se o Claim deriva de consulta estruturada, os filtros e parâmetros relevantes estão registrados?
+- [ ] Se o Claim é negativo, a ausência de registro realmente permite concluir ausência?
 - [ ] A fonte está disponível ao usuário ou sua restrição/indisponibilidade foi corretamente representada?
 - [ ] A forma de armazenamento, citação ou referência é proporcional e adequada?
 - [ ] A gravidade da afirmação exige diligência adicional?
@@ -1001,7 +1221,7 @@ Esse checklist não substitui o julgamento de suficiência de evidência do FF-0
 
 ---
 
-# 34. Decisões reservadas aos documentos seguintes
+# 36. Decisões reservadas aos documentos seguintes
 
 ## FF-0011 — CLAIMS_AND_EVIDENCE
 
@@ -1045,7 +1265,7 @@ Este documento não define:
 
 ---
 
-# 35. Critérios para revisão crítica e canonização
+# 37. Critérios para canonização
 
 Antes de promover o FF-0010 para CANONICAL, deve-se confirmar que:
 
@@ -1061,16 +1281,70 @@ Antes de promover o FF-0010 para CANONICAL, deve-se confirmar que:
 - estabelece metadados mínimos de proveniência;
 - diferencia múltiplos links de evidência realmente independente;
 - separa autoridade sobre ato da verdade material de alegação;
-- não presume que fonte oficial seja imparcial para toda afirmação;
+- não presume que fonte oficial seja imparcial ou competente para toda afirmação;
 - não trata quantidade fixa de fontes como substituto de julgamento;
+- trata cadeia de transformação, incluindo transcrição, OCR, tradução e dados derivados;
+- estabelece cautela específica para afirmações negativas baseadas em ausência;
+- trata bases estruturadas e consultas de forma reproduzível;
+- impede seleção enviesada de fontes materialmente relevantes;
 - preserva temporalidade e versão das fontes;
 - não torna material privado, vazado ou privilegiado requisito do MVP;
 - preserva sustentabilidade operacional e possibilidade de automação responsável;
 - não antecipa indevidamente o modelo formal de Claims, schema técnico ou processo de correção.
 
+A revisão crítica de 2026-09-04 considera esses critérios satisfeitos no conteúdo da v0.2, sujeito à aprovação explícita de André para promoção a CANONICAL.
+
 ---
 
-# 36. Impacto documental
+# 38. Revisão crítica de 2026-09-04
+
+A revisão da v0.1 identificou pontos que poderiam gerar falsa robustez evidencial ou ambiguidade operacional e foram tratados nesta versão.
+
+## 38.1 “Fonte boa” ainda poderia ser interpretada como qualidade global do emissor
+
+O princípio central foi refinado para tornar explícitos o Claim, o período e a cadeia evidencial, além de proibir score global de confiabilidade como substituto de análise.
+
+## 38.2 A prioridade de fonte primária podia ser confundida com deferência à narrativa oficial
+
+Foi reforçado que documento oficial prova com especial força o ato da instituição dentro de sua competência, mas não prova automaticamente prática efetiva, causalidade ou verdade material de alegações externas ao ato.
+
+## 38.3 Faltava dizer com clareza quando uma fonte jornalística secundária pode bastar
+
+A v0.2 estabelece critérios para uso suficiente de reportagem secundária em Claims limitados, sem criar regra fixa de quantidade de fontes e sem permitir que afirmações graves dependam de apuração opaca inadequada.
+
+## 38.4 Independência entre fontes precisava ser avaliada na raiz, não apenas no veículo
+
+Diferenciou-se independência de publicação de independência evidencial e foi explicitado que múltiplos veículos podem continuar dependentes de uma única raiz documental ou informacional.
+
+## 38.5 Faltava uma proteção explícita contra cherry-picking
+
+A seleção de fontes não pode omitir evidência materialmente contraditória ou qualificadora apenas porque ela enfraquece uma narrativa desejada.
+
+## 38.6 Ausência de resultado precisava de regra geral própria
+
+A v0.1 tratava esse risco principalmente em sistemas públicos. A v0.2 cria regra transversal para Claims negativos e exige cautela com exaustividade, sigilo, indexação, filtros e período.
+
+## 38.7 Bases estruturadas e consultas não tinham proveniência reproduzível suficiente
+
+Foram acrescentadas regras para parâmetros, filtros, data de extração, versão, paginação, escopo e linhagem de dados derivados.
+
+## 38.8 Transformações intermediárias estavam subespecificadas
+
+Transcrição, OCR, tradução, resumo, cálculo e agregação passaram a ser tratados como camadas derivadas que devem preservar relação com a fonte original.
+
+## 38.9 Fontes digitais exigiam salvaguardas adicionais de autenticidade
+
+A v0.2 acrescenta atenção a impersonação, conta comprometida, material sintético/manipulado e exposição acidental de conteúdo privado.
+
+## 38.10 Versões diferentes da mesma fonte não devem ser tratadas como simples correção
+
+Foi criada distinção entre correção, atualização de estado, substituição normativa, edição sem explicação e mudança temporal, preservando a memória da versão anteriormente válida.
+
+Após os ajustes, não foi identificado conflito canônico bloqueante com FF-0001, FF-0002, FF-0004, FF-0007, FF-0008 ou FF-0009.
+
+---
+
+# 39. Impacto documental
 
 ## É impactado por
 
@@ -1100,8 +1374,8 @@ Antes de promover o FF-0010 para CANONICAL, deve-se confirmar que:
 
 ---
 
-# 37. Vigência
+# 40. Vigência
 
-Esta versão permanece **DRAFT** até revisão crítica e aprovação explícita.
+Esta versão permanece **DRAFT** até aprovação explícita.
 
-**FF-0010 — SOURCE_POLICY v0.1 // DRAFT**
+**FF-0010 — SOURCE_POLICY v0.2 // DRAFT**
