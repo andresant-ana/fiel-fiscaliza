@@ -2,9 +2,9 @@
 
 **Nome do documento:** Source Policy  
 **ID:** FF-0010  
-**Versão:** 0.2  
-**Status:** DRAFT  
-**Última revisão:** 2026-09-04  
+**Versão:** 1.0  
+**Status:** CANONICAL  
+**Última revisão:** 2026-09-06  
 **Responsável:** André  
 **Projeto:** Fiel Fiscaliza  
 
@@ -1292,7 +1292,7 @@ Antes de promover o FF-0010 para CANONICAL, deve-se confirmar que:
 - preserva sustentabilidade operacional e possibilidade de automação responsável;
 - não antecipa indevidamente o modelo formal de Claims, schema técnico ou processo de correção.
 
-A revisão crítica de 2026-09-04 considera esses critérios satisfeitos no conteúdo da v0.2, sujeito à aprovação explícita de André para promoção a CANONICAL.
+Os critérios foram considerados satisfeitos na revisão crítica da v0.2, e André aprovou explicitamente a promoção desta política em 2026-09-06.
 
 ---
 
@@ -1376,6 +1376,6 @@ Após os ajustes, não foi identificado conflito canônico bloqueante com FF-000
 
 # 40. Vigência
 
-Esta versão permanece **DRAFT** até aprovação explícita.
+Esta versão possui status **CANONICAL** e entra em vigor em **2026-09-06** por aprovação explícita de André.
 
-**FF-0010 — SOURCE_POLICY v0.2 // DRAFT**
+**FF-0010 — SOURCE_POLICY v1.0 // CANONICAL**
