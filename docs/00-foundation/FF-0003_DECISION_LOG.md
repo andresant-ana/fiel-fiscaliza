@@ -2,9 +2,9 @@
 
 **Nome do documento:** Decision Log  
 **ID:** FF-0003  
-**Versão:** 1.6  
+**Versão:** 1.7  
 **Status:** CANONICAL  
-**Última revisão:** 2026-09-04  
+**Última revisão:** 2026-09-06  
 **Responsável:** André  
 **Projeto:** Fiel Fiscaliza  
 
@@ -1153,11 +1153,61 @@ Essas decisões permanecem reservadas respectivamente a FF-0010, FF-0011 e FF-00
 
 ---
 
+## FF-DEC-0039 — FF-0010 promovido a CANONICAL v1.0
+
+**Data:** 2026-09-06  
+**Status:** APROVADA  
+
+### Decisão
+
+O **FF-0010 — SOURCE_POLICY v1.0** foi aprovado após revisão crítica e tornou-se a política canônica de adequação, classificação, prioridade, proveniência e uso editorial de fontes do Fiel Fiscaliza.
+
+Entre as regras centrais formalizadas:
+
+- adequação de fonte é avaliada em relação ao Claim, ao período e à cadeia evidencial, não por reputação global do emissor;
+- a classificação primária, secundária ou de descoberta é relativa à afirmação considerada;
+- fontes oficiais têm prioridade para comprovar seus próprios atos dentro de sua competência, sem se tornarem automaticamente prova da verdade material de alegações controvertidas;
+- uma única fonte pode bastar em Claims limitados quando for diretamente adequada, enquanto afirmações graves, contestadas, causais ou baseadas em ausência exigem diligência adicional proporcional;
+- múltiplos links não equivalem a múltiplas evidências independentes quando compartilham a mesma raiz;
+- imprensa, fontes técnicas, redes sociais, bases estruturadas, documentos oficiais e reproduções arquivísticas possuem regras específicas de uso;
+- Claims negativos exigem cautela com exaustividade, cobertura temporal, sigilo, indexação e parâmetros de busca;
+- transcrição, OCR, tradução, resumo, cálculo e agregação são camadas derivadas e não substituem silenciosamente a fonte original;
+- fontes removidas, alteradas ou substituídas devem preservar rastreabilidade de versão;
+- proveniência inclui, quando material, emissor, identificação, URL ou referência, datas, vigência, versão, localizador interno, acessibilidade, origem e transformações;
+- material privado, vazado, obtido por acesso indevido ou exposto acidentalmente não se torna automaticamente fonte pública adequada;
+- automação pode auxiliar coleta e classificação preliminar, mas não pode elevar sozinha autenticidade ou status editorial de um Claim.
+
+### Salvaguardas
+
+A canonização do FF-0010 não define ainda:
+
+- modelo formal de Claim;
+- estados de verificação;
+- suficiência formal e combinação de evidências por classe de Claim;
+- lógica de confirmação, contestação, refutação ou desconhecimento;
+- fluxo detalhado de correções e retratações;
+- schema técnico de Source ou mecanismos concretos de coleta.
+
+Essas decisões permanecem reservadas principalmente a FF-0011, FF-0012, domínio, arquitetura e operações.
+
+### Formalização
+
+- FF-0010 — SOURCE_POLICY v1.0 // CANONICAL.
+- Commit de formalização: `793c7fe7b47b54ae2f7baf002dd897f08f6594fc`.
+
+### Impacto
+
+- FF-0011 — CLAIMS_AND_EVIDENCE passa a ter base canônica para definir suficiência, estados e relações entre Claim e evidência;
+- FF-0012 — CORRECTIONS_POLICY deverá considerar fontes corrigidas, removidas, alteradas ou invalidadas;
+- documentos posteriores de domínio, arquitetura, automação, segurança, legal e operações devem preservar proveniência e cadeia evidencial conforme esta política;
+- Gate F2 permanece aberto até FF-0011 e FF-0012 também estarem CANONICAL e a avaliação de publicabilidade ser reproduzível.
+
+---
+
 # 10. Pendências abertas na data desta versão
 
 As entradas abaixo não constituem decisões aprovadas; apenas consolidam questões já reconhecidas como pendentes.
 
-- produzir, revisar e canonizar FF-0010 — SOURCE_POLICY;
 - produzir, revisar e canonizar FF-0011 — CLAIMS_AND_EVIDENCE;
 - produzir, revisar e canonizar FF-0012 — CORRECTIONS_POLICY;
 - continuar avaliando as hipóteses do FF-0005 de forma proporcional ao risco e preservar a dívida de validação do FF-0006;
@@ -1191,8 +1241,8 @@ Ao adicionar uma nova entrada, deve-se verificar se ela:
 
 # 12. Vigência
 
-Esta versão possui status **CANONICAL** e entra em vigor em **2026-09-04** por aprovação explícita de André.
+Esta versão possui status **CANONICAL** e entra em vigor em **2026-09-06** por aprovação explícita de André.
 
-**FF-0003 — DECISION_LOG v1.6 // CANONICAL**
+**FF-0003 — DECISION_LOG v1.7 // CANONICAL**
 
-Esta revisão registra a canonização do FF-0009 e mantém o projeto na Fase 2 — Política editorial e evidências, com FF-0010, FF-0011 e FF-0012 ainda pendentes antes do Gate F2.
+Esta revisão registra a canonização do FF-0010 e mantém o projeto na Fase 2 — Política editorial e evidências, com FF-0011 e FF-0012 ainda pendentes antes do Gate F2.
